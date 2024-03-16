@@ -3,6 +3,7 @@
 {
   imports = [
     ./user.nix
+    ./ssh.nix
     ./git.nix
   ];
 }
