@@ -13,5 +13,6 @@
     ../../programs/per-device/mangohud.nix
     ../../programs/per-device/handbrake.nix
     ../../programs/per-device/osu-lazer.nix
+    ../../programs/per-device/lutris.nix
   ];
 }
