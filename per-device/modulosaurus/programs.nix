@@ -14,5 +14,6 @@
     ../../programs/per-device/handbrake.nix
     ../../programs/per-device/osu-lazer.nix
     ../../programs/per-device/lutris.nix
+    ../../programs/per-device/bitwarden.nix
   ];
 }
