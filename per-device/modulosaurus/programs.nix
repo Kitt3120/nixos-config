@@ -4,7 +4,7 @@
   imports = [
     ../../programs/per-device/gparted.nix
     ../../programs/per-device/firefox.nix
-    ../../programs/per-device/vscode.nix
+    ../../programs/per-device/ungoogled-chromium.nix
     ../../programs/per-device/vscode-insiders.nix
     ../../programs/per-device/obs-studio.nix
     ../../programs/per-device/wine-staging.nix
@@ -15,5 +15,28 @@
     ../../programs/per-device/osu-lazer.nix
     ../../programs/per-device/lutris.nix
     ../../programs/per-device/bitwarden.nix
+    ../../programs/per-device/joplin.nix
+    ../../programs/per-device/bambu-studio.nix
+    ../../programs/per-device/remmina.nix
+    ../../programs/per-device/prism-launcher.nix
+    ../../programs/per-device/retroarch.nix
+    ../../programs/per-device/dolphin-emulator.nix
+    ../../programs/per-device/audacity.nix
+    ../../programs/per-device/ausweisapp.nix
+    ../../programs/per-device/discord.nix
+    ../../programs/per-device/easyeffects.nix
+    ../../programs/per-device/inkscape.nix
+    ../../programs/per-device/krita.nix
+    ../../programs/per-device/signal.nix
+    ../../programs/per-device/thunderbird.nix
+    ../../programs/per-device/tor-browser.nix
+    ../../programs/per-device/nextcloud.nix
+    ../../programs/per-device/blender.nix
+    ../../programs/per-device/jetbrains-toolbox.nix
+    ../../programs/per-device/teams-for-linux.nix
+    ../../programs/per-device/mkvtoolnix.nix
+    ../../programs/per-device/qflipper.nix
+    ../../programs/per-device/vlc.nix
+    ../../programs/per-device/wootility.nix
   ];
 }

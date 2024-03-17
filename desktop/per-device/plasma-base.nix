@@ -41,6 +41,9 @@
     kdePackages.konsole
     kdePackages.discover
     kdePackages.dolphin
+    kdePackages.kolourpaint
+    #kdePackages.kamoso # TODO: Enable again when package updated
+    kdePackages.filelight
     kwalletcli
     libheif
     xwaylandvideobridge
