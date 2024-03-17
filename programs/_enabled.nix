@@ -14,6 +14,7 @@
     ./fish.nix
     ./thefuck.nix
     ./zoxide.nix
+    ./mail.nix
     ./git.nix
     ./nix-prefetch-github.nix
     ./java.nix
