@@ -3,7 +3,7 @@
 {
   imports = [
     ../../programs/per-device/gparted.nix
-    ../../programs/per-device/firefox.nix
+    ../../programs/per-device/firefox-nightly.nix
     ../../programs/per-device/ungoogled-chromium.nix
     ../../programs/per-device/vscode-insiders.nix
     ../../programs/per-device/obs-studio.nix
@@ -38,5 +38,7 @@
     ../../programs/per-device/qflipper.nix
     ../../programs/per-device/vlc.nix
     ../../programs/per-device/wootility.nix
+    ../../programs/per-device/yt-dlp.nix
+    ../../programs/per-device/rustup.nix
   ];
 }
