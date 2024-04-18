@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver.displayManager = {
+  services.displayManager = {
     defaultSession =
       if config.services.xserver.desktopManager.plasma5.enable then
         "plasmawayland"

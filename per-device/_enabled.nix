@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./modulosaurus/_enabled.nix
+    #./modulosaurus/_enabled.nix
+    ./hydra/_enabled.nix
   ];
 }

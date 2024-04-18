@@ -5,4 +5,6 @@
     wootility
     wooting-udev-rules
   ];
+
+  hardware.wooting.enable = true;
 }

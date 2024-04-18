@@ -21,5 +21,7 @@
     ./neofetch.nix
     ./uwufetch.nix
     ./ffmpeg.nix
+    ./lm_sensors.nix
+    ./dfc.nix
   ];
 }
