@@ -24,5 +24,6 @@
     ./lm_sensors.nix
     ./dfc.nix
     ./llvm.nix
+    ./pkg-config.nix
   ];
 }
