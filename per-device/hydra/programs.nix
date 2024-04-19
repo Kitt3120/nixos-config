@@ -46,5 +46,12 @@
     ../../programs/per-device/radeontop.nix
     ../../programs/per-device/opentabletdriver.nix
     ../../programs/per-device/kdenlive.nix
+    ../../programs/per-device/zap.nix
+    ../../programs/per-device/imagemagick.nix
+    ../../programs/per-device/aircrack-ng.nix
+    ../../programs/per-device/burpsuite.nix
+    ../../programs/per-device/hashcat.nix
+    ../../programs/per-device/john.nix
+    ../../programs/per-device/wifite2.nix
   ];
 }

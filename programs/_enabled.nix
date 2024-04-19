@@ -23,5 +23,6 @@
     ./ffmpeg.nix
     ./lm_sensors.nix
     ./dfc.nix
+    ./llvm.nix
   ];
 }
