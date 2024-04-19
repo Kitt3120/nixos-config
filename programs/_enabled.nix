@@ -24,8 +24,10 @@
     ./lm_sensors.nix
     ./dfc.nix
     ./llvm.nix
+    ./pkgconf.nix
     ./pkg-config.nix
     ./openssl.nix
     ./gnumake.nix
+    ./cpufrequtils.nix
   ];
 }
