@@ -53,5 +53,6 @@
     ../../programs/per-device/hashcat.nix
     ../../programs/per-device/john.nix
     ../../programs/per-device/wifite2.nix
+    ../../programs/per-device/linux-wifi-hotspot.nix
   ];
 }
