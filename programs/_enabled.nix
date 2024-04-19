@@ -25,5 +25,7 @@
     ./dfc.nix
     ./llvm.nix
     ./pkg-config.nix
+    ./openssl.nix
+    ./gnumake.nix
   ];
 }
