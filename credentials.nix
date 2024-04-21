@@ -39,5 +39,29 @@
         };
       };
     };
+
+    ssh = {
+      blocks = {
+        mrmeeseeks = lib.mkOption {
+          default = ''
+            Host <>
+              HostName <>
+              User <>
+            
+            '';
+          type = lib.types.str;
+        };
+
+        schweren-dev = lib.mkOption {
+          default = ''
+            Host schweren.dev
+              HostName <>
+              User <>
+            
+          '';
+          type = lib.types.str;
+        };
+      };
+    };
   };
 }
