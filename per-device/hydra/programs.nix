@@ -44,7 +44,6 @@
     ../../programs/per-device/framework-tool.nix
     ../../programs/per-device/nvtop.nix
     ../../programs/per-device/radeontop.nix
-    ../../programs/per-device/opentabletdriver.nix
     ../../programs/per-device/kdenlive.nix
     ../../programs/per-device/zap.nix
     ../../programs/per-device/imagemagick.nix
@@ -54,5 +53,6 @@
     ../../programs/per-device/john.nix
     ../../programs/per-device/wifite2.nix
     ../../programs/per-device/linux-wifi-hotspot.nix
+    ../../programs/per-device/mdk4.nix
   ];
 }

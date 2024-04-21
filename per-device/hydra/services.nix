@@ -10,5 +10,6 @@
     ../../services/per-device/powermanagement.nix
     ../../services/per-device/thermald.nix
     #../../services/per-device/tlp.nix
+    ../../services/per-device/opentabletdriver.nix
   ];
 }
