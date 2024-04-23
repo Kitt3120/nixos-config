@@ -54,5 +54,6 @@
     ../../programs/per-device/wifite2.nix
     ../../programs/per-device/linux-wifi-hotspot.nix
     ../../programs/per-device/mdk4.nix
+    ../../programs/per-device/gamemode.nix
   ];
 }

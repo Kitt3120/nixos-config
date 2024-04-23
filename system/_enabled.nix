@@ -8,6 +8,8 @@
     ./time.nix
     ./locale.nix
     ./nixgc.nix
+    ./dbus.nix
     ./flatpak.nix
+    ./polkit.nix
   ];
 }
