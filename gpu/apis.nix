@@ -10,8 +10,10 @@
   environment.systemPackages = with pkgs; [
     mesa
     mesa-demos
-    libdrm
+    clinfo
+    wayland-utils
     glxinfo
+    libdrm
     vulkan-tools
     vulkan-headers
     vulkan-extension-layer
