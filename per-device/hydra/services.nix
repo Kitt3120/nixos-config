@@ -8,8 +8,8 @@
     ../../services/per-device/docker.nix
     ../../services/per-device/fprintd.nix
     ../../services/per-device/powermanagement.nix
+    ../../services/per-device/powertop.nix
     ../../services/per-device/thermald.nix
-    #../../services/per-device/tlp.nix
     ../../services/per-device/opentabletdriver.nix
   ];
 }
