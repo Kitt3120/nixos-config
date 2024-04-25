@@ -28,6 +28,6 @@
     ./pkg-config.nix
     ./openssl.nix
     ./gnumake.nix
-    ./cpufrequtils.nix
+    ./cpupower.nix
   ];
 }
