@@ -17,6 +17,7 @@
       gpg.format = "ssh";
       commit.gpgsign = true;
       tag.gpgsign = true;
+      rerere.enabled = true;
       column.ui = "auto";
       fetch.writeCommitGraph = true;
 
