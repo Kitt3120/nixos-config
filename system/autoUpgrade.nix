@@ -5,5 +5,6 @@
     enable = true;
     allowReboot = false;
     dates = "hourly";
+    persistent = true;
   };
 }

@@ -57,5 +57,6 @@
     ../../programs/per-device/gamemode.nix
     ../../programs/per-device/ryzen-monitor-ng.nix
     ../../programs/per-device/cpupower-gui.nix
+    ../../programs/per-device/libnotify.nix
   ];
 }

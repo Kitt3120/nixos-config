@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../services/per-device/nixos-upgrade-notification/libnotify.nix
     ../../services/per-device/powermanagement.nix
     ../../services/per-device/powertop.nix
     ../../services/per-device/thermald.nix

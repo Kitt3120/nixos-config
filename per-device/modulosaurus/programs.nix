@@ -42,5 +42,6 @@
     ../../programs/per-device/rustup.nix
     ../../programs/per-device/ventoy.nix
     ../../programs/per-device/gamemode.nix
+    ../../programs/per-device/libnotify.nix
   ];
 }
