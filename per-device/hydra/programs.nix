@@ -58,5 +58,6 @@
     ../../programs/per-device/ryzen-monitor-ng.nix
     ../../programs/per-device/cpupower-gui.nix
     ../../programs/per-device/libnotify.nix
+    #../../programs/per-device/inputmodule-control.nix # TODO: Enable again when PR is merged or when building against local nixpkgs repo
   ];
 }
