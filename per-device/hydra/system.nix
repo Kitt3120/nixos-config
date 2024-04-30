@@ -10,6 +10,7 @@
     ../../system/per-device/bootloader/grub-osprober.nix
     ../../system/per-device/microcode/amd.nix
     ../../system/per-device/ryzen-smu.nix
-    ../../system/per-device/iio-sensor.nix 
+    ../../system/per-device/iio-sensor.nix
+    ../../system/per-device/inputmodule.nix
   ];
 }

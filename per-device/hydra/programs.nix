@@ -58,7 +58,6 @@
     ../../programs/per-device/ryzen-monitor-ng.nix
     ../../programs/per-device/cpupower-gui.nix
     ../../programs/per-device/libnotify.nix
-    ../../programs/per-device/inputmodule-control.nix
     ../../programs/per-device/youtube-music.nix
   ];
 }
