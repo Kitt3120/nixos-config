@@ -59,5 +59,7 @@
     ../../programs/per-device/cpupower-gui.nix
     ../../programs/per-device/libnotify.nix
     ../../programs/per-device/youtube-music.nix
+    ../../programs/per-device/ani-cli.nix
+    ../../programs/per-device/syncplay.nix
   ];
 }
