@@ -61,5 +61,7 @@
     ../../programs/per-device/youtube-music.nix
     ../../programs/per-device/ani-cli.nix
     ../../programs/per-device/syncplay.nix
+    ../../programs/per-device/maven.nix
+    ../../programs/per-device/gradle.nix
   ];
 }
