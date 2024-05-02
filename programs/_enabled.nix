@@ -29,5 +29,6 @@
     ./openssl.nix
     ./gnumake.nix
     ./cpupower.nix
+    ./fuse3.nix
   ];
 }
