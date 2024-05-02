@@ -8,9 +8,5 @@
       layout = "de";
       variant = "deadgraveacute";
     };
-    libinput = {
-      enable = true;
-      touchpad.tapping = true;
-    };
   };
 }

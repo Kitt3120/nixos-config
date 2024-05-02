@@ -5,6 +5,8 @@
     ./xserver.nix
     ./wayland.nix
 
+    ./libinput.nix
+
     ./sddm.nix
 
     ./qt.nix
