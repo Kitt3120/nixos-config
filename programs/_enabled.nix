@@ -30,5 +30,6 @@
     ./gnumake.nix
     ./cpupower.nix
     ./fuse3.nix
+    ./screen.nix
   ];
 }
