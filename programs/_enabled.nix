@@ -31,5 +31,6 @@
     ./cpupower.nix
     ./fuse3.nix
     ./screen.nix
+    ./speedtest-cli.nix
   ];
 }
