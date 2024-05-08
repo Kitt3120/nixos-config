@@ -63,5 +63,6 @@
     ../../programs/per-device/syncplay.nix
     ../../programs/per-device/maven.nix
     ../../programs/per-device/gradle.nix
+    ../../programs/per-device/vintage-story.nix
   ];
 }
