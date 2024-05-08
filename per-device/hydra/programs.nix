@@ -64,5 +64,6 @@
     ../../programs/per-device/maven.nix
     ../../programs/per-device/gradle.nix
     ../../programs/per-device/vintage-story.nix
+    ../../programs/per-device/onedrive-gui.nix
   ];
 }
