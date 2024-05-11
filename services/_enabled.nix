@@ -2,14 +2,17 @@
 
 {
   imports = [
+    ./dbus.nix
+    ./fwupd.nix
     ./fstrim.nix
-    ./cups.nix
+    ./flatpak.nix
     ./openssh.nix
     ./avahi.nix
     ./timesyncd.nix
-    ./logrotate.nix
     ./oomd.nix
+    ./logrotate.nix
     #./smartd.nix # TODO: Enable again
     ./packagekit.nix
+    ./cups.nix
   ];
 }
