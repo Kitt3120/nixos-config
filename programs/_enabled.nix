@@ -34,5 +34,6 @@
     ./speedtest-cli.nix
     ./python3.nix
     ./rsync.nix
+    ./parallel.nix
   ];
 }
