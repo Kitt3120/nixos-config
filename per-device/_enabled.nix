@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./hydra/_enabled.nix
+    #./hydra/_enabled.nix
+    #./schweren.dev/_enabled.nix
   ];
 }

@@ -10,6 +10,13 @@
         };
       };
 
+      minecraft = {
+        hashedPassword = lib.mkOption {
+          default = "";
+          type = lib.types.str;
+        };
+      };
+
       authorizedKeys = lib.mkOption {
         default = [
             ""
