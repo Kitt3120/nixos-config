@@ -32,5 +32,6 @@
     ./fuse3.nix
     ./screen.nix
     ./speedtest-cli.nix
+    ./python3.nix
   ];
 }
