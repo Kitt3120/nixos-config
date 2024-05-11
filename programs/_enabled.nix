@@ -33,5 +33,6 @@
     ./screen.nix
     ./speedtest-cli.nix
     ./python3.nix
+    ./rsync.nix
   ];
 }
