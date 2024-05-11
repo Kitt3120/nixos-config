@@ -35,5 +35,6 @@
     ./python3.nix
     ./rsync.nix
     ./parallel.nix
+    ./rustup.nix
   ];
 }

@@ -39,7 +39,6 @@
     ../../programs/per-device/vlc.nix
     ../../programs/per-device/wootility.nix
     ../../programs/per-device/yt-dlp.nix
-    ../../programs/per-device/rustup.nix
     ../../programs/per-device/ventoy.nix
     ../../programs/per-device/framework-tool.nix
     ../../programs/per-device/nvtop.nix
