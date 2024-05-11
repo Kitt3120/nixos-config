@@ -8,8 +8,8 @@
   imports = [
     <home-manager/nixos>
     ./hardware-configuration.nix
-    ./credentials-template.nix
-    ./credentials.nix
+    ./settings-defaults.nix
+    ./settings.nix
     ./system/_enabled.nix
     ./gpu/_enabled.nix
     ./services/_enabled.nix
