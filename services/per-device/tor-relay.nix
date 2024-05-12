@@ -19,7 +19,7 @@
       BandwidthRate = config.tor.BandwidthRate;
       BandwidthBurst = config.tor.BandwidthBurst;
       SOCKSPort = 0;
-      SocksPolicy = "reject *:*";
+      SocksPolicy = [ "reject *:*" ];
     };
   };
 }
