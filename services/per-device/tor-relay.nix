@@ -20,6 +20,6 @@
       BandwidthBurst = config.tor.BandwidthBurst;
       SOCKSPort = 0;
       SocksPolicy = "reject *:*";
-    }
+    };
   };
 }

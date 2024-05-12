@@ -79,8 +79,8 @@
             default = "05:00";
             type = lib.types.str;
           };
-        }
-      }
+        };
+      };
     };
 
     ssh = {
@@ -162,6 +162,6 @@
         default = "1 MBytes";
         type = lib.types.str;
       };
-    }
+    };
   };
 }

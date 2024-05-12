@@ -9,6 +9,6 @@
     rebootWindow = {
       lower = config.autoUpgrade.autoReboot.window.lower;
       upper = config.autoUpgrade.autoReboot.window.upper;
-    }
+    };
   };
 }
