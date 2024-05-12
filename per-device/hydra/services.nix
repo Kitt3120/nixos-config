@@ -8,6 +8,7 @@
     ../../services/per-device/thermald.nix
     ../../services/per-device/fprintd.nix
     ../../services/per-device/bluetooth.nix
+    ../../services/per-device/flatpak.nix
     ../../services/per-device/mullvad.nix
     ../../services/per-device/docker.nix
     ../../services/per-device/openrgb.nix

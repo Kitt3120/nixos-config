@@ -5,7 +5,6 @@
     ./dbus.nix
     ./fwupd.nix
     ./fstrim.nix
-    ./flatpak.nix
     ./openssh.nix
     ./avahi.nix
     ./timesyncd.nix
