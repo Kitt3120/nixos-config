@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # If Discord is installed, get its hash to later check if it was modified
 DISCORD_PATH="/run/current-system/sw/bin/discord"
