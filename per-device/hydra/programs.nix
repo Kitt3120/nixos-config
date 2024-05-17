@@ -57,7 +57,7 @@
     ../../programs/per-device/ventoy.nix
     ../../programs/per-device/vintage-story.nix
     ../../programs/per-device/vlc.nix
-    ../../programs/per-device/vscode-insiders.nix
+    ../../programs/per-device/vscode.nix
     ../../programs/per-device/wifite2.nix
     ../../programs/per-device/wine-staging.nix
     ../../programs/per-device/wootility.nix
