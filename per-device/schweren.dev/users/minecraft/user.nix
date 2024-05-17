@@ -10,7 +10,7 @@
     ];
     createHome = true;
     linger = true;
-    hashedPassword = config.credentials.minecraft.hashedPassword;
+    hashedPassword = config.credentials.user.minecraft.hashedPassword;
   };
 
   allUsers = [ "minecraft" ];

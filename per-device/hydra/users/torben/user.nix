@@ -22,7 +22,7 @@
     ];
     createHome = true;
     linger = true;
-    hashedPassword = config.credentials.torben.hashedPassword;
+    hashedPassword = config.credentials.user.torben.hashedPassword;
   };
 
   allUsers = [ "torben" ];

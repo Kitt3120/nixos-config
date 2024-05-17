@@ -9,6 +9,7 @@
     ./hostname.nix
     ./programs.nix
     ./services.nix
+    ./settings-defaults.nix
     ./system.nix
   ];
 }
