@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./networking/_enabled.nix
     ./users/_enabled.nix
 
     ./desktop.nix
