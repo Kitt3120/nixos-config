@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./mapUsers.nix
+    ./firewall-mailcow.nix
   ];
 }

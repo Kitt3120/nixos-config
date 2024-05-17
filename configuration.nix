@@ -7,8 +7,10 @@
 {
   imports = [
     <home-manager/nixos>
+    ./functions/_enabled.nix
     ./gpu/_enabled.nix
     ./hardware-configuration.nix
+    ./networking/_enabled.nix
     ./per-device/_enabled.nix
     ./programs/_enabled.nix
     ./services/_enabled.nix

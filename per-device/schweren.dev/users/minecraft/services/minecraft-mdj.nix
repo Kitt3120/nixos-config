@@ -1,23 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  mdj = config.mkMinecraftForgeServer "mdj" "/home/minecraft/mdj" "1.20.1-47.2.30" pkgs.jdk17 "5G" false;
+in
 {
-  home-manager.users.minecraft.systemd.user.services.minecraft-mdj = {
-    Unit = {
-      Description = "Minecraft MDJ";
-      After = [ "network.target" ];
-      Wants = [ "network.target" ];
-    };
-
-    Service = {
-      Type = "oneshot";
-      RemainAfterExit = true;
-      WorkingDirectory = "/home/minecraft/mdj";
-      ExecStart = "/home/minecraft/mdj/systemd-start.sh";
-      ExecStop = "/home/minecraft/mdj/systemd-stop.sh";
-    };
-    
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
+  home-manager.users.minecraft = {
+    home.packages = [ mdj.scripts.manager mdj.scripts.start mdj.scripts.stop ];
+    systemd.user.services.minecraft-mdj = mdj.systemd.unit;
   };
 }
