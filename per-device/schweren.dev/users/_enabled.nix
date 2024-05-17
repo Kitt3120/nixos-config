@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./torben/_enabled.nix
     ./minecraft/_enabled.nix
+    ./torben/_enabled.nix
   ];
 }

@@ -7,15 +7,15 @@
 {
   imports = [
     <home-manager/nixos>
+    ./gpu/_enabled.nix
     ./hardware-configuration.nix
+    ./per-device/_enabled.nix
+    ./programs/_enabled.nix
+    ./services/_enabled.nix
     ./settings-defaults.nix
     ./settings.nix
     ./system/_enabled.nix
-    ./gpu/_enabled.nix
-    ./services/_enabled.nix
-    ./programs/_enabled.nix
     ./users/_enabled.nix
-    ./per-device/_enabled.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./user.nix
-    ./ssh.nix
     ./git.nix
+    ./ssh.nix
+    ./user.nix
   ];
 }

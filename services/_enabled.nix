@@ -2,16 +2,16 @@
 
 {
   imports = [
-    ./dbus.nix
-    ./fwupd.nix
-    ./fstrim.nix
-    ./openssh.nix
     ./avahi.nix
-    ./timesyncd.nix
-    ./oomd.nix
-    ./logrotate.nix
-    #./smartd.nix # TODO: Enable again
-    ./packagekit.nix
     ./cups.nix
+    ./dbus.nix
+    ./fstrim.nix
+    ./fwupd.nix
+    ./logrotate.nix
+    ./oomd.nix
+    ./openssh.nix
+    ./packagekit.nix
+    ./timesyncd.nix
+    #./smartd.nix # TODO: Enable again
   ];
 }

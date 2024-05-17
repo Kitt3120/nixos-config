@@ -3,38 +3,38 @@
 {
   imports = [
     ./appimage-run.nix
-    ./pciutils.nix
-    ./usbutils.nix
-    ./fdisk.nix
-    ./gdisk.nix
-    ./parted.nix
-    ./killall.nix
-    ./htop.nix
     ./btop.nix
-    ./fish.nix
-    ./thefuck.nix
-    ./zoxide.nix
-    ./mail.nix
-    ./git.nix
-    ./nix-prefetch-github.nix
-    ./java.nix
-    ./neofetch.nix
-    ./uwufetch.nix
-    ./ffmpeg.nix
-    ./lm_sensors.nix
-    ./dfc.nix
-    ./llvm.nix
-    ./pkgconf.nix
-    ./pkg-config.nix
-    ./openssl.nix
-    ./gnumake.nix
     ./cpupower.nix
+    ./dfc.nix
+    ./fdisk.nix
+    ./ffmpeg.nix
+    ./fish.nix
     ./fuse3.nix
-    ./screen.nix
-    ./speedtest-cli.nix
+    ./gdisk.nix
+    ./git.nix
+    ./gnumake.nix
+    ./htop.nix
+    ./java.nix
+    ./killall.nix
+    ./llvm.nix
+    ./lm_sensors.nix
+    ./mail.nix
+    ./neofetch.nix
+    ./nix-prefetch-github.nix
+    ./openssl.nix
+    ./parallel.nix
+    ./parted.nix
+    ./pciutils.nix
+    ./pkg-config.nix
+    ./pkgconf.nix
     ./python3.nix
     ./rsync.nix
-    ./parallel.nix
     ./rustup.nix
+    ./screen.nix
+    ./speedtest-cli.nix
+    ./thefuck.nix
+    ./usbutils.nix
+    ./uwufetch.nix
+    ./zoxide.nix
   ];
 }

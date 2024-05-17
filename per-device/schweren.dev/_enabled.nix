@@ -3,11 +3,12 @@
 {
   imports = [
     ./users/_enabled.nix
-    ./system.nix
-    ./hostname.nix
-    ./gpu.nix
-    ./services.nix
+    
     ./desktop.nix
+    ./gpu.nix
+    ./hostname.nix
     ./programs.nix
+    ./services.nix
+    ./system.nix
   ];
 }
