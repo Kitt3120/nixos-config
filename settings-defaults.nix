@@ -61,5 +61,22 @@
         };
       };
     };
+
+    smartd = {
+      temperatureChangeThreshold = lib.mkOption {
+        default = 4;
+        type = lib.types.int;
+      };
+
+      temperatureLog = lib.mkOption {
+        default = 35;
+        type = lib.types.int;
+      };
+
+      temperatureMax = lib.mkOption {
+        default = 40;
+        type = lib.types.int;
+      };
+    };
   };
 }

@@ -12,6 +12,6 @@
     ./openssh.nix
     ./packagekit.nix
     ./timesyncd.nix
-    #./smartd.nix # TODO: Enable again
+    ./smartd.nix
   ];
 }
