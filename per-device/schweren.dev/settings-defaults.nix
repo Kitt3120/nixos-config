@@ -12,7 +12,7 @@
 
           ssh = {
             authorizedKeys = lib.mkOption {
-              default = [ ];
+              default = [];
               type = lib.types.listOf lib.types.str;
             };
           };
@@ -26,7 +26,7 @@
 
           ssh = {
             authorizedKeys = lib.mkOption {
-              default = [ ];
+              default = [];
               type = lib.types.listOf lib.types.str;
             };
           };
