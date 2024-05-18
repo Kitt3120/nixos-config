@@ -14,7 +14,7 @@
   environment.systemPackages = with pkgs; [ 
     kdePackages.sddm-kcm
     kdePackages.flatpak-kcm
-    kdePackages.plasma-disks # TODO: Enable again when plasma-disks has been fixed
+    kdePackages.plasma-disks
     kdePackages.kde-gtk-config
     kdePackages.packagekit-qt
     kdePackages.plasma-nm
