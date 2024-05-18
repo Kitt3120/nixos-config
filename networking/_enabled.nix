@@ -3,5 +3,6 @@
 {
   imports = [
     ./firewall.nix
+    ./nftables.nix
   ];
 }
