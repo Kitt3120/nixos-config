@@ -14,5 +14,6 @@
     ../../services/per-device/powermanagement.nix
     ../../services/per-device/powertop.nix
     ../../services/per-device/thermald.nix
+    ../../services/per-device/smartd.nix
   ];
 }

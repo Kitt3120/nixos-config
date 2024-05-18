@@ -12,6 +12,5 @@
     ./openssh.nix
     ./packagekit.nix
     ./timesyncd.nix
-    ./smartd.nix
   ];
 }
