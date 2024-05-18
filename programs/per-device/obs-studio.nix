@@ -13,10 +13,9 @@
             obs-pipewire-audio-capture
             obs-gstreamer
             obs-vaapi
-            #obs-source-clone # TODO: Enable again when updated
+            obs-source-clone
             obs-scale-to-sound
             obs-rgb-levels-filter
-            obs-multi-rtmp
             obs-composite-blur
             obs-command-source
             obs-backgroundremoval
