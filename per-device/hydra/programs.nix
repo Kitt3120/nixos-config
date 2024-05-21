@@ -28,6 +28,7 @@
     ../../programs/per-device/john.nix
     ../../programs/per-device/joplin.nix
     ../../programs/per-device/kdenlive.nix
+    ../../programs/per-device/kitty.nix
     ../../programs/per-device/krita.nix
     ../../programs/per-device/libnotify.nix
     ../../programs/per-device/linux-wifi-hotspot.nix
