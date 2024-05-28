@@ -61,5 +61,12 @@
         };
       };
     };
+
+    wireguard = {
+      interfaces = lib.mkOption {
+        default = { };
+        type = lib.types.attrs;
+      };
+    };
   };
 }
