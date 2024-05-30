@@ -3,6 +3,7 @@
 {
   imports = [
     ./appimage-run.nix
+    ./aria2.nix
     ./btop.nix
     ./cpupower.nix
     ./dfc.nix
