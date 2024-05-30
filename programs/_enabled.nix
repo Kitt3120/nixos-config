@@ -35,6 +35,7 @@
     ./thefuck.nix
     ./usbutils.nix
     ./uwufetch.nix
+    ./wget.nix
     ./zoxide.nix
   ];
 }
