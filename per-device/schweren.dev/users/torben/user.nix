@@ -11,6 +11,7 @@
       "kvm"
       "libvirt"
       "libvirt-qemu"
+      "libvirtd"
       "docker"
       "gamemode"
       "audio"
