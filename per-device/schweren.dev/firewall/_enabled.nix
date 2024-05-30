@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./firewall.nix
-    ./wireguard.nix
+    ./mailcow.nix
+    ./minecraft-mdj.nix
   ];
 }
