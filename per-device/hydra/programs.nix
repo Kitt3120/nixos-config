@@ -30,6 +30,7 @@
     ../../programs/per-device/kdenlive.nix
     ../../programs/per-device/kitty.nix
     ../../programs/per-device/krita.nix
+    ../../programs/per-device/libreoffice.nix
     ../../programs/per-device/libnotify.nix
     ../../programs/per-device/linux-wifi-hotspot.nix
     ../../programs/per-device/lutris.nix
@@ -41,6 +42,7 @@
     ../../programs/per-device/nvtop.nix
     ../../programs/per-device/obs-studio.nix
     ../../programs/per-device/onedrive-gui.nix
+    ../../programs/per-device/onlyoffice.nix
     ../../programs/per-device/osu-lazer.nix
     ../../programs/per-device/prism-launcher.nix
     ../../programs/per-device/qflipper.nix
