@@ -10,6 +10,12 @@ let
         exit 1
       fi
 
+      APP_NAME="NixOS"
+      TITLE="Upgrade"
+
+      echo "Sending upgrade start notification..."
+      notify-send -a "$APP_NAME" -u "normal" "$TITLE" "Starting upgrade..."
+
       sleep 1 # Give nixos-upgrade.service some time to start
 
       echo "Waiting for nixos-upgrade.service to finish..."
@@ -21,9 +27,6 @@ let
       echo "nixos-upgrade.service has finished"
       
       echo "nixos-upgrade.service status: $SERVICE_STATUS"
-
-      APP_NAME="NixOS"
-      TITLE="Upgrade"
       
       if [[ $STATUS == "inactive" ]]; then
         echo "Sending success notification"
