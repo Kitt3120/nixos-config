@@ -34,6 +34,7 @@
     ./screen.nix
     ./speedtest-cli.nix
     ./thefuck.nix
+    ./tldr.nix
     ./usbutils.nix
     ./uwufetch.nix
     ./wget.nix
