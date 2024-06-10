@@ -11,6 +11,7 @@ in {
   imports = [ (import stylix).nixosModules.stylix ];
 
   stylix = {
+    enable = true;
     polarity = "dark";
 
     image = pkgs.fetchurl {
