@@ -12,6 +12,7 @@
     ./fish.nix
     ./fuse3.nix
     ./gdisk.nix
+    ./gh.nix
     ./git.nix
     ./gnumake.nix
     ./htop.nix
