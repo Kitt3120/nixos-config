@@ -7,7 +7,7 @@
     ../../system/per-device/bootloader/grub-osprober.nix
     ../../system/per-device/bootloader/grub.nix
     ../../system/per-device/iio-sensor.nix
-    ../../system/per-device/inputmodule.nix
+    #../../system/per-device/inputmodule.nix # TODO: Enable again when merged
     ../../system/per-device/kernel/modules/framework.nix
     ../../system/per-device/kernel/zen.nix
     ../../system/per-device/microcode/amd.nix
