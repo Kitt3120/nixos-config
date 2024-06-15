@@ -5,6 +5,7 @@
     ./appimage-run.nix
     ./aria2.nix
     ./btop.nix
+    ./btrfs-progs.nix
     ./cpupower.nix
     ./dfc.nix
     ./fdisk.nix
