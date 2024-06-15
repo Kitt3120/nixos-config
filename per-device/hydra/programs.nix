@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../programs/per-device/adb.nix
     ../../programs/per-device/aircrack-ng.nix
     ../../programs/per-device/ani-cli.nix
     ../../programs/per-device/audacity.nix
@@ -20,6 +21,7 @@
     ../../programs/per-device/gamescope.nix
     ../../programs/per-device/gparted.nix
     ../../programs/per-device/gradle.nix
+    ../../programs/per-device/gsmartcontrol.nix
     ../../programs/per-device/handbrake.nix
     ../../programs/per-device/hashcat.nix
     ../../programs/per-device/imagemagick.nix
@@ -34,6 +36,7 @@
     ../../programs/per-device/libnotify.nix
     ../../programs/per-device/linux-wifi-hotspot.nix
     ../../programs/per-device/lutris.nix
+    ../../programs/per-device/lshw-gui.nix
     ../../programs/per-device/mangohud.nix
     ../../programs/per-device/maven.nix
     ../../programs/per-device/mdk4.nix
@@ -56,7 +59,7 @@
     ../../programs/per-device/teams-for-linux.nix
     ../../programs/per-device/thunderbird.nix
     ../../programs/per-device/tor-browser.nix
-    ../../programs/per-device/ungoogled-chromium.nix
+    #../../programs/per-device/ungoogled-chromium.nix # TODO: Enable again when cached on nix servers, compilation takes over 5 hours
     ../../programs/per-device/ventoy.nix
     ../../programs/per-device/vintage-story.nix
     ../../programs/per-device/vlc.nix
