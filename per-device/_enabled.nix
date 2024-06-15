@@ -8,6 +8,7 @@
 {
   imports = [
     #./hydra/_enabled.nix
+    #./modulosaurus/_enabled.nix
     #./schweren.dev/_enabled.nix
   ];
 }
