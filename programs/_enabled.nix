@@ -20,6 +20,7 @@
     ./killall.nix
     ./llvm.nix
     ./lm_sensors.nix
+    ./lshw.nix
     ./mail.nix
     ./neofetch.nix
     ./nix-prefetch-github.nix
@@ -38,6 +39,7 @@
     ./tldr.nix
     ./usbutils.nix
     ./uwufetch.nix
+    ./vim.nix
     ./wget.nix
     ./zoxide.nix
   ];
