@@ -44,6 +44,20 @@
     kdePackages.kolourpaint
     #kdePackages.kamoso # TODO: Enable again when package updated
     kdePackages.filelight
+    kdePackages.isoimagewriter
+    kdePackages.kbackup
+    kdePackages.kcalc
+    kdePackages.kcharselect
+    kdePackages.partitionmanager
+    kdePackages.kdebugsettings
+    kdePackages.keysmith
+    kdePackages.kfind
+    kdePackages.kgpg
+    kdePackages.kmousetool
+    kdePackages.krdc
+    kdePackages.krfb
+    kdePackages.ksystemlog
+    kdePackages.kweather
     kwalletcli
     libheif
     xwaylandvideobridge
