@@ -12,53 +12,54 @@
   };
   
   environment.systemPackages = with pkgs; [ 
-    kdePackages.sddm-kcm
-    kdePackages.flatpak-kcm
-    kdePackages.plasma-disks
-    kdePackages.kde-gtk-config
-    kdePackages.packagekit-qt
-    kdePackages.plasma-nm
-    kdePackages.plasma-systemmonitor
-    kdePackages.plasma-integration
-    kdePackages.kinfocenter
-    kdePackages.kwallet
-    kdePackages.kwallet-pam
     kdePackages.baloo
     kdePackages.bluedevil
-    kdePackages.plasma-browser-integration
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.kdesdk-thumbnailers
-    kdePackages.kimageformats
-    kdePackages.qtimageformats
-    kdePackages.ffmpegthumbs
-    kdePackages.taglib
-    kdePackages.kio-extras
-    kdePackages.yakuake
-    kdePackages.spectacle
-    kdePackages.skanpage
-    kdePackages.okular
-    kdePackages.kate
-    kdePackages.konsole
     kdePackages.discover
     kdePackages.dolphin
-    kdePackages.kolourpaint
-    #kdePackages.kamoso # TODO: Enable again when package updated
-    libsForQt5.kamoso # Instead using Plasma 5 version
+    kdePackages.ffmpegthumbs
     kdePackages.filelight
+    kdePackages.flatpak-kcm
     kdePackages.isoimagewriter
+    kdePackages.kate
     kdePackages.kbackup
     kdePackages.kcalc
     kdePackages.kcharselect
-    kdePackages.partitionmanager
+    kdePackages.kde-gtk-config
     kdePackages.kdebugsettings
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.kdesdk-thumbnailers
     kdePackages.keysmith
     kdePackages.kfind
     kdePackages.kgpg
+    kdePackages.kimageformats
+    kdePackages.kinfocenter
+    kdePackages.kio-extras
     kdePackages.kmousetool
+    kdePackages.kolourpaint
+    kdePackages.konsole
     kdePackages.krdc
     kdePackages.krfb
     kdePackages.ksystemlog
+    kdePackages.kwallet
+    kdePackages.kwallet-pam
     kdePackages.kweather
+    kdePackages.okular
+    kdePackages.packagekit-qt
+    kdePackages.partitionmanager
+    kdePackages.plasma-browser-integration
+    kdePackages.plasma-disks
+    kdePackages.plasma-integration
+    kdePackages.plasma-nm
+    kdePackages.plasma-systemmonitor
+    kdePackages.plasma-workspace-wallpapers
+    kdePackages.qtimageformats
+    kdePackages.sddm-kcm
+    kdePackages.skanpage
+    kdePackages.spectacle
+    kdePackages.taglib
+    kdePackages.yakuake
+    libsForQt5.kamoso # Instead using Plasma 5 version
+    #kdePackages.kamoso # TODO: Enable again when package updated
     kwalletcli
     libheif
     xwaylandvideobridge
