@@ -43,6 +43,7 @@
     kdePackages.dolphin
     kdePackages.kolourpaint
     #kdePackages.kamoso # TODO: Enable again when package updated
+    libsForQt5.kamoso # Instead using Plasma 5 version
     kdePackages.filelight
     kdePackages.isoimagewriter
     kdePackages.kbackup
