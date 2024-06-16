@@ -11,7 +11,6 @@
     ../../programs/per-device/bitwarden.nix
     ../../programs/per-device/blender.nix
     ../../programs/per-device/burpsuite.nix
-    ../../programs/per-device/cpupower-gui.nix
     ../../programs/per-device/discord.nix
     ../../programs/per-device/dolphin-emulator.nix
     ../../programs/per-device/easyeffects.nix
