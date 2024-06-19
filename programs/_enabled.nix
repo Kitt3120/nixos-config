@@ -16,6 +16,7 @@
     ./gh.nix
     ./git.nix
     ./gnumake.nix
+    ./gnutar.nix
     ./htop.nix
     ./java.nix
     ./killall.nix
@@ -38,10 +39,14 @@
     ./speedtest-cli.nix
     ./thefuck.nix
     ./tldr.nix
+    ./unzip.nix
     ./usbutils.nix
     ./uwufetch.nix
     ./vim.nix
     ./wget.nix
+    ./xz.nix
+    ./zip.nix
     ./zoxide.nix
+    ./zstd.nix
   ];
 }
