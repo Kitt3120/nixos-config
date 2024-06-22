@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  hardware.opengl = {
+  hardware.graphics = {
     extraPackages = with pkgs; [
       rocmPackages.clr.icd
       radeontop
