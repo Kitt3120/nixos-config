@@ -8,8 +8,10 @@
 
   xdg.portal = {
     extraPortals = [ pkgs.xdg-desktop-portal-kde ];
-    config.common.default = lib.mkDefault "kde";
+    config.common.default = "kde";
   };
+
+  networking.firewall.allowedTCPPorts = [ 3389 ]; # Allow new built-in RDP on Plasma 6.1+
   
   environment.systemPackages = with pkgs; [ 
     kdePackages.baloo
@@ -51,12 +53,15 @@
     kdePackages.plasma-integration
     kdePackages.plasma-nm
     kdePackages.plasma-systemmonitor
+    kdePackages.plasma-wayland-protocols
     kdePackages.plasma-workspace-wallpapers
     kdePackages.qtimageformats
     kdePackages.sddm-kcm
     kdePackages.skanpage
     kdePackages.spectacle
+    kdePackages.systemsettings
     kdePackages.taglib
+    kdePackages.wayland
     kdePackages.yakuake
     libsForQt5.kamoso # Instead using Plasma 5 version
     #kdePackages.kamoso # TODO: Enable again when package updated
