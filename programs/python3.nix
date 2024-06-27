@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ python3 python312Packages.pip ];
+  environment.systemPackages = with pkgs; [ python312 python312Packages.pip ];
 }
