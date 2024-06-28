@@ -8,5 +8,6 @@
     ./nixgc.nix
     ./polkit.nix
     ./time.nix
+    ./ulimit.nix
   ];
 }
