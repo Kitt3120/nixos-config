@@ -9,6 +9,5 @@
     ../../services/per-device/onedrive.nix
     ../../services/per-device/openrgb.nix
     ../../services/per-device/opentabletdriver.nix
-    ../../services/per-device/smartd.nix
   ];
 }

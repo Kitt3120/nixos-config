@@ -20,7 +20,6 @@
     ../../programs/per-device/gamescope.nix
     ../../programs/per-device/gparted.nix
     ../../programs/per-device/gradle.nix
-    ../../programs/per-device/gsmartcontrol.nix
     ../../programs/per-device/handbrake.nix
     ../../programs/per-device/hashcat.nix
     ../../programs/per-device/imagemagick.nix
