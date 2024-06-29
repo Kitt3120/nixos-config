@@ -45,6 +45,7 @@
     ../../programs/per-device/onedrive-gui.nix
     ../../programs/per-device/onlyoffice.nix
     ../../programs/per-device/osu-lazer.nix
+    ../../programs/per-device/plex-media-player.nix
     ../../programs/per-device/prism-launcher.nix
     ../../programs/per-device/qflipper.nix
     ../../programs/per-device/radeontop.nix
