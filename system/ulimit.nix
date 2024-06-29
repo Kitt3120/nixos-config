@@ -6,7 +6,7 @@
       domain = "*";
       item = "nofile";
       type = "-";
-      value = "10240";
+      value = "524288"; # https://github.com/lutris/docs/blob/master/HowToEsync.md
     }
   ];
 }
