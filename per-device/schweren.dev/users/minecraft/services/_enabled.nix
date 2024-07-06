@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./minecraft-mdj.nix
+    #./minecraft-mdj.nix
+    ./minecraft-scary.nix
   ];
 }
