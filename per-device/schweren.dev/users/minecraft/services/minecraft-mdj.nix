@@ -8,4 +8,6 @@ in
     home.packages = [ mdj.scripts.manager mdj.scripts.start mdj.scripts.stop ];
     systemd.user.services.minecraft-mdj = mdj.systemd.unit;
   };
+
+  networking.firewall.allowedTCPPorts = [ 25565 ];
 }

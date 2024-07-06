@@ -3,6 +3,5 @@
 {
   imports = [
     ./mailcow.nix
-    ./minecraft-mdj.nix
   ];
 }
