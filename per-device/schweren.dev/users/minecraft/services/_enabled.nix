@@ -3,6 +3,7 @@
 {
   imports = [
     #./minecraft-mdj.nix
-    ./minecraft-scary.nix
+    #./minecraft-scary.nix
+    ./minecraft-adventure.nix
   ];
 }
