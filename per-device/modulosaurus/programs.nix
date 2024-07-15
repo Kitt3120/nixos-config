@@ -58,7 +58,7 @@
     ../../programs/per-device/teams-for-linux.nix
     ../../programs/per-device/thunderbird.nix
     ../../programs/per-device/tor-browser.nix
-    #../../programs/per-device/ungoogled-chromium.nix # TODO: Enable again when cached on nix servers, compilation takes over 5 hours
+    ../../programs/per-device/ungoogled-chromium.nix
     ../../programs/per-device/ventoy.nix
     ../../programs/per-device/vintage-story.nix
     ../../programs/per-device/vlc.nix
