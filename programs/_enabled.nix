@@ -37,7 +37,7 @@
     ./rustup.nix
     ./screen.nix
     ./speedtest-cli.nix
-    #./thefuck.nix # TODO: Enable again when package fixed
+    ./thefuck.nix
     ./tldr.nix
     ./unzip.nix
     ./usbutils.nix
