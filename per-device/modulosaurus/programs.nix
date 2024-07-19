@@ -49,7 +49,6 @@
     ../../programs/per-device/prism-launcher.nix
     ../../programs/per-device/qflipper.nix
     ../../programs/per-device/qrtool.nix
-    ../../programs/per-device/radeontop.nix
     ../../programs/per-device/remmina.nix
     ../../programs/per-device/retroarch.nix
     ../../programs/per-device/ryzen-monitor-ng.nix
