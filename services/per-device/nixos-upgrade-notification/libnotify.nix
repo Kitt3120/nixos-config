@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-# The button to open the terminal on failure is not working yet
+# TODO: The button to open the terminal on failure is not working yet
 
 let
   nixos-upgrade-notification-libnotify = (
