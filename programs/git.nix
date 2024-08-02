@@ -23,8 +23,12 @@
 
       alias = {
         as = "!git add . && git status";
+        ds = "diff --staged";
+        ads = "!git add . && git diff --staged";
         bvs = "!git branch -v --sort=committerdate";
         bvas = "!git branch -va --sort=committerdate";
+        rebaseFromMain = "!git stash && git checkout main && git fetch --all -p && git pull && git checkout - && git rebase main && git stash pop";
+        rebaseFromMaster = "!git stash && git checkout master && git fetch --all -p && git pull && git checkout - && git rebase master && git stash pop";
       };
     };
   };
