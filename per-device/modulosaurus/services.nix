@@ -4,6 +4,7 @@
   imports = [
     ../../services/per-device/ckb-next.nix
     ../../services/per-device/flatpak.nix
+    ../../services/per-device/media-pipelines.nix
     ../../services/per-device/mullvad.nix
     ../../services/per-device/nixos-upgrade-notification/libnotify.nix
     ../../services/per-device/onedrive.nix
