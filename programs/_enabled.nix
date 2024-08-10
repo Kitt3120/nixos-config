@@ -8,6 +8,7 @@
     ./btrfs-progs.nix
     ./cpupower.nix
     ./dfc.nix
+    ./dig.nix
     ./fdisk.nix
     ./ffmpeg.nix
     ./fish.nix
