@@ -42,6 +42,7 @@
     ../../programs/per-device/mdk4.nix
     ../../programs/per-device/mkvtoolnix.nix
     ../../programs/per-device/nextcloud.nix
+    ../../programs/per-device/noson.nix
     ../../programs/per-device/nvtop.nix
     ../../programs/per-device/obs-studio.nix
     ../../programs/per-device/onedrive-gui.nix
