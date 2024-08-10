@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  minecraft = config.mkMinecraftFabricServer "adventure" "/home/minecraft/adventure" "fabric" pkgs.jdk21 "15G" false; # TODO: Put Minecraft servers into settings
+  minecraft = config.mkMinecraftFabricServer "adventure" "/home/minecraft/adventure" "fabric" pkgs.jdk21 "10G" false; # TODO: Put Minecraft servers into settings
 in
 {
   home-manager.users.minecraft = {
