@@ -90,5 +90,24 @@
         type = lib.types.str;
       };
     };
+
+    zabbix = {
+      server = lib.mkOption {
+        default = "";
+        type = lib.types.str;
+      };
+
+      listen = {
+        ip = lib.mkOption {
+          default = "0.0.0.0";
+          type = lib.types.str;
+        };
+
+        port = lib.mkOption {
+          default = 10050;
+          type = lib.types.int;
+        };
+      };
+    };
   };
 }
