@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ ausweisapp ];
+  programs.ausweisapp = {
+    enable = true;
+    openFirewall = true;
+  };
 }
