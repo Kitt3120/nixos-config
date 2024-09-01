@@ -12,8 +12,6 @@
     mesa-demos
     clinfo
     wayland-utils
-    glxinfo
-    driversi686Linux.glxinfo
     libdrm
     libva-vdpau-driver
     driversi686Linux.libva-vdpau-driver
