@@ -8,4 +8,7 @@
     listen = config.zabbix.listen;
     openFirewall = true;
   };
+
+  # Allow the zabbix-agent to access the docker socket
+  users.users.zabbix-agent.extraGroups = [ "docker" ];
 }
