@@ -61,6 +61,7 @@
     ../../programs/per-device/tor-browser.nix
     ../../programs/per-device/ungoogled-chromium.nix
     ../../programs/per-device/ventoy.nix
+    ../../programs/per-device/vesktop.nix
     ../../programs/per-device/vintage-story.nix
     ../../programs/per-device/vlc.nix
     ../../programs/per-device/vscode.nix
