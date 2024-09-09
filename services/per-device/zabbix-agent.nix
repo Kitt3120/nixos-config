@@ -7,6 +7,9 @@
     server = config.zabbix.server;
     listen = config.zabbix.listen;
     openFirewall = true;
+    settings = {
+      "ServerActive" = config.zabbix.server;
+    };
   };
 
   # Allow the zabbix-agent to access the docker socket
