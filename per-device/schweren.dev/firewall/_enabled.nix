@@ -3,5 +3,6 @@
 {
   imports = [
     ./mailcow.nix
+    ./satisfactory.nix
   ];
 }
