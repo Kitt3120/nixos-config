@@ -27,6 +27,7 @@
     ./mail.nix
     ./neofetch.nix
     ./nix-prefetch-github.nix
+    ./nmap.nix
     ./openssl.nix
     ./parallel.nix
     ./parted.nix
