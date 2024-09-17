@@ -25,6 +25,7 @@
     ./lm_sensors.nix
     ./lshw.nix
     ./mail.nix
+    ./ncdu.nix
     ./neofetch.nix
     ./nix-prefetch-github.nix
     ./nmap.nix
