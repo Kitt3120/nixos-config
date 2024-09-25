@@ -25,6 +25,7 @@
         as = "!git add . && git status";
         ds = "diff --staged";
         ads = "!git add . && git diff --staged";
+        fp = "!git fetch --all -p && git pull";
         pf = "push --force-with-lease";
         bvs = "!git branch -v --sort=committerdate";
         bvas = "!git branch -va --sort=committerdate";
