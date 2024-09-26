@@ -28,6 +28,7 @@
     ./ncdu.nix
     ./neofetch.nix
     ./nix-prefetch-github.nix
+    ./nixfmt.nix
     ./nmap.nix
     ./openssl.nix
     ./parallel.nix
