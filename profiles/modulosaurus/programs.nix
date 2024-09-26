@@ -12,7 +12,6 @@
     ../../programs/blender.nix
     ../../programs/burpsuite.nix
     ../../programs/corectrl.nix
-    ../../programs/discord.nix
     ../../programs/dolphin-emulator.nix
     ../../programs/easyeffects.nix
     ../../programs/firefox-nightly.nix
@@ -66,7 +65,6 @@
     ../../programs/vintage-story.nix
     ../../programs/vlc.nix
     ../../programs/vscode.nix
-    ../../programs/webcord.nix
     ../../programs/wifite2.nix
     ../../programs/wine-staging.nix
     ../../programs/wootility.nix
