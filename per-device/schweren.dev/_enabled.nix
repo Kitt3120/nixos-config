@@ -4,7 +4,7 @@
   imports = [
     ./firewall/_enabled.nix
     ./users/_enabled.nix
-    
+
     ./hostname.nix
     ./networking.nix
     ./programs.nix

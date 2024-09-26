@@ -25,9 +25,9 @@ let
         STATUS=$(systemctl is-active nixos-upgrade.service)
       done
       echo "nixos-upgrade.service has finished"
-      
+
       echo "nixos-upgrade.service status: $SERVICE_STATUS"
-      
+
       if [[ $STATUS == "inactive" ]]; then
         echo "Sending success notification"
         notify-send -a "$APP_NAME" -u "normal" "$TITLE" "Completed successfully"

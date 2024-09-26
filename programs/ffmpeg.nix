@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ ffmpeg-full ];  
+  environment.systemPackages = with pkgs; [ ffmpeg-full ];
 }

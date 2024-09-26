@@ -1,11 +1,17 @@
 { config, pkgs, ... }:
 
 let
-  minecraft = config.mkMinecraftFabricServer "adventure" "/home/minecraft/adventure" "fabric" pkgs.jdk21 "10G" false; # TODO: Put Minecraft servers into settings
+  minecraft =
+    config.mkMinecraftFabricServer "adventure" "/home/minecraft/adventure" "fabric" pkgs.jdk21 "10G"
+      false; # TODO: Put Minecraft servers into settings
 in
 {
   home-manager.users.minecraft = {
-    home.packages = [ minecraft.scripts.manager minecraft.scripts.start minecraft.scripts.stop ];
+    home.packages = [
+      minecraft.scripts.manager
+      minecraft.scripts.start
+      minecraft.scripts.stop
+    ];
     systemd.user.services.minecraft-adventure = minecraft.systemd.unit;
   };
 

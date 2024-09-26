@@ -2,7 +2,7 @@
 
 {
   gtk.iconCache.enable = true;
-  
+
   environment.systemPackages = with pkgs; [
     gtk2
     gtk3

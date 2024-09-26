@@ -1,11 +1,18 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   options.mkMinecraftFabricServer = lib.mkOption {
-    default = name: directory: jarname: java: RAM: debug:
+    default =
+      name: directory: jarname: java: RAM: debug:
       let
-        minecraft-manager = with pkgs; (
-          writeShellScriptBin "minecraft-${name}" ''
+        minecraft-manager =
+          with pkgs;
+          (writeShellScriptBin "minecraft-${name}" ''
             function start_attach {
               if ! ${screen}/bin/screen -list | grep -q minecraft-${name}; then
                 echo Seems like the ${name} is not running. Starting ${name}...
@@ -57,11 +64,11 @@
             }
 
             menu
-          ''
-        );
+          '');
 
-        minecraft-start = with pkgs; (
-          writeShellScriptBin "minecraft-${name}-start" ''
+        minecraft-start =
+          with pkgs;
+          (writeShellScriptBin "minecraft-${name}-start" ''
             COMMAND_CD="cd ${directory}"
             COMMAND_JAVA="${java}/bin/java -Xms${RAM} -Xmx${RAM}"
             COMMAND_IPV6="-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
@@ -95,47 +102,46 @@
             ${screen}/bin/screen -S minecraft-${name} -X stuff " | "
             ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_TEE"
             echo ${name} started
-          ''
-        );
+          '');
 
-        minecraft-stop = with pkgs; (
-          writeShellScriptBin "minecraft-${name}-stop" ''
+        minecraft-stop =
+          with pkgs;
+          (writeShellScriptBin "minecraft-${name}-stop" ''
             if ${screen}/bin/screen -list | ${gnugrep}/bin/grep -q minecraft-${name};
             then
               ${screen}/bin/screen -S minecraft-${name} -X stuff "stop^M" && while ${screen}/bin/screen -list | ${gnugrep}/bin/grep -q minecraft-${name}; do ${coreutils}/bin/sleep 1; done && echo ${name} stopped
             else
               echo ${name} is not running
             fi
-          ''
-        );
+          '');
       in
-        {
-          scripts = {
-            manager = minecraft-manager;
-            start = minecraft-start;
-            stop = minecraft-stop;
+      {
+        scripts = {
+          manager = minecraft-manager;
+          start = minecraft-start;
+          stop = minecraft-stop;
+        };
+
+        systemd.unit = {
+          Unit = {
+            Description = "Minecraft ${name}";
+            After = [ "network.target" ];
+            Wants = [ "network.target" ];
           };
 
-          systemd.unit = {
-            Unit = {
-              Description = "Minecraft ${name}";
-              After = [ "network.target" ];
-              Wants = [ "network.target" ];
-            };
+          Service = {
+            Type = "oneshot";
+            RemainAfterExit = true;
+            WorkingDirectory = "${directory}";
+            ExecStart = "${minecraft-start}/bin/minecraft-${name}-start";
+            ExecStop = "${minecraft-stop}/bin/minecraft-${name}-stop";
+          };
 
-            Service = {
-              Type = "oneshot";
-              RemainAfterExit = true;
-              WorkingDirectory = "${directory}";
-              ExecStart = "${minecraft-start}/bin/minecraft-${name}-start";
-              ExecStop = "${minecraft-stop}/bin/minecraft-${name}-stop";
-            };
-
-            Install = {
-              WantedBy = [ "default.target" ];
-            };
+          Install = {
+            WantedBy = [ "default.target" ];
           };
         };
+      };
     type = lib.types.anything;
   };
 }

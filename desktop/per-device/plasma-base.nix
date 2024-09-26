@@ -1,7 +1,12 @@
 # DO NOT IMPORT THIS MODULE MANUALLY
 # This module gets imported by the plasma5 and plasma6 modules
 
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.kdeconnect.enable = true;
@@ -12,8 +17,8 @@
   };
 
   networking.firewall.allowedTCPPorts = [ 3389 ]; # Allow new built-in RDP on Plasma 6.1+
-  
-  environment.systemPackages = with pkgs; [ 
+
+  environment.systemPackages = with pkgs; [
     kdePackages.baloo
     kdePackages.bluedevil
     kdePackages.discover

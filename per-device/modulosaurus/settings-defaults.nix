@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   options = {
@@ -12,12 +17,12 @@
 
           ssh = {
             authorizedKeys = lib.mkOption {
-              default = [];
+              default = [ ];
               type = lib.types.listOf lib.types.str;
             };
 
             blocks = lib.mkOption {
-              default = [];
+              default = [ ];
               type = lib.types.listOf lib.types.str;
             };
           };

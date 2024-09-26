@@ -8,11 +8,10 @@
   ];
 
   home-manager.users = config.mapAllUsersToSet (user: {
-      "${user}".xdg.configFile."kitty/kitty.conf".text = ''
-        term xterm-256color
-        shell_integration enabled
-        confirm_os_window_close -1
-      '';
-    }
-  );
+    "${user}".xdg.configFile."kitty/kitty.conf".text = ''
+      term xterm-256color
+      shell_integration enabled
+      confirm_os_window_close -1
+    '';
+  });
 }

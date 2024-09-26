@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   options = {
@@ -12,7 +17,7 @@
 
           ssh = {
             authorizedKeys = lib.mkOption {
-              default = [];
+              default = [ ];
               type = lib.types.listOf lib.types.str;
             };
           };
@@ -26,7 +31,7 @@
 
           ssh = {
             authorizedKeys = lib.mkOption {
-              default = [];
+              default = [ ];
               type = lib.types.listOf lib.types.str;
             };
           };
@@ -44,7 +49,7 @@
         default = "";
         type = lib.types.str;
       };
-      
+
       Nickname = lib.mkOption {
         default = "";
         type = lib.types.str;

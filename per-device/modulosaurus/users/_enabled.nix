@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./torben/_enabled.nix
-  ];
+  imports = [ ./torben/_enabled.nix ];
 }

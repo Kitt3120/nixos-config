@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # See https://nixos.wiki/wiki/Nvidia
   hardware.nvidia = {

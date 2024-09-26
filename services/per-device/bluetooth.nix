@@ -1,12 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  hardware.bluetooth =  {
+  hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };
 
-  environment.systemPackages = with pkgs; [ 
-    bluez-tools
-  ];
+  environment.systemPackages = with pkgs; [ bluez-tools ];
 }

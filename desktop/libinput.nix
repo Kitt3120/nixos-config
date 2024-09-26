@@ -2,7 +2,7 @@
 
 {
   services.libinput = {
-      enable = true;
-      touchpad.naturalScrolling = true;
-    };
+    enable = true;
+    touchpad.naturalScrolling = true;
+  };
 }

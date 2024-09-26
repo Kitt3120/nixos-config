@@ -3,84 +3,84 @@
 let
   media-pipelines = (
     pkgs.writeShellScriptBin "media-pipelines" ''
-        if ! command -v HandBrakeCLI > /dev/null; then
-            echo "HandBrakeCLI is not installed. Please install it to run media-pipelines." >&2
-            exit 1
-        fi
+      if ! command -v HandBrakeCLI > /dev/null; then
+          echo "HandBrakeCLI is not installed. Please install it to run media-pipelines." >&2
+          exit 1
+      fi
 
-        if [ ! -f "/home/$(whoami)/.config/ghb/presets.json" ]; then
-            echo "HandBrake presets file not found. Please run HandBrake GUI at least once to generate it." >&2
-            exit 1
-        fi
+      if [ ! -f "/home/$(whoami)/.config/ghb/presets.json" ]; then
+          echo "HandBrake presets file not found. Please run HandBrake GUI at least once to generate it." >&2
+          exit 1
+      fi
 
-        function handbrake {
-            mkdir -p HandBrake
-            cd ./HandBrake
+      function handbrake {
+          mkdir -p HandBrake
+          cd ./HandBrake
 
-            IFS=$'\n'
-            for profile in $(find . -maxdepth 1 -type d ! -name . -printf '%f\n')
-            do
-                echo "$profile:"
+          IFS=$'\n'
+          for profile in $(find . -maxdepth 1 -type d ! -name . -printf '%f\n')
+          do
+              echo "$profile:"
 
-                mkdir -p "./$profile/Successful"
-                mkdir -p "./$profile/Failed"
-                mkdir -p "./$profile/Output"
+              mkdir -p "./$profile/Successful"
+              mkdir -p "./$profile/Failed"
+              mkdir -p "./$profile/Output"
 
-                cd "./$profile"
+              cd "./$profile"
 
-                for file in $(find . -maxdepth 1 -type f \( -name "*.mp4" -o -name "*.mov" -o -name "*.avi" -o -name "*.wmv" -o -name "*.flv" -o -name "*.mkv" -o -name "*.webm" \))
-                do
-                    file=$(basename "$file")
-                    echo -n "> $file..."
-                    error_output=$(HandBrakeCLI -i "$file" -o "./Output/$file" --preset-import-gui -Z "$profile" 2>&1 >/dev/null)
-                    if [ $? -eq 0 ]; then
-                        mv "$file" "./Successful/$file"
-                        echo -e "\r> $file ✅"
-                    else
-                        mv "$file" "./Failed/$file"
-                        echo -e "\r> $file ❌: $error_output"
-                    fi
-                done
+              for file in $(find . -maxdepth 1 -type f \( -name "*.mp4" -o -name "*.mov" -o -name "*.avi" -o -name "*.wmv" -o -name "*.flv" -o -name "*.mkv" -o -name "*.webm" \))
+              do
+                  file=$(basename "$file")
+                  echo -n "> $file..."
+                  error_output=$(HandBrakeCLI -i "$file" -o "./Output/$file" --preset-import-gui -Z "$profile" 2>&1 >/dev/null)
+                  if [ $? -eq 0 ]; then
+                      mv "$file" "./Successful/$file"
+                      echo -e "\r> $file ✅"
+                  else
+                      mv "$file" "./Failed/$file"
+                      echo -e "\r> $file ❌: $error_output"
+                  fi
+              done
 
-                cd ..
-            done
-            unset IFS
+              cd ..
+          done
+          unset IFS
 
-            cd ..
-        }
+          cd ..
+      }
 
-        function cleanup {
-            IFS=$'\n'
-            for file in $(find . -type f -mtime +7 -not -name "*.sh" -not -name "*.directory")
-            do
-                echo "> $file"
-                rm "$file"
-            done
-            unset IFS
-        }
+      function cleanup {
+          IFS=$'\n'
+          for file in $(find . -type f -mtime +7 -not -name "*.sh" -not -name "*.directory")
+          do
+              echo "> $file"
+              rm "$file"
+          done
+          unset IFS
+      }
 
-        previous_working_dir="$(pwd)"
-        pipelines_dir="/home/$(whoami)/Pipelines"
-        mkdir -p "$pipelines_dir"
-        cd "$pipelines_dir"
+      previous_working_dir="$(pwd)"
+      pipelines_dir="/home/$(whoami)/Pipelines"
+      mkdir -p "$pipelines_dir"
+      cd "$pipelines_dir"
 
-        echo "Pipeline directory: $pipelines_dir"
+      echo "Pipeline directory: $pipelines_dir"
 
-        echo ""
+      echo ""
 
-        echo "Running HandBrake pipeline"
-        handbrake
+      echo "Running HandBrake pipeline"
+      handbrake
 
-        echo ""
+      echo ""
 
-        cd "$pipelines_dir" # Just in case :)
-        echo "Cleaning up old files"
-        cleanup
+      cd "$pipelines_dir" # Just in case :)
+      echo "Cleaning up old files"
+      cleanup
 
-        cd $previous_working_dir
+      cd $previous_working_dir
 
-        exit 0
-        ''
+      exit 0
+    ''
   );
 
   media-pipelines-service = {

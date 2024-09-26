@@ -14,7 +14,6 @@
       "en_US.UTF-8/UTF-8"
     ];
 
-
     defaultLocale = "en_GB.UTF-8";
 
     extraLocaleSettings = {

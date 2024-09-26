@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    kdePackages.plasma-disks
-  ];
+  environment.systemPackages = with pkgs; [ kdePackages.plasma-disks ];
 }

@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../virtualization/per-device/docker.nix
-  ];
+  imports = [ ../../virtualization/per-device/docker.nix ];
 }

@@ -26,7 +26,7 @@
     4070
     4444
     35382
-   ];
+  ];
 
   networking.firewall.allowedUDPPorts = [
     136

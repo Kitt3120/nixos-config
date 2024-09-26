@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   options = {
@@ -19,7 +24,7 @@
           type = lib.types.str;
         };
 
-        from =  lib.mkOption {
+        from = lib.mkOption {
           default = "";
           type = lib.types.str;
         };
@@ -36,7 +41,7 @@
         default = "hourly";
         type = lib.types.str;
       };
-      
+
       persistent = lib.mkOption {
         default = false;
         type = lib.types.bool;

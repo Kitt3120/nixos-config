@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../networking/per-device/nftables.nix
-  ];
+  imports = [ ../../networking/per-device/nftables.nix ];
 }

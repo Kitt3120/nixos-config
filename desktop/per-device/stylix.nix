@@ -1,13 +1,17 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
-  stylix = builtins.fetchGit {
-    url = "https://github.com/danth/stylix.git";
-  };
+  stylix = builtins.fetchGit { url = "https://github.com/danth/stylix.git"; };
 
-  # load stylix from local at /home/torben/Nextcloud/Programmierung/NixOS/stylix/
-  #stylix = import /home/torben/Nextcloud/Programmierung/NixOS/stylix;
-in {
+in
+# load stylix from local at /home/torben/Nextcloud/Programmierung/NixOS/stylix/
+#stylix = import /home/torben/Nextcloud/Programmierung/NixOS/stylix;
+{
   imports = [ (import stylix).nixosModules.stylix ];
 
   stylix = {
