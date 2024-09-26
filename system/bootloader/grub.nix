@@ -8,5 +8,8 @@
     timeoutStyle = "menu";
     efiSupport = true;
     device = "nodev";
+    useOSProber = true;
+    enableCryptodisk = true;
+    memtest86.enable = true;
   };
 }
