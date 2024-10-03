@@ -16,6 +16,7 @@
     ../../../programs/gdisk.nix
     ../../../programs/gh.nix
     ../../../programs/git.nix
+    ../../../programs/gnu-coreutils-full.nix
     ../../../programs/gnumake.nix
     ../../../programs/gnutar.nix
     ../../../programs/htop.nix
@@ -40,6 +41,7 @@
     ../../../programs/rsync.nix
     ../../../programs/rustup.nix
     ../../../programs/screen.nix
+    ../../../programs/scrub.nix
     ../../../programs/speedtest-cli.nix
     ../../../programs/thefuck.nix
     ../../../programs/tldr.nix
