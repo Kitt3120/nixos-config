@@ -21,6 +21,7 @@
     ../../../programs/gnutar.nix
     ../../../programs/htop.nix
     ../../../programs/java.nix
+    ../../../programs/jq.nix
     ../../../programs/killall.nix
     ../../../programs/llvm.nix
     ../../../programs/lm_sensors.nix
