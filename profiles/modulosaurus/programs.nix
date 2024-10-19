@@ -54,6 +54,7 @@
     #../../programs/retroarch.nix # TODO: Enable again
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
+    ../../programs/sqlmap.nix
     ../../programs/steam.nix
     ../../programs/syncplay.nix
     ../../programs/teams-for-linux.nix
