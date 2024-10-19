@@ -68,8 +68,8 @@
     kdePackages.taglib
     kdePackages.wayland
     kdePackages.yakuake
-    libsForQt5.kamoso # Instead using Plasma 5 version
     #kdePackages.kamoso # TODO: Enable again when package updated
+    libsForQt5.kamoso # Instead using Plasma 5 version
     kwalletcli
     libheif
     xwaylandvideobridge
