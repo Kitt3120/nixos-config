@@ -5,6 +5,7 @@
     ../../programs/adb.nix
     ../../programs/aircrack-ng.nix
     ../../programs/ani-cli.nix
+    ../../programs/armitage.nix
     ../../programs/audacity.nix
     ../../programs/ausweisapp.nix
     ../../programs/bambu-studio.nix
@@ -40,6 +41,7 @@
     ../../programs/mangohud.nix
     ../../programs/maven.nix
     ../../programs/mdk4.nix
+    ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/nextcloud.nix
     ../../programs/nhentai.nix
