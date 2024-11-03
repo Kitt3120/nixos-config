@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-sudo mv /etc/nixos/hardware-configuration.nix /tmp/
-sudo rm -rf /etc/nixos/*
+DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+
+sudo mv /etc/nixos /tmp/nixos-$DATE
+sudo mkdir /etc/nixos
 sudo cp -r ./* /etc/nixos
 sudo rm -rf /etc/nixos/switch.sh /etc/nixos/.gitignore /etc/nixos/.git
-sudo mv /tmp/hardware-configuration.nix /etc/nixos/
+sudo cp /tmp/nixos-$DATE/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 sudo chown root:root -R /etc/nixos/
 
 sudo sudo nix-channel --update
-sudo nixos-rebuild switch --upgrade-all
+sudo nixos-rebuild switch --upgrade-all |& nom
