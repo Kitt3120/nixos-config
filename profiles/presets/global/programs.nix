@@ -31,6 +31,7 @@
     ../../../programs/neofetch.nix
     ../../../programs/nix-prefetch-github.nix
     ../../../programs/nixfmt.nix
+    ../../../programs/nix-output-monitor.nix
     ../../../programs/nmap.nix
     ../../../programs/openssl.nix
     ../../../programs/parallel.nix
