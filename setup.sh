@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 
-sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixos
+read -p "Which channel do you want to use?
+1 - nixos-unstable
+2 - nixos-unstable-small
+
+> " CHANNEL
+
+case $CHANNEL in
+  1)
+    CHANNEL="https://channels.nixos.org/nixos-unstable"
+    ;;
+  2)
+    CHANNEL="https://channels.nixos.org/nixos-unstable-small"
+    ;;
+  *)
+    echo "Invalid option"
+    exit 1
+    ;;
+esac
+
+sudo nix-channel --add $CHANNEL nixos
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 
 git update-index --assume-unchanged settings.nix
