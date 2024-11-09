@@ -16,6 +16,7 @@
     ../../programs/cpupower-gui.nix
     ../../programs/dolphin-emulator.nix
     ../../programs/easyeffects.nix
+    ../../programs/evillimiter.nix
     ../../programs/exploitdb.nix
     ../../programs/firefox-nightly.nix
     ../../programs/framework-tool.nix
