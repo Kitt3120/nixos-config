@@ -10,4 +10,10 @@ sudo cp /tmp/nixos-$DATE/hardware-configuration.nix /etc/nixos/hardware-configur
 sudo chown root:root -R /etc/nixos/
 
 sudo sudo nix-channel --update
-sudo nixos-rebuild switch --upgrade-all |& nom
+
+NIX_OUTPUT_MONITOR_INSTALLED=$(command -v nom)
+if [ -x "$NIX_OUTPUT_MONITOR_INSTALLED" ]; then
+  sudo nixos-rebuild switch --upgrade-all |& nom
+else
+  nix-shell -p nix-output-monitor --run "sudo nixos-rebuild switch --upgrade-all |& nom"
+fi
