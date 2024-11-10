@@ -9,6 +9,7 @@
     ../../../system/nixgc.nix
     ../../../system/polkit.nix
     ../../../system/time.nix
+    ../../../system/tmp.nix
     ../../../system/ulimit.nix
   ];
 }
