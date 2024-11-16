@@ -6,6 +6,7 @@
     ../../../desktop/wayland.nix
 
     ../../../desktop/libinput.nix
+    ../../../desktop/inputmethods.nix
 
     ../../../desktop/sddm.nix
 
