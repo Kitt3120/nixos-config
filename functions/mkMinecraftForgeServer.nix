@@ -66,6 +66,7 @@
             menu
           '');
 
+        # TODO: Remove commented out GC options
         minecraft-start =
           with pkgs;
           (writeShellScriptBin "minecraft-${name}-start" ''

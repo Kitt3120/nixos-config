@@ -68,7 +68,7 @@
     kdePackages.taglib
     kdePackages.wayland
     kdePackages.yakuake
-    libsForQt5.kamoso # Plasma 6 version (kdePackages.kamoso) does not build
+    libsForQt5.kamoso # Plasma 5 version (Plasma 6's kdePackages.kamoso) does not build
     kwalletcli
     libheif
     xwaylandvideobridge
