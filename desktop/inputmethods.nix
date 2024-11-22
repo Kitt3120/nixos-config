@@ -21,7 +21,11 @@
   # provides an ibus interface. Can't use ibus for e.g. QT_IM_MODULE though,
   # because that at least breaks mumble
   environment.variables = {
-    GLFW_IM_MODULE = "ibus";
     IBUS_ENABLE_SYNC_MODE = "1";
+    MOZC_IBUS_CANDIDATE_WINDOW = "ibus";
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "ibus";
+    SDL_IM_MODULE = "fcitx";
   };
 }
