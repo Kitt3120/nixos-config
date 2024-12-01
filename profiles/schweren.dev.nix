@@ -6,6 +6,7 @@
 
     ./schweren.dev/firewall/mailcow.nix
     ./schweren.dev/firewall/satisfactory.nix
+    ./schweren.dev/firewall/valheim.nix
 
     ./schweren.dev/users/minecraft/ssh.nix
     ./schweren.dev/users/minecraft/user.nix
