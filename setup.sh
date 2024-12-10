@@ -3,6 +3,7 @@
 read -p "Which channel do you want to use?
 1 - nixos-unstable
 2 - nixos-unstable-small
+3 - nixos-24.11
 
 > " CHANNEL
 
@@ -12,6 +13,9 @@ case $CHANNEL in
     ;;
   2)
     CHANNEL="https://channels.nixos.org/nixos-unstable-small"
+    ;;
+  3)
+    CHANNEL="https://channels.nixos.org/nixos-24.11"
     ;;
   *)
     echo "Invalid option"
