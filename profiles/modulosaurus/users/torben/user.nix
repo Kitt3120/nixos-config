@@ -20,6 +20,7 @@
       "optical"
       "scanner"
       "games"
+      "i2c"
     ];
     createHome = true;
     linger = true;

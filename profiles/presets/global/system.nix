@@ -4,6 +4,7 @@
   imports = [
     ../../../system/autoUpgrade.nix
     ../../../system/firmware.nix
+    ../../../system/i2c.nix
     ../../../system/locale.nix
     ../../../system/networking.nix
     ../../../system/nixgc.nix

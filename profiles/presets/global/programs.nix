@@ -20,6 +20,7 @@
     ../../../programs/gnumake.nix
     ../../../programs/gnutar.nix
     ../../../programs/htop.nix
+    ../../../programs/i2c-tools.nix
     ../../../programs/java.nix
     ../../../programs/jq.nix
     ../../../programs/killall.nix
