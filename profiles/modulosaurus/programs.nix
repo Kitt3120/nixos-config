@@ -63,6 +63,7 @@
     ../../programs/thunderbird.nix
     ../../programs/tor-browser.nix
     ../../programs/ungoogled-chromium.nix
+    ../../programs/uni-sync.nix
     ../../programs/ventoy.nix
     ../../programs/vesktop.nix
     ../../programs/vintage-story.nix
