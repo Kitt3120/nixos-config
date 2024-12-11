@@ -5,9 +5,31 @@
   ...
 }:
 
+# TODO: Remove overrideAttrs workaround and commit the fix to nixpkgs
+let
+  openrgb-master = pkgs.openrgb-with-all-plugins.overrideAttrs (oldAttrs: rec {
+
+    version = "master";
+
+    src = pkgs.fetchFromGitLab {
+      owner = "CalcProgrammer1";
+      repo = "OpenRGB";
+      rev = "master";
+      sha256 = "sha256-cVGMXzpJJ6WQMkNe7YytANmWGM56nNpAX86phW8umKQ=";
+    };
+
+    postPatch = ''
+      patchShebangs scripts/build-udev-rules.sh
+      substituteInPlace scripts/build-udev-rules.sh \
+        --replace /bin/chmod "${pkgs.coreutils}/bin/chmod"
+      substituteInPlace scripts/build-udev-rules.sh \
+        --replace /usr/bin/env "${pkgs.coreutils}/bin/env"
+    '';
+  });
+in
 {
-  environment.systemPackages = with pkgs; [ pkgs.openrgb-with-all-plugins ];
-  services.udev.packages = [ pkgs.openrgb-with-all-plugins ];
+  environment.systemPackages = [ openrgb-master ];
+  services.udev.packages = [ openrgb-master ];
 
   boot.kernelModules =
     [ "i2c-dev" ]
