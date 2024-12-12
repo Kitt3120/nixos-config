@@ -53,6 +53,7 @@
     ../../../programs/uwufetch.nix
     ../../../programs/vim.nix
     ../../../programs/wget.nix
+    ../../../programs/xfsprogs.nix
     ../../../programs/xz.nix
     ../../../programs/zip.nix
     ../../../programs/zoxide.nix
