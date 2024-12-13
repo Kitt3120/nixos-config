@@ -4,6 +4,7 @@
   imports = [
     ../../programs/adb.nix
     ../../programs/aircrack-ng.nix
+    ../../programs/an-anime-team-launchers.nix
     ../../programs/ani-cli.nix
     ../../programs/armitage.nix
     ../../programs/audacity.nix
