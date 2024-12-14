@@ -60,6 +60,7 @@
     kdePackages.plasma-systemmonitor
     kdePackages.plasma-wayland-protocols
     kdePackages.plasma-workspace-wallpapers
+    kdePackages.polkit-kde-agent-1
     kdePackages.qtimageformats
     kdePackages.sddm-kcm
     kdePackages.skanpage
