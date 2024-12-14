@@ -55,6 +55,7 @@
     kdePackages.packagekit-qt
     kdePackages.partitionmanager
     kdePackages.plasma-browser-integration
+    kdePackages.plasma-disks
     kdePackages.plasma-integration
     kdePackages.plasma-nm
     kdePackages.plasma-systemmonitor
