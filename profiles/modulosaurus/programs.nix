@@ -22,6 +22,7 @@
     ../../programs/gamescope.nix
     ../../programs/gparted.nix
     ../../programs/gradle.nix
+    ../../programs/gsmartcontrol.nix
     ../../programs/handbrake.nix
     ../../programs/hashcat.nix
     ../../programs/imagemagick.nix
