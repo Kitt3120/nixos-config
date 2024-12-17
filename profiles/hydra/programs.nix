@@ -6,6 +6,7 @@
     ../../programs/aircrack-ng.nix
     ../../programs/an-anime-team-launchers.nix
     ../../programs/ani-cli.nix
+    ../../programs/anki.nix
     ../../programs/armitage.nix
     ../../programs/audacity.nix
     ../../programs/ausweisapp.nix
