@@ -30,6 +30,9 @@
     ../../../programs/mail.nix
     ../../../programs/ncdu.nix
     ../../../programs/neofetch.nix
+    ../../../programs/nix-alien.nix
+    ../../../programs/nix-index.nix
+    ../../../programs/nix-ld.nix
     ../../../programs/nix-prefetch-github.nix
     ../../../programs/nixfmt.nix
     ../../../programs/nix-output-monitor.nix
