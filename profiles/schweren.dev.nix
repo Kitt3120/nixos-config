@@ -15,6 +15,7 @@
     #./schweren.dev/users/minecraft/services/minecraft-adventure.nix
     #./schweren.dev/users/minecraft/services/minecraft-dud.nix
     ./schweren.dev/users/minecraft/services/minecraft-redstone.nix
+    #./schweren.dev/users/minecraft/services/minecraft-horror.nix
 
     ./schweren.dev/users/torben/git.nix
     ./schweren.dev/users/torben/ssh.nix
