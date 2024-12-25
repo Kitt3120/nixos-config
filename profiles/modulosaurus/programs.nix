@@ -30,7 +30,6 @@
     ../../programs/inkscape.nix
     ../../programs/jetbrains-toolbox.nix
     ../../programs/john.nix
-    ../../programs/joplin.nix
     ../../programs/kdenlive.nix
     ../../programs/kitty.nix
     ../../programs/krita.nix
