@@ -43,7 +43,7 @@
     ../../programs/lshw-gui.nix
     ../../programs/mangohud.nix
     ../../programs/maven.nix
-    ../../programs/mdk4.nix
+    #../../programs/mdk4.nix #TODO: Enable again
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/nextcloud.nix
