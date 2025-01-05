@@ -1,21 +1,34 @@
 { config, pkgs, ... }:
 
 {
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   hardware.graphics = {
     extraPackages = with pkgs; [
-      amdvlk
+      rocmPackages.hipblas
+      rocmPackages.rocblas
+      rocmPackages.clr
       rocmPackages.clr.icd
       radeontop
       radeontools
       radeon-profile
     ];
-
-    extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
   };
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  environment.sessionVariables.AMDVLK_ENABLE_DEVELOPING_EXT = "all";
-  services.xserver.videoDrivers = [ "amdgpu" ];
-
-  systemd.tmpfiles.rules = [ "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}" ];
+  systemd.tmpfiles.rules =
+    let
+      rocmEnv = pkgs.symlinkJoin {
+        name = "rocm-combined";
+        paths = with pkgs.rocmPackages; [
+          rocblas
+          hipblas
+          clr
+          clr.icd
+        ];
+      };
+    in
+    [
+      "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+    ];
 }
