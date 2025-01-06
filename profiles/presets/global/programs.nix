@@ -41,6 +41,7 @@
     ../../../programs/parallel.nix
     ../../../programs/parted.nix
     ../../../programs/pciutils.nix
+    ../../../programs/pigz.nix
     ../../../programs/pkg-config.nix
     ../../../programs/pkgconf.nix
     ../../../programs/python3.nix
