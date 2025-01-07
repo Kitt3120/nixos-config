@@ -37,12 +37,12 @@
       };
 
       temperatureLog = lib.mkOption {
-        default = 60;
+        default = 70;
         type = lib.types.int;
       };
 
       temperatureMax = lib.mkOption {
-        default = 60;
+        default = 70;
         type = lib.types.int;
       };
     };
