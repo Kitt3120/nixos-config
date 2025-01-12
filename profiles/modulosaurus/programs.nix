@@ -43,6 +43,7 @@
     #../../programs/mdk4.nix # TODO: Enable again
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
+    ../../programs/mpv.nix
     ../../programs/nextcloud.nix
     ../../programs/nhentai.nix
     ../../programs/nvtop.nix
