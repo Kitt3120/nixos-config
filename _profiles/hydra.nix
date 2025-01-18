@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./presets/global.nix
-    ./presets/desktop.nix
+    ../_presets/global.nix
+    ../_presets/desktop.nix
 
     ./hydra/desktop.nix
     ./hydra/gpu.nix

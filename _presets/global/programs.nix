@@ -1,0 +1,66 @@
+{ config, pkgs, ... }:
+
+{
+  imports = [
+    ../../programs/appimage-run.nix
+    ../../programs/aria2.nix
+    ../../programs/btop.nix
+    ../../programs/btrfs-progs.nix
+    ../../programs/cpupower.nix
+    ../../programs/dfc.nix
+    ../../programs/dig.nix
+    ../../programs/fdisk.nix
+    ../../programs/ffmpeg.nix
+    ../../programs/fish.nix
+    ../../programs/fuse3.nix
+    ../../programs/gdisk.nix
+    ../../programs/gh.nix
+    ../../programs/git.nix
+    ../../programs/gnu-coreutils-full.nix
+    ../../programs/gnumake.nix
+    ../../programs/gnutar.nix
+    ../../programs/htop.nix
+    ../../programs/i2c-tools.nix
+    ../../programs/java.nix
+    ../../programs/jq.nix
+    ../../programs/killall.nix
+    ../../programs/llvm.nix
+    ../../programs/lm_sensors.nix
+    ../../programs/lshw.nix
+    ../../programs/mail.nix
+    ../../programs/ncdu.nix
+    ../../programs/neofetch.nix
+    ../../programs/nix-alien.nix
+    ../../programs/nix-index.nix
+    ../../programs/nix-ld.nix
+    ../../programs/nix-prefetch-github.nix
+    ../../programs/nixfmt.nix
+    ../../programs/nix-output-monitor.nix
+    ../../programs/nmap.nix
+    ../../programs/openssl.nix
+    ../../programs/parallel.nix
+    ../../programs/parted.nix
+    ../../programs/pciutils.nix
+    ../../programs/pigz.nix
+    ../../programs/pkg-config.nix
+    ../../programs/pkgconf.nix
+    ../../programs/python3.nix
+    ../../programs/rsync.nix
+    ../../programs/rustup.nix
+    ../../programs/screen.nix
+    ../../programs/scrub.nix
+    ../../programs/speedtest-cli.nix
+    ../../programs/thefuck.nix
+    ../../programs/tldr.nix
+    ../../programs/unzip.nix
+    ../../programs/usbutils.nix
+    ../../programs/uwufetch.nix
+    ../../programs/vim.nix
+    ../../programs/wget.nix
+    ../../programs/xfsprogs.nix
+    ../../programs/xz.nix
+    ../../programs/zip.nix
+    ../../programs/zoxide.nix
+    ../../programs/zstd.nix
+  ];
+}

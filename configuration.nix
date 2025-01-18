@@ -8,7 +8,7 @@
   imports = [
     <home-manager/nixos>
     ./hardware-configuration.nix
-    ./profiles/_enabled.nix
+    ./_profiles/_enabled.nix
     ./settings-defaults.nix
     ./settings.nix
   ];

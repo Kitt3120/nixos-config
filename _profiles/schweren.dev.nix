@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./presets/global.nix
+    ../_presets/global.nix
 
     ./schweren.dev/firewall/mailcow.nix
     ./schweren.dev/firewall/playforia-minigolf.nix
