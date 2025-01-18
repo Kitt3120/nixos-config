@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../../desktop/plasma/plasma.nix ];
+  imports = [ ../../desktop/plasma.nix ];
 }
