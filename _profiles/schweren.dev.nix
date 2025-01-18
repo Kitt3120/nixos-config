@@ -9,6 +9,8 @@
     ./schweren.dev/firewall/satisfactory.nix
     ./schweren.dev/firewall/valheim.nix
 
+    ./schweren.dev/desktop.nix
+    ./schweren.dev/gpu.nix
     ./schweren.dev/hostname.nix
     ./schweren.dev/networking.nix
     ./schweren.dev/programs.nix
