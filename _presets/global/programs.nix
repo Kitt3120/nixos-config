@@ -57,8 +57,10 @@
     ../../programs/uwufetch.nix
     ../../programs/vim.nix
     ../../programs/wget.nix
+    ../../programs/wine-staging.nix
     ../../programs/xfsprogs.nix
     ../../programs/xz.nix
+    ../../programs/yt-dlp.nix
     ../../programs/zip.nix
     ../../programs/zoxide.nix
     ../../programs/zstd.nix

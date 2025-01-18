@@ -73,10 +73,8 @@
     ../../programs/vlc.nix
     ../../programs/vscode.nix
     ../../programs/wifite2.nix
-    ../../programs/wine-staging.nix
     ../../programs/wootility.nix
     ../../programs/youtube-music.nix
-    ../../programs/yt-dlp.nix
     ../../programs/zap.nix
   ];
 }
