@@ -31,4 +31,4 @@ sudo nix-channel --add $CHANNEL nixos
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 
 git update-index --assume-unchanged settings.nix
-git update-index --assume-unchanged profiles/_enabled.nix
+git update-index --assume-unchanged _profiles/_enabled.nix

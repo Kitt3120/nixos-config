@@ -1,5 +1,5 @@
 # Untrack this file from git by running
-# git update-index --assume-unchanged profiles/_enabled.nix
+# git update-index --assume-unchanged _profiles/_enabled.nix
 # or by running setup.sh
 # Then set current device profile below
 
@@ -8,7 +8,7 @@
 {
   imports = [
     #./hydra.nix
-    ./modulosaurus.nix
+    #./modulosaurus.nix
     #./schweren.dev.nix
   ];
 }
