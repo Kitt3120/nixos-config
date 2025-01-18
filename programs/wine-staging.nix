@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ wineWowPackages.stagingFull ];
-
-  imports = [ ./wine-base.nix ];
+  environment.systemPackages = with pkgs; [
+    wineWowPackages.stagingFull
+    winetricks
+    protontricks
+    protonup-qt
+  ];
 }
