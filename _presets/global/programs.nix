@@ -30,6 +30,7 @@
     ../../programs/mail.nix
     ../../programs/ncdu.nix
     ../../programs/neofetch.nix
+    ../../programs/nh.nix
     ../../programs/nix-alien.nix
     ../../programs/nix-index.nix
     ../../programs/nix-ld.nix
