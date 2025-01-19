@@ -11,7 +11,6 @@
     ./modulosaurus/networking.nix
     ./modulosaurus/programs.nix
     ./modulosaurus/services.nix
-    ./modulosaurus/settings-defaults.nix
     ./modulosaurus/system.nix
     ./modulosaurus/users.nix
     ./modulosaurus/virtualization.nix

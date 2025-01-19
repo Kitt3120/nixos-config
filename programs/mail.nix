@@ -1,7 +1,30 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  programs.msmtp = {
+  options.credentials.mail = {
+    host = lib.mkOption {
+      type = lib.types.str;
+    };
+
+    user = lib.mkOption {
+      type = lib.types.str;
+    };
+
+    password = lib.mkOption {
+      type = lib.types.str;
+    };
+
+    from = lib.mkOption {
+      type = lib.types.str;
+    };
+  };
+
+  config.programs.msmtp = {
     enable = true;
     accounts = {
       default = {

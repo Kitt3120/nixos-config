@@ -9,7 +9,6 @@
     <home-manager/nixos>
     ./hardware-configuration.nix
     ./_profiles/_enabled.nix
-    ./settings-defaults.nix
     ./settings.nix
   ];
 

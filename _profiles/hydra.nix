@@ -11,7 +11,6 @@
     ./hydra/networking.nix
     ./hydra/programs.nix
     ./hydra/services.nix
-    ./hydra/settings-defaults.nix
     ./hydra/system.nix
     ./hydra/users.nix
     ./hydra/virtualization.nix

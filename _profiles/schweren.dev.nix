@@ -15,7 +15,6 @@
     ./schweren.dev/networking.nix
     ./schweren.dev/programs.nix
     ./schweren.dev/services.nix
-    ./schweren.dev/settings-defaults.nix
     ./schweren.dev/system.nix
     ./schweren.dev/users.nix
     ./schweren.dev/virtualization.nix
