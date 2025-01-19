@@ -38,6 +38,7 @@
     ../../programs/nixfmt.nix
     ../../programs/nix-output-monitor.nix
     ../../programs/nmap.nix
+    ../../programs/nvd.nix
     ../../programs/openssl.nix
     ../../programs/parallel.nix
     ../../programs/parted.nix
