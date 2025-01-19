@@ -11,10 +11,6 @@
       type = lib.types.str;
     };
 
-    openFirewall = lib.mkOption {
-      type = lib.types.bool;
-    };
-
     listen = {
       ip = lib.mkOption {
         default = "0.0.0.0";
@@ -25,6 +21,10 @@
         default = 10050;
         type = lib.types.int;
       };
+    };
+
+    openFirewall = lib.mkOption {
+      type = lib.types.bool;
     };
 
     allowDocker = lib.mkOption {
