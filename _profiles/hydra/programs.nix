@@ -56,6 +56,7 @@
     ../../programs/osu-lazer.nix
     ../../programs/plex-media-player.nix
     ../../programs/prism-launcher.nix
+    ../../programs/protonup.nix
     ../../programs/qflipper.nix
     ../../programs/qrtool.nix
     ../../programs/remmina.nix
