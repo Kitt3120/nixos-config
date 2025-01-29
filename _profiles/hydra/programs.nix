@@ -72,7 +72,7 @@
     ../../programs/ungoogled-chromium.nix
     ../../programs/ventoy.nix
     ../../programs/vesktop.nix
-    ../../programs/vintage-story.nix
+    #../../programs/vintage-story.nix # TODO: Enable again when fixed
     ../../programs/vlc.nix
     ../../programs/vscode.nix
     ../../programs/wifite2.nix

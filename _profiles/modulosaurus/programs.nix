@@ -40,7 +40,7 @@
     ../../programs/lshw-gui.nix
     ../../programs/mangohud.nix
     ../../programs/maven.nix
-    #../../programs/mdk4.nix # TODO: Enable again
+    #../../programs/mdk4.nix # TODO: Enable again when fixed
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/mpv.nix
@@ -70,7 +70,7 @@
     ../../programs/uni-sync.nix
     ../../programs/ventoy.nix
     ../../programs/vesktop.nix
-    ../../programs/vintage-story.nix
+    #../../programs/vintage-story.nix # TODO: Enable again when fixed
     ../../programs/vlc.nix
     ../../programs/vscode.nix
     ../../programs/wifite2.nix
