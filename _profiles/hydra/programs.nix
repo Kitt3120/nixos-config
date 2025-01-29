@@ -60,7 +60,7 @@
     ../../programs/qflipper.nix
     ../../programs/qrtool.nix
     ../../programs/remmina.nix
-    #../../programs/retroarch.nix # TODO: Enable again when fixed
+    ../../programs/retroarch.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
     ../../programs/sqlmap.nix
