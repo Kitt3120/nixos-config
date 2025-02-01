@@ -31,6 +31,7 @@
     ../../programs/hashcat.nix
     ../../programs/imagemagick.nix
     ../../programs/inkscape.nix
+    ../../programs/jellyfin.nix
     ../../programs/jetbrains-toolbox.nix
     ../../programs/john.nix
     ../../programs/kdenlive.nix
