@@ -4,7 +4,7 @@
   imports = [
     ../../services/ckb-next.nix
     ../../services/flatpak.nix
-    ../../services/media-pipelines.nix
+    ../../services/media-pipelines-ffmpeg.nix
     ../../services/mullvad.nix
     ../../services/nixos-upgrade-notification/libnotify.nix
     ../../services/onedrive.nix

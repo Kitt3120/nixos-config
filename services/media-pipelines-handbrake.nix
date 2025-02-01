@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 let
-  media-pipelines = (
-    pkgs.writeShellScriptBin "media-pipelines" ''
+  media-pipelines-handbrake = (
+    pkgs.writeShellScriptBin "media-pipelines-handbrake" ''
       if ! command -v HandBrakeCLI > /dev/null; then
-          echo "HandBrakeCLI is not installed. Please install it to run media-pipelines." >&2
+          echo "HandBrakeCLI is not installed. Please install it to run media-pipelines-handbrake." >&2
           exit 1
       fi
 
@@ -83,16 +83,16 @@ let
     ''
   );
 
-  media-pipelines-service = {
+  media-pipelines-handbrake-service = {
     Unit = {
-      Description = "Media Pipelines";
+      Description = "Media Pipelines (HandBrake)";
       After = [ "multi-user.target" ];
       Wants = [ "multi-user.target" ];
     };
 
     Service = {
       Type = "oneshot";
-      ExecStart = "${media-pipelines}/bin/media-pipelines";
+      ExecStart = "${media-pipelines-handbrake}/bin/media-pipelines";
     };
 
     Install = {
@@ -100,9 +100,9 @@ let
     };
   };
 
-  media-pipelines-timer = {
+  media-pipelines-handbrake-timer = {
     Unit = {
-      Description = "Media Pipelines Timer";
+      Description = "Media Pipelines (HandBrake)";
     };
 
     Timer = {
@@ -115,12 +115,12 @@ let
   };
 in
 {
-  environment.systemPackages = [ media-pipelines ];
+  environment.systemPackages = [ media-pipelines-handbrake ];
 
   home-manager.users = config.mapAllUsersToSet (user: {
     "${user}".systemd.user = {
-      services.media-pipelines = media-pipelines-service;
-      timers.media-pipelines = media-pipelines-timer;
+      services.media-pipelines-handbrake = media-pipelines-handbrake-service;
+      timers.media-pipelines-handbrake = media-pipelines-handbrake-timer;
     };
   });
 }
