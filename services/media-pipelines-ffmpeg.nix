@@ -201,7 +201,7 @@ let
 
     Service = {
       Type = "oneshot";
-      ExecStart = "${media-pipelines-ffmpeg}/bin/media-pipelines";
+      ExecStart = "${media-pipelines-ffmpeg}/bin/media-pipelines-ffmpeg";
     };
 
     Install = {

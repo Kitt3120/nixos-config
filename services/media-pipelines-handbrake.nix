@@ -92,7 +92,7 @@ let
 
     Service = {
       Type = "oneshot";
-      ExecStart = "${media-pipelines-handbrake}/bin/media-pipelines";
+      ExecStart = "${media-pipelines-handbrake}/bin/media-pipelines-handbrake";
     };
 
     Install = {
