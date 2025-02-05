@@ -129,6 +129,16 @@ let
           FFMPEG_COMMAND+=(-qp $VIDEO_QP)
         fi
 
+        VIDEO_CFR=$(echo "$PROFILE_VIDEO" | $JQ -r '.cfr')
+        if [ "$VIDEO_CFR" != "null" ]; then
+          FFMPEG_COMMAND+=(-fps_mode cfr -r $VIDEO_CFR)
+        fi
+
+        VIDEO_VFR=$(echo "$PROFILE_VIDEO" | $JQ -r '.vfr')
+        if [ "$VIDEO_VFR" != "null" ]; then
+          FFMPEG_COMMAND+=(-fps_mode vfr -vf "fps=$VIDEO_VFR")
+        fi
+
         VIDEO_CRF=$(echo "$PROFILE_VIDEO" | $JQ -r '.crf')
         if [ "$VIDEO_CRF" != "null" ]; then
           FFMPEG_COMMAND+=(-crf $VIDEO_CRF)
