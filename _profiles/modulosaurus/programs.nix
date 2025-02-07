@@ -59,6 +59,7 @@
     ../../programs/qrtool.nix
     ../../programs/remmina.nix
     ../../programs/retroarch.nix
+    ../../programs/rustdesk.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
     ../../programs/sqlmap.nix
