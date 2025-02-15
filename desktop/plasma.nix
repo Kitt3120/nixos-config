@@ -74,6 +74,5 @@
     kwalletcli
     libheif
     xwaylandvideobridge
-    #plasma-wallpaper-engine # TODO: Find way to package software, as it is not available
   ];
 }

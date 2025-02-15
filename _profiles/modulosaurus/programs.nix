@@ -75,6 +75,7 @@
     #../../programs/vintage-story.nix # TODO: Enable again when fixed
     ../../programs/vlc.nix
     ../../programs/vscode.nix
+    ../../programs/wallpaper-engine-kde-plugin.nix
     #../../programs/wifite2.nix # TODO: Enable again when fixed
     ../../programs/wootility.nix
     ../../programs/youtube-music.nix
