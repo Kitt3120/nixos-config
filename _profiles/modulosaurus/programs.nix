@@ -10,7 +10,7 @@
     ../../programs/armitage.nix
     ../../programs/audacity.nix
     ../../programs/ausweisapp.nix
-    #../../programs/bambu-studio.nix # TODO: Enable again when fixed
+    ../../programs/bambu-studio.nix
     ../../programs/bitwarden.nix
     ../../programs/blender.nix
     ../../programs/burpsuite.nix
