@@ -7,7 +7,7 @@
   };
 
   xdg.portal = {
-    extraPortals = [ pkgs.xdg-desktop-portal-kde ];
+    extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
     config.common.default = "kde";
   };
 
@@ -69,10 +69,10 @@
     kdePackages.systemsettings
     kdePackages.taglib
     kdePackages.wayland
+    kdePackages.xwaylandvideobridge
     kdePackages.yakuake
-    libsForQt5.kamoso # Plasma 5 version (Plasma 6's kdePackages.kamoso) does not build
+    libsForQt5.kamoso # Plasma 5 version (Plasma 6's kdePackages.kamoso does not build)
     kwalletcli
     libheif
-    xwaylandvideobridge
   ];
 }
