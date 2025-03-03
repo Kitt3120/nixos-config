@@ -20,7 +20,6 @@
     ../../programs/easyeffects.nix
     ../../programs/evillimiter.nix
     ../../programs/exploitdb.nix
-    ../../programs/firefox-nightly.nix
     ../../programs/framework-tool.nix
     ../../programs/gamemode.nix
     ../../programs/gamescope.nix
