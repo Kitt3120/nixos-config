@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ thunderbird-latest ];
+  programs.thunderbird = {
+    enable = true;
+    package = pkgs.thunderbird-latest;
+  };
 }
