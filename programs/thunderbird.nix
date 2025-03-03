@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ thunderbird ];
+  environment.systemPackages = with pkgs; [ thunderbird-latest ];
 }

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ mpv-unwrapped ];
+  environment.systemPackages = with pkgs; [ mpv ];
 
   environment.etc."mpv/mpv.conf".text = ''
     sub-auto=fuzzy
