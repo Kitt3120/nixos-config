@@ -34,8 +34,9 @@
     ../../programs/kdenlive.nix
     ../../programs/kitty.nix
     ../../programs/krita.nix
-    ../../programs/libreoffice.nix
     ../../programs/libnotify.nix
+    ../../programs/libreoffice.nix
+    ../../programs/librewolf.nix
     ../../programs/linux-wifi-hotspot.nix
     ../../programs/lutris.nix
     ../../programs/lshw-gui.nix
@@ -45,6 +46,7 @@
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/mpv.nix
+    ../../programs/mullvad-browser.nix
     ../../programs/nextcloud.nix
     ../../programs/nhentai.nix
     ../../programs/nvtop.nix
@@ -73,6 +75,7 @@
     ../../programs/ventoy.nix
     ../../programs/vesktop.nix
     #../../programs/vintage-story.nix # TODO: Enable again when fixed
+    ../../programs/vivaldi.nix
     ../../programs/vlc.nix
     ../../programs/vscode.nix
     ../../programs/wallpaper-engine-kde-plugin.nix
