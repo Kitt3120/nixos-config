@@ -1,13 +1,14 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [ zoxide ];
 
-  home-manager.users =
-    if config.programs.fish.enable then
-      config.mapAllUsersToSet (user: {
-        "${user}".xdg.configFile."fish/conf.d/zoxide.fish".text = "zoxide init --cmd cd fish | source";
-      })
-    else
-      { };
+  programs.bash.interactiveShellInit = "eval $(zoxide init --cmd bash)";
+  programs.zsh.interactiveShellInit = lib.mkIf config.programs.zsh.enable "eval $(zoxide init --cmd zsh)";
+  programs.fish.interactiveShellInit = lib.mkIf config.programs.fish.enable "zoxide init --cmd cd fish | source";
 }
