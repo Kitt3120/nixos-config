@@ -54,6 +54,7 @@
     ../../programs/onedrive-gui.nix
     ../../programs/onlyoffice.nix
     ../../programs/osu-lazer.nix
+    ../../programs/pdfarranger.nix
     ../../programs/plex-media-player.nix
     ../../programs/prism-launcher.nix
     ../../programs/protonup.nix
