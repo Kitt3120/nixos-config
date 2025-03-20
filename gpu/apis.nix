@@ -8,9 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     mesa
-    mesa.drivers
     driversi686Linux.mesa
-    driversi686Linux.mesa.drivers
     mesa-demos
     clinfo
     wayland-utils
