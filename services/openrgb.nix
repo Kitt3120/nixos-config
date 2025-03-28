@@ -15,7 +15,7 @@ let
       owner = "CalcProgrammer1";
       repo = "OpenRGB";
       rev = "master";
-      sha256 = "sha256-zIJQ6B8mGclJ/PMglT2WCE1uyNd4hNvtLyG4GpXeIBI=";
+      sha256 = "sha256-T8jGd2aemoZUJ9s58gM3/nT0b0WPH37ZJ/hzRErPxsg=";
     };
 
     postPatch = ''
