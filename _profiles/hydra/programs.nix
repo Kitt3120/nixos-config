@@ -37,6 +37,7 @@
     ../../programs/kitty.nix
     ../../programs/krita.nix
     ../../programs/libreoffice.nix
+    ../../programs/librewolf.nix
     ../../programs/libnotify.nix
     ../../programs/linux-wifi-hotspot.nix
     ../../programs/lutris.nix
@@ -62,7 +63,7 @@
     ../../programs/qrtool.nix
     ../../programs/remmina.nix
     ../../programs/retroarch.nix
-    ../../programs/rustdesk.nix
+    #../../programs/rustdesk.nix TODO: Enable again when fixed
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
     ../../programs/sqlmap.nix
