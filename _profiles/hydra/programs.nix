@@ -32,7 +32,7 @@
     ../../programs/inkscape.nix
     ../../programs/jellyfin.nix
     ../../programs/jetbrains-toolbox.nix
-    #../../programs/john.nix #TODO: Enable again
+    #../../programs/john.nix #TODO: Enable again when fixed
     ../../programs/kdenlive.nix
     ../../programs/kitty.nix
     ../../programs/krita.nix
@@ -44,7 +44,7 @@
     ../../programs/lshw-gui.nix
     ../../programs/mangohud.nix
     ../../programs/maven.nix
-    #../../programs/mdk4.nix #TODO: Enable again
+    #../../programs/mdk4.nix #TODO: Enable again when fixed
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/mpv.nix
