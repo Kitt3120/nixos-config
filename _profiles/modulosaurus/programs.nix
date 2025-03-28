@@ -29,7 +29,7 @@
     ../../programs/inkscape.nix
     ../../programs/jellyfin.nix
     ../../programs/jetbrains-toolbox.nix
-    #../../programs/john.nix # TODO: Enable again when fixed
+    ../../programs/john.nix
     ../../programs/kdenlive.nix
     ../../programs/kitty.nix
     ../../programs/krita.nix
