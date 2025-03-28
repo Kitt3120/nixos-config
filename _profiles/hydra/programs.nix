@@ -44,7 +44,7 @@
     ../../programs/lshw-gui.nix
     ../../programs/mangohud.nix
     ../../programs/maven.nix
-    #../../programs/mdk4.nix #TODO: Enable again when fixed
+    ../../programs/mdk4.nix
     ../../programs/metasploit.nix
     ../../programs/mkvtoolnix.nix
     ../../programs/mpv.nix
