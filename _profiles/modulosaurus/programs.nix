@@ -77,7 +77,6 @@
     ../../programs/vlc.nix
     ../../programs/vscode.nix
     ../../programs/wallpaper-engine-kde-plugin.nix
-    ../../programs/wifite2.nix
     ../../programs/wootility.nix
     ../../programs/youtube-music.nix
     ../../programs/zap.nix
