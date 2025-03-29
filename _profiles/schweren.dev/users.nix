@@ -8,7 +8,7 @@
     #./users/minecraft/services/minecraft-scary.nix
     #./users/minecraft/services/minecraft-adventure.nix
     #./users/minecraft/services/minecraft-dud.nix
-    ./users/minecraft/services/minecraft-redstone.nix
+    #./users/minecraft/services/minecraft-redstone.nix
     #./users/minecraft/services/minecraft-horror.nix
   ];
 }
