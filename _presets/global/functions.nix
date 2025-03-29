@@ -3,7 +3,7 @@
 {
   imports = [
     ../../functions/mapUsers.nix
-    ../../functions/mkMinecraftFabricServer.nix
     ../../functions/mkMinecraftServer.nix
+    ../../functions/mkMinecraftForgeServer.nix
   ];
 }

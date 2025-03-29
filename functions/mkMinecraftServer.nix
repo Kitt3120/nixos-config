@@ -8,7 +8,7 @@
 {
   options.mkMinecraftServer = lib.mkOption {
     default =
-      name: directory: forge: java: RAM: debug:
+      name: directory: jarname: java: RAM: debug:
       let
         minecraft-manager =
           with pkgs;
@@ -75,7 +75,7 @@
             COMMAND_MCFLAGS="-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1"
             COMMAND_GC="-XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=130 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=28 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:SurvivorRatio=32 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150"
             COMMAND_HUGE_PAGES="-XX:+UseTransparentHugePages -Xlog:gc+init"
-            COMMAND_FORGE="@libraries/net/minecraftforge/forge/${forge}/unix_args.txt nogui"
+            COMMAND_JAR="-jar ${jarname}.jar nogui"
             COMMAND_TEE="tee ./server.log${if debug then "^M" else "; exit^M"}"
 
             if ${screen}/bin/screen -list | ${gnugrep}/bin/grep -q minecraft-${name};
@@ -97,7 +97,7 @@
             ${screen}/bin/screen -S minecraft-${name} -X stuff " "
             ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_HUGE_PAGES"
             ${screen}/bin/screen -S minecraft-${name} -X stuff " "
-            ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_FORGE"
+            ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_JAR"
             ${screen}/bin/screen -S minecraft-${name} -X stuff " | "
             ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_TEE"
             echo ${name} started
