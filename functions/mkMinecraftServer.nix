@@ -6,7 +6,7 @@
 }:
 
 {
-  options.mkMinecraftForgeServer = lib.mkOption {
+  options.mkMinecraftServer = lib.mkOption {
     default =
       name: directory: forge: java: RAM: debug:
       let

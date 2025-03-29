@@ -2,7 +2,7 @@
 
 let
   mdj =
-    config.mkMinecraftForgeServer "mdj" "/home/minecraft/mdj" "1.20.1-47.2.30" pkgs.jdk17 "10G"
+    config.mkMinecraftServer "mdj" "/home/minecraft/mdj" "1.20.1-47.2.30" pkgs.jdk17 "10G"
       false; # TODO: Put Minecraft servers into settings
 in
 {
