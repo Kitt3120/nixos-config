@@ -4,11 +4,14 @@
   imports = [
     ../../programs/appimage-run.nix
     ../../programs/aria2.nix
+    ../../programs/bcachefs-tools.nix
     ../../programs/btop.nix
     ../../programs/btrfs-progs.nix
     ../../programs/cpupower.nix
+    ../../programs/cryptsetup.nix
     ../../programs/dfc.nix
     ../../programs/dig.nix
+    ../../programs/exfatprogs.nix
     ../../programs/fdisk.nix
     ../../programs/ffmpeg.nix
     ../../programs/fish.nix
@@ -27,6 +30,7 @@
     ../../programs/llvm.nix
     ../../programs/lm_sensors.nix
     ../../programs/lshw.nix
+    ../../programs/lvm2.nix
     ../../programs/mail.nix
     ../../programs/ncdu.nix
     ../../programs/neofetch.nix
@@ -34,10 +38,11 @@
     ../../programs/nix-alien.nix
     ../../programs/nix-index.nix
     ../../programs/nix-ld.nix
+    ../../programs/nix-output-monitor.nix
     ../../programs/nix-prefetch-github.nix
     ../../programs/nixfmt.nix
-    ../../programs/nix-output-monitor.nix
     ../../programs/nmap.nix
+    ../../programs/ntfs3g.nix
     ../../programs/nvd.nix
     ../../programs/openssl.nix
     ../../programs/parallel.nix
