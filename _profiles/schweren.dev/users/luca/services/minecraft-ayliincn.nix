@@ -15,6 +15,11 @@ in
     systemd.user.services.minecraft-ayliincn = ayliincn.systemd.unit;
   };
 
-  networking.firewall.allowedTCPPorts = [ 25565 ];
-  networking.firewall.allowedUDPPorts = [ 19132 ];
+  networking.firewall.allowedTCPPorts = [
+    8123 # Dynmap
+    25565 # Minecraft
+  ];
+  networking.firewall.allowedUDPPorts = [
+    19132 # GeyserMC
+  ];
 }
