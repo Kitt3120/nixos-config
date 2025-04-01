@@ -2,7 +2,7 @@
 
 let
   ayliincn =
-    config.mkMinecraftServer "ayliincn" "/home/luca/ayliincn" "paper" pkgs.jdk21 "10G"
+    config.mkMinecraftServer "ayliincn" "/home/luca/ayliincn" "paper" pkgs.jdk21 "15G"
       false; # TODO: Put Minecraft servers into settings
 in
 {
