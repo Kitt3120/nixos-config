@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     llvmPackages.openmp
     llvmPackages.mlir
-    llvmPackages.lldb-manpages
+    #llvmPackages.lldb-manpages # TODO: Enable again when fixed
     llvmPackages.libunwind
     llvmPackages.libcxxStdenv
     llvmPackages.libcxxClang
