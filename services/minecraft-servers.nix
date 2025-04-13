@@ -14,22 +14,21 @@
     acc: server:
     acc
     // {
-      ${server.user} = {
-        home.packages = [
-          (config.mkMinecraftServer server.name server.directory server.jarName server.java server.ram
+      ${server.user} = acc.${server.user} or { } // {
+        home.packages = (acc.${server.user}.home.packages or [ ]) ++ [
+          (config.mkMinecraftServer server.name server.directory server.jar.url server.jar.hash server.java
+            server.ram
             server.debug
-          ).scripts.manager
-          (config.mkMinecraftServer server.name server.directory server.jarName server.java server.ram
-            server.debug
-          ).scripts.start
-          (config.mkMinecraftServer server.name server.directory server.jarName server.java server.ram
-            server.debug
-          ).scripts.stop
+          ).scripts.cli
         ];
-        systemd.user.services."minecraft-${server.name}" =
-          (config.mkMinecraftServer server.name server.directory server.jarName server.java server.ram
-            server.debug
-          ).systemd.unit;
+
+        systemd.user.services = (acc.${server.user}.systemd.user.services or { }) // {
+          "minecraft-${server.name}" =
+            (config.mkMinecraftServer server.name server.directory server.jar.url server.jar.hash server.java
+              server.ram
+              server.debug
+            ).systemd.unit;
+        };
       };
     }
   ) { } config.minecraft.servers;

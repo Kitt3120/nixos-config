@@ -8,9 +8,14 @@
 {
   options.mkMinecraftServer = lib.mkOption {
     default =
-      name: directory: jarname: java: RAM: debug:
+      name: directory: jarurl: jarhash: java: RAM: debug:
       let
-        minecraft-manager =
+        jar = pkgs.fetchurl {
+          url = jarurl;
+          sha256 = jarhash;
+        };
+
+        script-cli =
           with pkgs;
           (writeShellScriptBin "minecraft-${name}" ''
             function start_attach {
@@ -66,16 +71,18 @@
             menu
           '');
 
-        minecraft-start =
+        script-start =
           with pkgs;
           (writeShellScriptBin "minecraft-${name}-start" ''
+            COMMAND_MKDIR="${coreutils}/bin/mkdir -p ${directory}"
             COMMAND_CD="cd ${directory}"
+            COMMAND_EULA="echo eula=true > eula.txt"
             COMMAND_JAVA="${java}/bin/java -Xms${RAM} -Xmx${RAM}"
             COMMAND_IPV6="-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
             COMMAND_MCFLAGS="-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1"
             COMMAND_GC="-XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=130 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=28 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:SurvivorRatio=32 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150"
             COMMAND_HUGE_PAGES="-XX:+UseTransparentHugePages -Xlog:gc+init"
-            COMMAND_JAR="-jar ${jarname}.jar nogui"
+            COMMAND_JAR="-jar ${jar} nogui"
             COMMAND_TEE="tee ./server.log${if debug then "^M" else "; exit^M"}"
 
             if ${screen}/bin/screen -list | ${gnugrep}/bin/grep -q minecraft-${name};
@@ -85,7 +92,11 @@
             fi
 
             ${screen}/bin/screen -dmS minecraft-${name} ${bash}/bin/bash
+            ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_MKDIR"
+            ${screen}/bin/screen -S minecraft-${name} -X stuff " && "
             ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_CD"
+            ${screen}/bin/screen -S minecraft-${name} -X stuff " && "
+            ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_EULA"
             ${screen}/bin/screen -S minecraft-${name} -X stuff " && "
             ${screen}/bin/screen -S minecraft-${name} -X stuff "$COMMAND_JAVA"
             ${screen}/bin/screen -S minecraft-${name} -X stuff " "
@@ -103,7 +114,7 @@
             echo ${name} started
           '');
 
-        minecraft-stop =
+        script-stop =
           with pkgs;
           (writeShellScriptBin "minecraft-${name}-stop" ''
             if ${screen}/bin/screen -list | ${gnugrep}/bin/grep -q minecraft-${name};
@@ -116,9 +127,9 @@
       in
       {
         scripts = {
-          manager = minecraft-manager;
-          start = minecraft-start;
-          stop = minecraft-stop;
+          cli = script-cli;
+          start = script-start;
+          stop = script-stop;
         };
 
         systemd.unit = {
@@ -131,9 +142,8 @@
           Service = {
             Type = "oneshot";
             RemainAfterExit = true;
-            WorkingDirectory = "${directory}";
-            ExecStart = "${minecraft-start}/bin/minecraft-${name}-start";
-            ExecStop = "${minecraft-stop}/bin/minecraft-${name}-stop";
+            ExecStart = "${script-start}/bin/minecraft-${name}-start";
+            ExecStop = "${script-stop}/bin/minecraft-${name}-stop";
           };
 
           Install = {
