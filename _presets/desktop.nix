@@ -13,6 +13,7 @@
     ../desktop/qt.nix
     ../desktop/gtk.nix
 
+    ../desktop/appstream.nix
     ../desktop/xdg.nix
     ../desktop/pipewire.nix
     ../desktop/fonts.nix
