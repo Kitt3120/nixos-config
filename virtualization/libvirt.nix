@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   virtualisation.libvirtd = {
@@ -18,6 +23,14 @@
       };
     };
   };
+
+  boot.extraModprobeConfig =
+    if config.hardware.cpu.intel.updateMicrocode == "amd" then
+      "options kvm_amd nested=1"
+    else if config.hardware.cpu.amd.updateMicrocode == "intel" then
+      "options kvm_intel nested=1"
+    else
+      "";
 
   programs.virt-manager.enable = true;
 
