@@ -6,6 +6,7 @@
     ../../system/firmware.nix
     ../../system/i2c.nix
     ../../system/locale.nix
+    ../../system/memoryAllocator.nix
     ../../system/networking.nix
     ../../system/nixgc.nix
     ../../system/polkit.nix
