@@ -13,5 +13,6 @@
     ../../system/time.nix
     ../../system/tmp.nix
     ../../system/ulimit.nix
+    ../../system/zramSwap.nix
   ];
 }
