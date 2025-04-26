@@ -13,7 +13,7 @@
     ../desktop/qt.nix
     ../desktop/gtk.nix
 
-    ../desktop/xdg-desktop-portal.nix
+    ../desktop/xdg.nix
     ../desktop/pipewire.nix
     ../desktop/fonts.nix
     ../desktop/hunspell.nix
