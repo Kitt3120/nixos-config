@@ -8,12 +8,15 @@
       anthy
       mozc
     ];
-    fcitx5.addons = with pkgs; [
-      fcitx5-anthy
-      fcitx5-mozc
-      kdePackages.fcitx5-qt
-      kdePackages.fcitx5-configtool
-    ];
+    fcitx5 = {
+      plasma6Support = true;
+      addons = with pkgs; [
+        fcitx5-anthy
+        fcitx5-mozc
+        kdePackages.fcitx5-qt
+        kdePackages.fcitx5-configtool
+      ];
+    };
   };
 
   # Credits @infinisil: https://github.com/infinisil/system/blob/07534666e0592d9ceb1fc157dc48baa7b1494d99/config/modules/japanese-input/default.nix

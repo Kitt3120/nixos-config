@@ -2,7 +2,7 @@
 
 {
   qt = {
-    platformTheme = "kde";
+    platformTheme = "kde6";
     style = "breeze";
   };
 
