@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  fonts = {
+    fontDir.enable = true;
+    enableDefaultPackages = true;
+    enableGhostscriptFonts = true;
+  };
+
   environment.systemPackages = with pkgs; [
     dejavu_fonts
     liberation_ttf
