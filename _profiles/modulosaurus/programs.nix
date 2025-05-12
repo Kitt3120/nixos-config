@@ -72,7 +72,7 @@
     ../../programs/tor-browser.nix
     ../../programs/ungoogled-chromium.nix
     ../../programs/uni-sync.nix
-    ../../programs/ventoy.nix
+    # ../../programs/ventoy.nix # TODO: Enable again when upstream removed blobs
     ../../programs/vesktop.nix
     ../../programs/vintage-story.nix
     ../../programs/vlc.nix
