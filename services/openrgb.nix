@@ -15,15 +15,13 @@ let
       owner = "CalcProgrammer1";
       repo = "OpenRGB";
       rev = "master";
-      sha256 = "sha256-8tTEk1Gn5pvlYIiXXxfXZ9EFDbrPeo5BMB8BID6NXdQ=";
+      sha256 = "sha256-YySkM9WYEejyMXFpIGPKTQjbepKl50HxOqo7BhWAX5M=";
     };
 
     postPatch = ''
       patchShebangs scripts/build-udev-rules.sh
       substituteInPlace scripts/build-udev-rules.sh \
-        --replace /bin/chmod "${pkgs.coreutils}/bin/chmod"
-      substituteInPlace scripts/build-udev-rules.sh \
-        --replace /usr/bin/env "${pkgs.coreutils}/bin/env"
+        --replace-fail /usr/bin/env "${pkgs.coreutils}/bin/env"
     '';
   });
 in
