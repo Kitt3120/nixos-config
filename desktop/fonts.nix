@@ -13,7 +13,11 @@
     ubuntu_font_family
     freefont_ttf
     noto-fonts
+    noto-fonts-lgc-plus
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     noto-fonts-emoji
+    noto-fonts-color-emoji
     fira-code
     nerd-fonts._0xproto
     nerd-fonts._3270
