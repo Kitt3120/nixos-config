@@ -61,7 +61,7 @@
     ../../programs/remmina.nix
     ../../programs/retroarch.nix
     ../../programs/rust-stakeholder.nix
-    #../../programs/rustdesk.nix TODO: Enable again when fixed
+    ../../programs/rustdesk.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
     ../../programs/sqlmap.nix
