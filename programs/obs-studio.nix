@@ -15,7 +15,6 @@
         obs-vaapi
         obs-source-clone
         obs-scale-to-sound
-        obs-rgb-levels-filter
         obs-composite-blur
         obs-command-source
         obs-backgroundremoval
