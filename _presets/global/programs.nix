@@ -47,6 +47,7 @@
     ../../programs/openssl.nix
     ../../programs/parallel.nix
     ../../programs/parted.nix
+    ../../programs/pay-respects.nix
     ../../programs/pciutils.nix
     ../../programs/pigz.nix
     ../../programs/pkg-config.nix
@@ -57,7 +58,6 @@
     ../../programs/screen.nix
     ../../programs/scrub.nix
     ../../programs/speedtest-cli.nix
-    ../../programs/thefuck.nix
     ../../programs/tldr.nix
     ../../programs/unzip.nix
     ../../programs/usbutils.nix
