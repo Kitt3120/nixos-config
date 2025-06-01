@@ -58,6 +58,7 @@
     ../../programs/screen.nix
     ../../programs/scrub.nix
     ../../programs/speedtest-cli.nix
+    ../../programs/sudo-rs.nix
     ../../programs/tldr.nix
     ../../programs/unzip.nix
     ../../programs/usbutils.nix
