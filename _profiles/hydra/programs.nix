@@ -56,7 +56,7 @@
     ../../programs/onlyoffice.nix
     ../../programs/osu-lazer.nix
     ../../programs/pdfarranger.nix
-    ../../programs/plex-media-player.nix
+    ../../programs/plex-desktop.nix
     ../../programs/prism-launcher.nix
     ../../programs/protonup.nix
     ../../programs/qflipper.nix
