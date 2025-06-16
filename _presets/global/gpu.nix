@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../../gpu/apis.nix ];
+  imports = [ ../../gpu/mesa.nix ];
 }
