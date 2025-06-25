@@ -37,8 +37,8 @@
     ../../programs/libreoffice.nix
     ../../programs/librewolf.nix
     ../../programs/linux-wifi-hotspot.nix
-    ../../programs/lutris.nix
     ../../programs/lshw-gui.nix
+    ../../programs/lutris.nix
     ../../programs/mangohud.nix
     ../../programs/maven.nix
     ../../programs/mdk4.nix
@@ -46,7 +46,7 @@
     ../../programs/mkvtoolnix.nix
     ../../programs/mpv.nix
     ../../programs/nextcloud.nix
-    ../../programs/nhentai.nix
+    #../../programs/nhentai.nix # TODO: Enable again when fixed
     ../../programs/nvtop.nix
     ../../programs/obs-studio.nix
     ../../programs/onedrive-gui.nix
@@ -64,6 +64,7 @@
     ../../programs/rustdesk.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/signal.nix
+    ../../programs/soco-cli.nix
     ../../programs/sqlmap.nix
     ../../programs/steam.nix
     ../../programs/syncplay.nix
