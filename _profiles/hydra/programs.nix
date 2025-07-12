@@ -12,7 +12,6 @@
     ../../programs/qrtool.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/soco-cli.nix
-    ../../programs/syncplay.nix
     ../../programs/tor-browser.nix
     ../../programs/ungoogled-chromium.nix
     ../../programs/wallpaper-engine-kde-plugin.nix
