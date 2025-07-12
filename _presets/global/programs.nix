@@ -17,17 +17,14 @@
     ../../programs/fish.nix
     ../../programs/fuse3.nix
     ../../programs/gdisk.nix
-    ../../programs/gh.nix
     ../../programs/git.nix
     ../../programs/gnu-coreutils-full.nix
     ../../programs/gnumake.nix
     ../../programs/gnutar.nix
     ../../programs/htop.nix
     ../../programs/i2c-tools.nix
-    ../../programs/java.nix
     ../../programs/jq.nix
     ../../programs/killall.nix
-    ../../programs/llvm.nix
     ../../programs/lm_sensors.nix
     ../../programs/lshw.nix
     ../../programs/lvm2.nix
@@ -41,7 +38,6 @@
     ../../programs/nix-output-monitor.nix
     ../../programs/nix-prefetch-github.nix
     ../../programs/nixfmt.nix
-    ../../programs/nmap.nix
     ../../programs/ntfs3g.nix
     ../../programs/nvd.nix
     ../../programs/openssl.nix
@@ -52,9 +48,8 @@
     ../../programs/pigz.nix
     ../../programs/pkg-config.nix
     ../../programs/pkgconf.nix
-    ../../programs/python3.nix
     ../../programs/rsync.nix
-    ../../programs/rustup.nix
+    ../../programs/rust-stakeholder.nix
     ../../programs/screen.nix
     ../../programs/scrub.nix
     ../../programs/speedtest-cli.nix
