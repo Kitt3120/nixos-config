@@ -4,6 +4,10 @@
   imports = [
     ../_presets/global.nix
 
+    ../_presets/amd-cpu.nix
+    ../_presets/amd-gpu.nix
+    ../_presets/gpu.nix
+
     ../_presets/desktop.nix
     ../_presets/development.nix
     ../_presets/gaming.nix
@@ -13,13 +17,10 @@
     ../_presets/social.nix
 
     ./modulosaurus/desktop.nix
-    ./modulosaurus/gpu.nix
     ./modulosaurus/hostname.nix
-    ./modulosaurus/networking.nix
     ./modulosaurus/programs.nix
     ./modulosaurus/services.nix
     ./modulosaurus/system.nix
-    ./modulosaurus/users.nix
     ./modulosaurus/virtualization.nix
   ];
 }
