@@ -26,6 +26,7 @@
 
   config.programs.msmtp = {
     enable = true;
+    setSendmail = true;
     accounts = {
       default = {
         auth = true;
