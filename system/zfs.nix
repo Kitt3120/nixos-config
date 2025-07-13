@@ -134,8 +134,11 @@
 
     networking.hostId = config.settings.zfs.hostId;
 
+    boot.supportedFilesystems = {
+      zfs = true;
+    };
+
     boot.zfs = {
-      enabled = true;
       allowHibernation = config.settings.zfs.allowHibernation;
       extraPools = config.settings.zfs.pools;
     };
