@@ -10,6 +10,7 @@
     zfs = {
       hostId = lib.mkOption {
         type = lib.types.nullOr lib.types.str;
+        default = null;
         description = "Host ID used for ZFS pools.";
       };
 
