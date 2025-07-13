@@ -6,8 +6,8 @@
 }:
 
 {
-  options = {
-    settings.amd.overdrive = {
+  options.settings = {
+    amd.overdrive = {
       enable = lib.mkOption {
         type = lib.types.bool;
         description = "Enable AMD GPU overdrive features.";

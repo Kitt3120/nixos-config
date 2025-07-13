@@ -6,8 +6,8 @@
 }:
 
 {
-  options = {
-    settings.zramSwap = {
+  options.settings = {
+    zramSwap = {
       enable = lib.mkOption {
         type = lib.types.bool;
         description = "Alias for zramSwap.enable";

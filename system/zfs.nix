@@ -6,8 +6,8 @@
 }:
 
 {
-  options = {
-    settings.zfs = {
+  options.settings = {
+    zfs = {
       hostId = lib.mkOption {
         type = lib.types.nullOr lib.types.str;
         description = "Host ID used for ZFS pools.";
