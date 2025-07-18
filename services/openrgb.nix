@@ -19,9 +19,14 @@ let
     };
 
     postPatch = ''
+      # Fix shebangs in scripts
       patchShebangs scripts/build-udev-rules.sh
       substituteInPlace scripts/build-udev-rules.sh \
         --replace-fail /usr/bin/env "${pkgs.coreutils}/bin/env"
+
+      # Remove installing OpenRGB's systemd service from the qmake file
+      substituteInPlace ./OpenRGB.pro \
+        --replace-fail "INSTALLS += target desktop icon metainfo udev_rules systemd_service" "INSTALLS += target desktop icon metainfo udev_rules"
     '';
   });
 in
