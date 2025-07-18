@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../programs/age.nix
     ../../programs/appimage-run.nix
     ../../programs/aria2.nix
     ../../programs/bcachefs-tools.nix
@@ -52,6 +53,7 @@
     ../../programs/rust-stakeholder.nix
     ../../programs/screen.nix
     ../../programs/scrub.nix
+    ../../programs/sops.nix
     ../../programs/speedtest-cli.nix
     ../../programs/sudo-rs.nix
     ../../programs/tldr.nix
