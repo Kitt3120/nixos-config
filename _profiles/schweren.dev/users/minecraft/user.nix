@@ -6,7 +6,10 @@
 }:
 
 {
-  sops.secrets."passwords/minecraft".neededForUsers = true;
+  sops.secrets."passwords/minecraft" = {
+    sopsFile = config.settings.sops.device-secrets;
+    neededForUsers = true;
+  };
 
   users.users.minecraft = {
     isNormalUser = true;
