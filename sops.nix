@@ -6,9 +6,7 @@
 }:
 
 {
-  imports = [
-    inputs.sops-nix.nixosModules.sops
-  ];
+  imports = [ inputs.sops-nix.nixosModules.sops ];
 
   options.settings = {
     sops = {

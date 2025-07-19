@@ -1,7 +1,12 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports = [ (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master") ];
+  imports = [ inputs.vscode-server.nixosModules.default ];
 
   services.vscode-server.enable = true;
 }
