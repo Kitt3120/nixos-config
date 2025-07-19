@@ -43,7 +43,7 @@
           ];
         };
 
-        "schweren.dev" = nixpkgs.lib.nixosSystem rec {
+        schweren = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = { inherit self system inputs; };
           modules = [
