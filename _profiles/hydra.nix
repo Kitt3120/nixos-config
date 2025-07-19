@@ -16,8 +16,11 @@
     ../_presets/productivity.nix
     ../_presets/social.nix
 
+    ./hydra/settings.nix
+
     ./hydra/desktop.nix
     ./hydra/hostname.nix
+    ./hydra/networking.nix
     ./hydra/programs.nix
     ./hydra/services.nix
     ./hydra/system.nix

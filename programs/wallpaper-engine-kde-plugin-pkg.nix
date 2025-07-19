@@ -1,6 +1,7 @@
 # Made by Sicheng-Pan (Macronova) (https://github.com/Sicheng-Pan) for nixpkgs repo here: https://github.com/NixOS/nixpkgs/pull/334984
 # Thank you so much for this!
 
+# TODO: Switch to nixpkgs version
 {
   extra-cmake-modules,
   fetchFromGitHub,

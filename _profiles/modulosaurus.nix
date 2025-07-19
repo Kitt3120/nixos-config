@@ -16,6 +16,8 @@
     ../_presets/productivity.nix
     ../_presets/social.nix
 
+    ./modulosaurus/settings.nix
+
     ./modulosaurus/desktop.nix
     ./modulosaurus/hostname.nix
     ./modulosaurus/programs.nix

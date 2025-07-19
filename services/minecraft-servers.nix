@@ -6,7 +6,7 @@
 }:
 
 {
-  options.minecraft.servers = lib.mkOption {
+  options.settings.minecraft.servers = lib.mkOption {
     type = lib.types.listOf (lib.types.attrs);
   };
 
@@ -31,10 +31,10 @@
         };
       };
     }
-  ) { } config.minecraft.servers;
+  ) { } config.settings.minecraft.servers;
 
   config.networking.firewall = {
-    allowedTCPPorts = lib.concatMap (server: server.ports.tcp) config.minecraft.servers;
-    allowedUDPPorts = lib.concatMap (server: server.ports.udp) config.minecraft.servers;
+    allowedTCPPorts = lib.concatMap (server: server.ports.tcp) config.settings.minecraft.servers;
+    allowedUDPPorts = lib.concatMap (server: server.ports.udp) config.settings.minecraft.servers;
   };
 }

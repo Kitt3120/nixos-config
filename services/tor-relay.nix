@@ -6,7 +6,7 @@
 }:
 
 {
-  options.tor-relay = {
+  options.settings.tor-relay = {
     ContactInfo = lib.mkOption {
       type = lib.types.str;
     };
@@ -60,21 +60,21 @@
 
   config.services.tor = {
     enable = true;
-    openFirewall = config.tor-relay.openFirewall;
+    openFirewall = config.settings.tor-relay.openFirewall;
     relay = {
       enable = true;
-      role = config.tor-relay.role;
+      role = config.settings.tor-relay.role;
     };
     settings = {
-      ContactInfo = config.tor-relay.ContactInfo;
-      Address = config.tor-relay.Address;
-      Nickname = config.tor-relay.Nickname;
-      ExitRelay = config.tor-relay.ExitRelay;
-      ExitPolicy = config.tor-relay.ExitPolicy;
-      BridgeRelay = config.tor-relay.BridgeRelay;
-      ORPort = config.tor-relay.ORPort;
-      BandwidthRate = config.tor-relay.BandwidthRate;
-      BandwidthBurst = config.tor-relay.BandwidthBurst;
+      ContactInfo = config.settings.tor-relay.ContactInfo;
+      Address = config.settings.tor-relay.Address;
+      Nickname = config.settings.tor-relay.Nickname;
+      ExitRelay = config.settings.tor-relay.ExitRelay;
+      ExitPolicy = config.settings.tor-relay.ExitPolicy;
+      BridgeRelay = config.settings.tor-relay.BridgeRelay;
+      ORPort = config.settings.tor-relay.ORPort;
+      BandwidthRate = config.settings.tor-relay.BandwidthRate;
+      BandwidthBurst = config.settings.tor-relay.BandwidthBurst;
       SOCKSPort = 0;
       SocksPolicy = [ "reject *:*" ];
     };

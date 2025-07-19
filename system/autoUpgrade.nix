@@ -6,7 +6,7 @@
 }:
 
 {
-  options.autoUpgrade = {
+  options.settings.autoUpgrade = {
     enable = lib.mkOption {
       default = true;
       type = lib.types.bool;
@@ -44,13 +44,13 @@
   };
 
   config.system.autoUpgrade = {
-    enable = config.autoUpgrade.enable;
-    dates = config.autoUpgrade.dates;
-    persistent = config.autoUpgrade.persistent;
-    allowReboot = config.autoUpgrade.autoReboot.enable;
+    enable = config.settings.autoUpgrade.enable;
+    dates = config.settings.autoUpgrade.dates;
+    persistent = config.settings.autoUpgrade.persistent;
+    allowReboot = config.settings.autoUpgrade.autoReboot.enable;
     rebootWindow = {
-      lower = config.autoUpgrade.autoReboot.window.lower;
-      upper = config.autoUpgrade.autoReboot.window.upper;
+      lower = config.settings.autoUpgrade.autoReboot.window.lower;
+      upper = config.settings.autoUpgrade.autoReboot.window.upper;
     };
   };
 }

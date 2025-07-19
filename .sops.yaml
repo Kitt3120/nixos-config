@@ -1,0 +1,32 @@
+keys:
+  - &modulosaurus-root age1yvk59sxvgklcf0uanhpa4rjqw3n380hnp200clr7tdy9amqezclqnscrul
+  - &modulosaurus-torben age1j5qdled7394qkzyk6n6zysrm5dzrmvan4f69shy4x64z6j3d6urq845dn2
+  - &hydra-root age1rtc7s6v64l3ttp3tgrdwpfjmpc7hhy0cmvy8ygz42sttc0qxhvys7cs0gy
+  - &hydra-torben age1tgeqcsyrjv9fngtcjg4ef6p4mdcnlsgvr45cwmxfnq4vpltnpygqgykcph
+  - &schweren-dev-root age1zqsw2zmrggl0svmjqeylhvngdj84a0nk3l0zp3av59384jgm6qaqsdjqd8
+  - &schweren-dev-torben age1nr93n9wpfnq8caczyulnyym73j4fkzg66xzh57s2n7lklw3g4sjsqlv5ss
+creation_rules:
+  - path_regex: secrets/shared\.yaml$
+    key_groups:
+      - age:
+          - *modulosaurus-root
+          - *modulosaurus-torben
+          - *hydra-root
+          - *hydra-torben
+          - *schweren-dev-root
+          - *schweren-dev-torben
+  - path_regex: secrets/modulosaurus\.yaml$
+    key_groups:
+      - age:
+          - *modulosaurus-root
+          - *modulosaurus-torben
+  - path_regex: secrets/hydra\.yaml$
+    key_groups:
+      - age:
+          - *hydra-root
+          - *hydra-torben
+  - path_regex: secrets/schweren\-dev.yaml$
+    key_groups:
+      - age:
+          - *schweren-dev-root
+          - *schweren-dev-torben

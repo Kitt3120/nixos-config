@@ -6,7 +6,7 @@
 }:
 
 {
-  options.zabbix-agent = {
+  options.settings.zabbix-agent = {
     server = lib.mkOption {
       type = lib.types.str;
     };
@@ -36,15 +36,17 @@
     services.zabbixAgent = {
       enable = true;
       package = pkgs.zabbix.agent2;
-      server = config.zabbix-agent.server;
-      listen = config.zabbix-agent.listen;
-      openFirewall = config.zabbix-agent.openFirewall;
+      server = config.settings.zabbix-agent.server;
+      listen = config.settings.zabbix-agent.listen;
+      openFirewall = config.settings.zabbix-agent.openFirewall;
       settings = {
-        "ServerActive" = config.zabbix-agent.server;
+        "ServerActive" = config.settings.zabbix-agent.server;
       };
     };
 
     # Allow the zabbix-agent to access the docker socket
-    users.users.zabbix-agent.extraGroups = lib.mkIf config.zabbix-agent.allowDocker [ "docker" ];
+    users.users.zabbix-agent.extraGroups = lib.mkIf config.settings.zabbix-agent.allowDocker [
+      "docker"
+    ];
   };
 }
