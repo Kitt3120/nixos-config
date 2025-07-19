@@ -17,6 +17,7 @@ in
     "ssh/keys/grapheneos".neededForUsers = true;
 
     "ssh/blocks/modulosaurus".neededForUsers = true;
+    "ssh/blocks/mrmeeseeks".neededForUsers = true;
     "ssh/blocks/schweren.dev".neededForUsers = true;
     "ssh/blocks/minecraft".neededForUsers = true;
   };
@@ -60,6 +61,8 @@ in
 
       touch /home/${username}/.ssh/config
       cat ${config.sops.secrets."ssh/blocks/modulosaurus".path} > /home/${username}/.ssh/config
+      echo "" >> /home/${username}/.ssh/config
+      cat ${config.sops.secrets."ssh/blocks/mrmeeseeks".path} > /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
       cat ${config.sops.secrets."ssh/blocks/schweren.dev".path} >> /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
