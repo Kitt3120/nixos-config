@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  self,
   ...
 }:
 
@@ -15,12 +16,6 @@
     dates = lib.mkOption {
       default = "hourly";
       type = lib.types.str;
-    };
-
-    # Doesn't really work when using a VPN, it will always fail
-    persistent = lib.mkOption {
-      default = false;
-      type = lib.types.bool;
     };
 
     autoReboot = {
@@ -46,11 +41,28 @@
   config.system.autoUpgrade = {
     enable = config.settings.autoUpgrade.enable;
     dates = config.settings.autoUpgrade.dates;
-    persistent = config.settings.autoUpgrade.persistent;
+    persistent = false;
     allowReboot = config.settings.autoUpgrade.autoReboot.enable;
     rebootWindow = {
       lower = config.settings.autoUpgrade.autoReboot.window.lower;
       upper = config.settings.autoUpgrade.autoReboot.window.upper;
     };
+    flake = self.outPath;
+    flags = [
+      "--update-input" # deprecated but still works for now
+      "nixpkgs"
+      "--update-input"
+      "home-manager"
+      "--update-input"
+      "aagl"
+      "--update-input"
+      "nix-alien"
+      "--update-input"
+      "sops-nix"
+      "--update-input"
+      "vscode-server"
+      "--no-write-lock-file"
+      "-L" # prints build logs
+    ];
   };
 }

@@ -9,6 +9,8 @@
   settings = {
     sops.device-secrets = ../../secrets/schweren-dev.yaml;
 
+    autoUpgrade.autoReboot.enable = true;
+
     memoryAllocator = "libc";
 
     zramSwap = {
