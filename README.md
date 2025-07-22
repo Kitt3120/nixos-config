@@ -61,6 +61,10 @@ Individual modules for specific programs, services, or system configurations are
 
 ## 🎯 Key Benefits of This Architecture
 
+### **Source of Truth**
+
+Because profiles import modules (either via presets or directly), modules are the source of truth for multiple devices. Fixing something or changing a behavior in a module will automatically apply to all devices that use that module, resulting in a consistent environment across devices.
+
 ### **Custom Abstractions over nixpkgs modules**
 
 The modular design allows for powerful customizations by defining device-specific settings and/or attribute overrides to existing nixpkgs modules.
@@ -139,7 +143,7 @@ settings = {
     optimiseSysctl = true;
     algorithm = "zstd";
     priority = 5;
-    memoryPercent = 50;  # Different per device based on RAM
+    memoryPercent = 50;
   };
 };
 ```
@@ -217,7 +221,7 @@ sops.secrets."your/secret" = {
 };
 ```
 
-## 🚀 Usage
+## 🛠️ Development Workflow
 
 ### **Adding New Software**
 
@@ -228,13 +232,13 @@ sops.secrets."your/secret" = {
 
 1. Create new profile directory: `_profiles/new-device/`
 2. Create device-specific modules (hostname, settings, etc.)
-3. Import relevant presets in `_profiles/new-device.nix`
+3. Import relevant modules and presets in `_profiles/new-device.nix`
 4. Add configuration to `flake.nix`
 5. Create device-specific secrets file
 6. Generate age key on new device using `age-keygen`
 7. Register device-specific secrets and public key in `.sops.yaml`
 
-## 🛠️ Development Workflow
+## 🚀 Usage
 
 ### **Building and Switching**
 
