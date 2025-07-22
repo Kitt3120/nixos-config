@@ -7,17 +7,11 @@
 
 {
   options.settings.tor-relay = {
-    ContactInfo = lib.mkOption {
-      type = lib.types.str;
-    };
+    ContactInfo = lib.mkOption { type = lib.types.str; };
 
-    Address = lib.mkOption {
-      type = lib.types.str;
-    };
+    Address = lib.mkOption { type = lib.types.str; };
 
-    Nickname = lib.mkOption {
-      type = lib.types.str;
-    };
+    Nickname = lib.mkOption { type = lib.types.str; };
 
     role = lib.mkOption {
       default = "relay";
@@ -49,13 +43,9 @@
       type = lib.types.int;
     };
 
-    BandwidthRate = lib.mkOption {
-      type = lib.types.str;
-    };
+    BandwidthRate = lib.mkOption { type = lib.types.str; };
 
-    BandwidthBurst = lib.mkOption {
-      type = lib.types.str;
-    };
+    BandwidthBurst = lib.mkOption { type = lib.types.str; };
   };
 
   config.services.tor = {

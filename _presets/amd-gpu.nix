@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../gpu/amd.nix
-  ];
+  imports = [ ../gpu/amd.nix ];
 }

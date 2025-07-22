@@ -59,8 +59,6 @@
           ];
         };
       in
-      [
-        "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
-      ];
+      [ "L+    /opt/rocm   -    -    -     -    ${rocmEnv}" ];
   };
 }

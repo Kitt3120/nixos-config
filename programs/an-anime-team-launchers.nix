@@ -1,13 +1,7 @@
-{
-  config,
-  inputs,
-  ...
-}:
+{ config, inputs, ... }:
 
 {
-  imports = [
-    inputs.aagl.nixosModules.default
-  ];
+  imports = [ inputs.aagl.nixosModules.default ];
 
   programs.anime-games-launcher.enable = true;
 

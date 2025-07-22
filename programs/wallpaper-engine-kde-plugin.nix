@@ -12,8 +12,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (pkgs.kdePackages.callPackage ./wallpaper-engine-kde-plugin-pkg.nix {
-      lib = lib;
-    })
+    (pkgs.kdePackages.callPackage ./wallpaper-engine-kde-plugin-pkg.nix { lib = lib; })
   ];
 }

@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./users/minecraft.nix
-  ];
+  imports = [ ./users/minecraft.nix ];
 }

@@ -7,9 +7,7 @@
 
 {
   options.settings.zabbix-agent = {
-    server = lib.mkOption {
-      type = lib.types.str;
-    };
+    server = lib.mkOption { type = lib.types.str; };
 
     listen = {
       ip = lib.mkOption {
@@ -23,13 +21,9 @@
       };
     };
 
-    openFirewall = lib.mkOption {
-      type = lib.types.bool;
-    };
+    openFirewall = lib.mkOption { type = lib.types.bool; };
 
-    allowDocker = lib.mkOption {
-      type = lib.types.bool;
-    };
+    allowDocker = lib.mkOption { type = lib.types.bool; };
   };
 
   config = {

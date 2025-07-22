@@ -265,7 +265,8 @@
           ZED_NOTIFY_VERBOSE = 1;
           ZED_USE_ENCLOSURE_LEDS = 1;
           ZED_SYSLOG_SUBCLASS_EXCLUDE = "history_event";
-        } // config.settings.zfs.zed.extraSettings;
+        }
+        // config.settings.zfs.zed.extraSettings;
       };
     };
   };
