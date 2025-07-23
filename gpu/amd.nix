@@ -44,6 +44,7 @@
       radeontop
       radeontools
       radeon-profile
+      rocmPackages.rocm-smi
     ];
 
     # Fix some ROCm related issues specific to NixOS
