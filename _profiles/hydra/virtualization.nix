@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ../../virtualization/docker.nix
     ../../virtualization/libvirt.nix
+    ../../virtualization/podman.nix
     ../../virtualization/waydroid.nix
   ];
 }
