@@ -2,6 +2,7 @@
 
 {
   imports = [
+    #../../programs/bambu-studio.nix # TODO: Enable again when fixed
     ../../programs/kitty.nix
     ../../programs/libnotify.nix
     ../../programs/librewolf.nix

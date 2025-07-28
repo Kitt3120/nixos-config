@@ -4,7 +4,6 @@
   imports = [
     ../programs/ani-cli.nix
     ../programs/audacity.nix
-    ../programs/bambu-studio.nix
     ../programs/blender.nix
     ../programs/easyeffects.nix
     ../programs/handbrake.nix
