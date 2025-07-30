@@ -3,7 +3,7 @@
 {
   imports = [
     ../programs/ani-cli.nix
-    ../programs/audacity.nix
+    #../programs/audacity.nix # TODO: Enable again when fixed
     ../programs/blender.nix
     ../programs/easyeffects.nix
     ../programs/handbrake.nix
