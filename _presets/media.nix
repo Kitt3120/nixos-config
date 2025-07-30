@@ -5,6 +5,7 @@
     ../programs/ani-cli.nix
     #../programs/audacity.nix # TODO: Enable again when fixed
     ../programs/blender.nix
+    ../programs/davinci-resolve-studio.nix
     ../programs/easyeffects.nix
     ../programs/handbrake.nix
     ../programs/imagemagick.nix
