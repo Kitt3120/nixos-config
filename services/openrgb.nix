@@ -6,7 +6,6 @@
 }:
 
 # TODO: Remove overrideAttrs workaround and commit the fix to nixpkgs
-# TODO: Add this src as flake input to let flake.lock handle the hash
 let
   openrgb-master = pkgs.openrgb-with-all-plugins.overrideAttrs (oldAttrs: rec {
 
