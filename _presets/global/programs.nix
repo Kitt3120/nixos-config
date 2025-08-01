@@ -53,6 +53,7 @@
     ../../programs/rust-stakeholder.nix
     ../../programs/screen.nix
     ../../programs/scrub.nix
+    ../../programs/smartmontools.nix
     ../../programs/sops.nix
     ../../programs/speedtest-cli.nix
     ../../programs/sudo-rs.nix
