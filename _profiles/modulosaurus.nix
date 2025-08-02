@@ -24,7 +24,5 @@
     ./modulosaurus/services.nix
     ./modulosaurus/system.nix
     ./modulosaurus/virtualization.nix
-
   ];
-  networking.firewall.allowedTCPPorts = [ 11434 ];
 }

@@ -50,4 +50,12 @@
       '';
     };
   });
+
+  # NixOS firewall previously allowed traffic from guests to the hypervisor.
+  # That traffic was bypassing the firewall.
+  # That has been fixed and now the firewall blocks all traffic from guests to the hypervisor.
+  # This trusts the virtual interface, so that the communication works again, for example for DHCP.
+  # This is hardcoded to virbr0 for now.
+  # I might add a device-specific option if needed later.
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 }
