@@ -9,7 +9,6 @@
       mozc
     ];
     fcitx5 = {
-      plasma6Support = true;
       addons = with pkgs; [
         fcitx5-anthy
         fcitx5-mozc

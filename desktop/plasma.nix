@@ -2,7 +2,7 @@
 
 {
   qt = {
-    platformTheme = "kde6";
+    platformTheme = "kde";
     style = "breeze";
   };
 
@@ -28,6 +28,7 @@
     kdePackages.filelight
     kdePackages.flatpak-kcm
     kdePackages.isoimagewriter
+    kdePackages.kamoso
     kdePackages.kate
     kdePackages.kbackup
     kdePackages.kcalc
@@ -68,10 +69,10 @@
     kdePackages.spectacle
     kdePackages.systemsettings
     kdePackages.taglib
+    kdePackages.wallpaper-engine-plugin
     kdePackages.wayland
     kdePackages.xwaylandvideobridge
     kdePackages.yakuake
-    libsForQt5.kamoso # Plasma 5 version (Plasma 6's kdePackages.kamoso does not build)
     kwalletcli
     libheif
   ];

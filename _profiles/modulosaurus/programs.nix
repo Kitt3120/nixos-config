@@ -16,7 +16,6 @@
     ../../programs/tor-browser.nix
     ../../programs/ungoogled-chromium.nix
     ../../programs/uni-sync.nix
-    ../../programs/wallpaper-engine-kde-plugin.nix
     ../../programs/wootility.nix
   ];
 }
