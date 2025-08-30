@@ -12,9 +12,9 @@ sudo chmod 700 -R /etc/nixos/
 
 NIX_OUTPUT_MONITOR_INSTALLED=$(command -v nom)
 if [ -x "$NIX_OUTPUT_MONITOR_INSTALLED" ]; then
-  sudo nixos-rebuild switch --flake /etc/nixos |& nom
+  sudo nixos-rebuild switch --flake /etc/nixos --show-trace |& nom
 else
-  nix-shell -p nix-output-monitor --run "sudo nixos-rebuild switch --flake /etc/nixos |& nom"
+  nix-shell -p nix-output-monitor --run "sudo nixos-rebuild switch --flake /etc/nixos --show-trace |& nom"
 fi
 
 NEW_NIX_STORE_PATH=$(readlink /run/current-system/sw)
