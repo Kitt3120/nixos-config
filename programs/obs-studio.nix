@@ -8,7 +8,6 @@
         input-overlay
         droidcam-obs
         obs-websocket
-        obs-webkitgtk
         obs-vkcapture
         obs-pipewire-audio-capture
         obs-gstreamer
