@@ -24,6 +24,7 @@
     ../../programs/gnutar.nix
     ../../programs/htop.nix
     ../../programs/i2c-tools.nix
+    ../../programs/inxi.nix
     ../../programs/jq.nix
     ../../programs/killall.nix
     ../../programs/lm_sensors.nix
