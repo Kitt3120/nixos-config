@@ -11,5 +11,6 @@
     ../../services/openrgb.nix
     ../../services/opentabletdriver.nix
     ../../services/smartd.nix
+    ../../services/sunshine.nix
   ];
 }
