@@ -8,6 +8,7 @@
     ../programs/gamescope.nix
     ../programs/lutris.nix
     ../programs/mangohud.nix
+    ../programs/moonlight-qt.nix
     ../programs/osu-lazer.nix
     ../programs/prism-launcher.nix
     ../programs/protonup.nix
