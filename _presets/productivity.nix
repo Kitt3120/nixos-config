@@ -14,6 +14,7 @@
     ../programs/onedrive-gui.nix
     ../programs/onlyoffice.nix
     ../programs/pdfarranger.nix
+    ../programs/qpdf.nix
     ../programs/remmina.nix
     ../programs/rustdesk.nix
     ../programs/texlive.nix
