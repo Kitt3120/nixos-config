@@ -5,6 +5,7 @@
     ../programs/anki.nix
     ../programs/ausweisapp.nix
     ../programs/bitwarden.nix
+    ../programs/brave.nix
     ../programs/corectrl.nix
     ../programs/cpupower-gui.nix
     ../programs/gparted.nix
