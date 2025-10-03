@@ -24,7 +24,6 @@
     hardware.amdgpu = {
       initrd.enable = true;
       opencl.enable = true;
-      amdvlk.enable = false; # We want to use Mesa's RADV Vulkan driver
       overdrive = {
         enable = config.settings.amd.overdrive.enable;
         ppfeaturemask = config.settings.amd.overdrive.ppfeaturemask;
