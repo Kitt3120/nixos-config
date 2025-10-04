@@ -60,6 +60,7 @@
     ../../programs/speedtest-cli.nix
     ../../programs/sudo-rs.nix
     ../../programs/tldr.nix
+    ../../programs/unrar.nix
     ../../programs/unzip.nix
     ../../programs/usbutils.nix
     ../../programs/uwufetch.nix
