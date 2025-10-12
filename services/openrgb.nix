@@ -37,6 +37,6 @@ in
   boot.kernelModules = [
     "i2c-dev"
   ]
-  ++ lib.optionals (config.hardware.cpu.intel.updateMicrocode == "amd") [ "i2c-piix4" ]
-  ++ lib.optionals (config.hardware.cpu.amd.updateMicrocode == "intel") [ "i2c-i801" ];
+  ++ lib.optionals (config.hardware.cpu.intel.updateMicrocode == true) [ "i2c-piix4" ]
+  ++ lib.optionals (config.hardware.cpu.amd.updateMicrocode == true) [ "i2c-i801" ];
 }

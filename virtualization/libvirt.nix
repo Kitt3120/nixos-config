@@ -17,9 +17,9 @@
   };
 
   boot.extraModprobeConfig =
-    if config.hardware.cpu.intel.updateMicrocode == "amd" then
+    if config.hardware.cpu.intel.updateMicrocode == true then
       "options kvm_amd nested=1"
-    else if config.hardware.cpu.amd.updateMicrocode == "intel" then
+    else if config.hardware.cpu.amd.updateMicrocode == true then
       "options kvm_intel nested=1"
     else
       "";
