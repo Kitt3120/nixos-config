@@ -21,28 +21,29 @@
   };
 
   config = {
-    hardware.amdgpu = {
-      initrd.enable = true;
-      opencl.enable = true;
-      overdrive = {
-        enable = config.settings.amd.overdrive.enable;
-        ppfeaturemask = config.settings.amd.overdrive.ppfeaturemask;
+    hardware = {
+      amdgpu = {
+        initrd.enable = true;
+        opencl.enable = true;
+        overdrive = {
+          enable = config.settings.amd.overdrive.enable;
+          ppfeaturemask = config.settings.amd.overdrive.ppfeaturemask;
+        };
       };
-    };
 
-    # Additional ROCm packages not covered by hardware.amdgpu.opencl.enable
-    hardware.graphics = {
-      extraPackages = with pkgs; [
-        rocmPackages.hipblas
-        rocmPackages.rocblas
-      ];
+      # Additional ROCm packages not covered by hardware.amdgpu.opencl.enable
+      graphics = {
+        extraPackages = with pkgs; [
+          rocmPackages.hipblas
+          rocmPackages.rocblas
+          ocl-icd
+        ];
+      };
     };
 
     # Useful userland tools for AMD GPUs
     environment.systemPackages = with pkgs; [
       radeontop
-      radeontools
-      radeon-profile
       rocmPackages.rocm-smi
     ];
 

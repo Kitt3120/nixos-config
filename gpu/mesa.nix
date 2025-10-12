@@ -7,22 +7,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-    mesa
-    driversi686Linux.mesa
     mesa-demos
-    clinfo
-    wayland-utils
-    libdrm
-    libva-vdpau-driver
-    driversi686Linux.libva-vdpau-driver
-    libvdpau-va-gl
-    driversi686Linux.libvdpau-va-gl
-    vdpauinfo
-    driversi686Linux.vdpauinfo
     vulkan-tools
     vulkan-headers
-    vulkan-extension-layer
+    clinfo
+    libdrm
+    libvdpau
+    vdpauinfo
+    driversi686Linux.vdpauinfo
     libva
     libva-utils
+    wayland-utils
   ];
 }
