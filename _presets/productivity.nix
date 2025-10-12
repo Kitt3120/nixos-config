@@ -12,7 +12,6 @@
     ../programs/gsmartcontrol.nix
     ../programs/libreoffice.nix
     ../programs/nextcloud.nix
-    ../programs/onedrive-gui.nix
     ../programs/onlyoffice.nix
     ../programs/pdfarranger.nix
     ../programs/qpdf.nix
