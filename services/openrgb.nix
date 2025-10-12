@@ -18,6 +18,8 @@ let
       sha256 = "sha256-8x3gQdV8A0h4+6Sp+CrmICQnzY2pVSFe/sxnFPKEG8g=";
     };
 
+    patches = lib.mkForce []; # removes upstreams qlist-include.patch, which is not needed anymore
+
     postPatch = ''
       # Fix shebangs in scripts
       patchShebangs scripts/build-udev-rules.sh
