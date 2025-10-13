@@ -36,7 +36,6 @@
         extraPackages = with pkgs; [
           rocmPackages.hipblas
           rocmPackages.rocblas
-          ocl-icd
         ];
       };
     };
