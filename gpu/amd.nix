@@ -30,14 +30,6 @@
           ppfeaturemask = config.settings.amd.overdrive.ppfeaturemask;
         };
       };
-
-      # Additional ROCm packages not covered by hardware.amdgpu.opencl.enable
-      graphics = {
-        extraPackages = with pkgs; [
-          rocmPackages.hipblas
-          rocmPackages.rocblas
-        ];
-      };
     };
 
     # Useful userland tools for AMD GPUs
@@ -55,7 +47,6 @@
             rocblas
             hipblas
             clr
-            clr.icd
           ];
         };
       in
