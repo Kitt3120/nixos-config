@@ -23,6 +23,7 @@
       "gamemode"
       "audio"
       "video"
+      "render"
       "input"
       "optical"
       "scanner"
