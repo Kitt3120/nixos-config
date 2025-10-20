@@ -11,6 +11,7 @@
     ../programs/maven.nix
     ../programs/python3.nix
     ../programs/rustup.nix
+    ../programs/sqlite.nix
     ../programs/vscode.nix
   ];
 }
