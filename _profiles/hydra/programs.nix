@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -8,7 +8,6 @@
     ../../programs/libnotify.nix
     ../../programs/librewolf.nix
     ../../programs/linux-wifi-hotspot.nix
-    ../../programs/lshw-gui.nix
     ../../programs/nvtop.nix
     ../../programs/podman-desktop.nix
     ../../programs/qrtool.nix

@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ ... }:
 
 {
   home-manager.users.torben.xdg.configFile."git/config".text = ''

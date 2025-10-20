@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, lib, ... }:
 
 {
   options.settings.minecraft.servers = lib.mkOption { type = lib.types.listOf (lib.types.attrs); };
