@@ -3,6 +3,7 @@
 {
   imports = [
     ../programs/adb.nix
+    ../programs/delta.nix
     ../programs/gh.nix
     ../programs/gradle.nix
     ../programs/java.nix
