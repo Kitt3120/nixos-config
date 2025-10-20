@@ -14,6 +14,5 @@
     ../programs/protonup.nix
     ../programs/retroarch.nix
     ../programs/steam.nix
-    ../programs/vintage-story.nix
   ];
 }
