@@ -77,13 +77,16 @@
         ma = "merge --abort";
         mc = "merge --continue";
 
-        rebaseToMain = "!git stash && git checkout main && git fetch --all -p && git pull && git checkout - && git rebase main && git stash pop";
-        rebaseToMaster = "!git stash && git checkout master && git fetch --all -p && git pull && git checkout - && git rebase master && git stash pop";
-        rebaseToStaging = "!git stash && git checkout staging && git fetch --all -p && git pull && git checkout - && git rebase staging && git stash pop";
+        logwalk = "log --walk-reflogs --oneline --decorate";
+        find-lost = "fsck --lost-found";
 
-        mergeFromMain = "!git stash && git checkout main && git fetch --all -p && git pull && git checkout - && git merge main && git stash pop";
-        mergeFromMaster = "!git stash && git checkout master && git fetch --all -p && git pull && git checkout - && git merge master && git stash pop";
-        mergeFromStaging = "!git stash && git checkout staging && git fetch --all -p && git pull && git checkout - && git merge staging && git stash pop";
+        rebaseToMain = "!git fetch --all -p && git stash && git pull && git checkout main && git pull && git checkout - && git rebase main && git stash pop";
+        rebaseToMaster = "!git fetch --all -p && git stash && git pull && git checkout master && git pull && git checkout - && git rebase master && git stash pop";
+        rebaseToStaging = "!git fetch --all -p && git stash && git pull && git checkout staging && git pull && git checkout - && git rebase staging && git stash pop";
+
+        mergeFromMain = "!git fetch --all -p && git stash && git pull && git checkout main && git pull && git checkout - && git merge main && git stash pop";
+        mergeFromMaster = "!git fetch --all -p && git stash && git pull && git checkout master && git pull && git checkout - && git merge master && git stash pop";
+        mergeFromStaging = "!git fetch --all -p && git stash && git pull && git checkout staging && git pull && git checkout - && git merge staging && git stash pop";
       };
     };
   };
