@@ -4,14 +4,17 @@
   settings = {
     sops.device-secrets = ../../secrets/schweren-dev.yaml;
 
-    comin.remotes = [
-      {
-        url = "https://github.com/Kitt3120/nixos-config.git";
-        name = "origin";
-        branch = "main";
-        poll-interval = 60;
-      }
-    ];
+    comin = {
+      autoReboot = true;
+      remotes = [
+        {
+          url = "https://github.com/Kitt3120/nixos-config.git";
+          name = "origin";
+          branch = "main";
+          pollInterval = 60;
+        }
+      ];
+    };
 
     #autoUpgrade.autoReboot.enable = true; # TODO
 
