@@ -55,7 +55,7 @@
       script-name = "comin-reboot-if-needed";
       rebootScriptDerivation =
         with pkgs;
-        (writeShellScriptBin ${script-name} ''
+        (writeShellScriptBin script-name ''
           ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && reboot
         '');
       rebootScript = "${rebootScriptDerivation}/bin/${script-name}";
