@@ -1,17 +1,15 @@
 { config, lib, ... }:
 
 {
-  options.settings = {
-    sunshine = {
-      settings = lib.mkOption {
-        type = lib.types.attrs;
-        description = "Settings for Sunshine.";
-      };
+  options.settings.sunshine = {
+    settings = lib.mkOption {
+      type = lib.types.attrs;
+      description = "Settings for Sunshine.";
+    };
 
-      apps = lib.mkOption {
-        type = lib.types.listOf lib.types.attrs;
-        description = "List of apps to be added to Sunshine.";
-      };
+    apps = lib.mkOption {
+      type = lib.types.listOf lib.types.attrs;
+      description = "List of apps to be added to Sunshine.";
     };
   };
 

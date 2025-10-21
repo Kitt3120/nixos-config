@@ -1,11 +1,9 @@
 { config, lib, ... }:
 
 {
-  options.settings = {
-    networking.wireguard.publicKey = lib.mkOption {
-      type = lib.types.str;
-      description = "Public key for the WireGuard interface.";
-    };
+  options.settings.networking.wireguard.publicKey = lib.mkOption {
+    type = lib.types.str;
+    description = "Public key for the WireGuard interface.";
   };
 
   config = {

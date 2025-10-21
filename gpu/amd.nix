@@ -6,17 +6,15 @@
 }:
 
 {
-  options.settings = {
-    amd.overdrive = {
-      enable = lib.mkOption {
-        type = lib.types.bool;
-        description = "Enable AMD GPU overdrive features.";
-      };
+  options.settings.amd.overdrive = {
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      description = "Enable AMD GPU overdrive features.";
+    };
 
-      ppfeaturemask = lib.mkOption {
-        type = lib.types.str;
-        description = "AMD GPU overdrive feature mask. Default is 0xffffffff (all features enabled).";
-      };
+    ppfeaturemask = lib.mkOption {
+      type = lib.types.str;
+      description = "AMD GPU overdrive feature mask. Default is 0xffffffff (all features enabled).";
     };
   };
 

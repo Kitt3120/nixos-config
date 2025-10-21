@@ -103,35 +103,32 @@ Abstracted modules can expose settings that are configured differently per devic
 
 #...
 
-options.settings = {
-  zramSwap = {
-    enable = lib.mkOption {
-    type = lib.types.bool;
-    description = "Alias for zramSwap.enable";
-    };
+options.settings.zramSwap = {
+  enable = lib.mkOption {
+  type = lib.types.bool;
+  description = "Alias for zramSwap.enable";
+  };
 
-    optimiseSysctl = lib.mkOption {
-    type = lib.types.bool;
-    description = "Applies sysctl settings to optimize zram swap usage. Reference: https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram";
-    };
+  optimiseSysctl = lib.mkOption {
+  type = lib.types.bool;
+  description = "Applies sysctl settings to optimize zram swap usage. Reference: https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram";
+  };
 
-    priority = lib.mkOption {
-    type = lib.types.int;
-    description = "Alias for zramSwap.priority";
-    };
+  priority = lib.mkOption {
+  type = lib.types.int;
+  description = "Alias for zramSwap.priority";
+  };
 
-    memoryPercent = lib.mkOption {
-    type = lib.types.int;
-    description = "Alias for zramSwap.memoryPercent";
-    };
+  memoryPercent = lib.mkOption {
+  type = lib.types.int;
+  description = "Alias for zramSwap.memoryPercent";
+  };
 
-    algorithm = lib.mkOption {
-    type = lib.types.str;
-    description = "Alias for zramSwap.algorithm";
-    };
+  algorithm = lib.mkOption {
+  type = lib.types.str;
+  description = "Alias for zramSwap.algorithm";
   };
 };
-
 #...
 ```
 

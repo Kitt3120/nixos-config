@@ -1,11 +1,9 @@
 { config, lib, ... }:
 
 {
-  options.settings = {
-    memoryAllocator = lib.mkOption {
-      type = lib.types.str;
-      description = "Alias for environment.memoryAllocator.provider.";
-    };
+  options.settings.memoryAllocator = lib.mkOption {
+    type = lib.types.str;
+    description = "Alias for environment.memoryAllocator.provider.";
   };
 
   config = {
