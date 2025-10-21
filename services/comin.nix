@@ -48,7 +48,6 @@
     };
   };
 
-  # bump
   config =
     let
       comin = config.services.comin.package;
@@ -56,7 +55,7 @@
       rebootScript =
         with pkgs;
         (writeShellScriptBin "comin-reboot-if-needed" ''
-          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && /sbin/reboot
+          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && reboot
         '');
     in
     {
