@@ -47,7 +47,7 @@
       description = "List of comin remotes to track.";
     };
   };
-
+  #
   config =
     let
       comin = config.services.comin.package;
