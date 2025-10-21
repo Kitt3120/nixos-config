@@ -6,7 +6,6 @@ PREVIOUS_NIX_STORE_PATH=$(readlink /run/current-system/sw)
 sudo mv /etc/nixos /tmp/nixos-$DATE
 sudo cp -r ./ /etc/nixos
 sudo rm -rf /etc/nixos/format.sh /etc/nixos/listUnusedFiles.sh /etc/nixos/switch.sh /etc/nixos/.gitignore /etc/nixos/.git /etc/nixos/.vscode
-sudo cp /tmp/nixos-$DATE/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 sudo chown root:root -R /etc/nixos/
 sudo chmod 700 -R /etc/nixos/
 
