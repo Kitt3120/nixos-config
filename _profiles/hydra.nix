@@ -16,6 +16,7 @@
     ../_presets/productivity.nix
     ../_presets/social.nix
 
+    ./hydra/hardware-configuration.nix
     ./hydra/settings.nix
 
     ./hydra/desktop.nix

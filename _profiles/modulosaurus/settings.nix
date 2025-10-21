@@ -4,6 +4,8 @@
   settings = {
     sops.device-secrets = ../../secrets/modulosaurus.yaml;
 
+    comin.poll-interval = 60;
+
     memoryAllocator = "libc";
 
     zramSwap = {

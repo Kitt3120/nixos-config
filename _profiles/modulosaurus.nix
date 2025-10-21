@@ -16,6 +16,7 @@
     ../_presets/productivity.nix
     ../_presets/social.nix
 
+    ./modulosaurus/hardware-configuration.nix
     ./modulosaurus/settings.nix
 
     ./modulosaurus/desktop.nix

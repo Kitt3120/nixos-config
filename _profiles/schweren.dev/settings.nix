@@ -4,7 +4,9 @@
   settings = {
     sops.device-secrets = ../../secrets/schweren-dev.yaml;
 
-    #autoUpgrade.autoReboot.enable = true;
+    comin.poll-interval = 60;
+
+    #autoUpgrade.autoReboot.enable = true; # TODO
 
     memoryAllocator = "libc";
 

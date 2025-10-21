@@ -3,6 +3,7 @@
 {
   imports = [
     ../../services/avahi.nix
+    ../../services/comin.nix
     ../../services/cups.nix
     ../../services/dbus.nix
     ../../services/fstrim.nix

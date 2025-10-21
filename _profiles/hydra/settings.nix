@@ -4,6 +4,8 @@
   settings = {
     sops.device-secrets = ../../secrets/hydra.yaml;
 
+    comin.poll-interval = 60;
+
     networking.wireguard.publicKey = "M2fupWZjNrQUDAcQoB1Lq9Tof+USBJm0Stgw9T+yJjM=";
 
     memoryAllocator = "libc";
