@@ -6,6 +6,24 @@
   ...
 }:
 
+let
+  comin = config.services.comin.package;
+  ripgrep = pkgs.ripgrep;
+  coreutils = pkgs.coreutils;
+  systemd = pkgs.systemd;
+  script-name = "comin-reboot-if-needed";
+  rebootScriptDerivation = (
+    pkgs.writeShellScriptBin script-name ''
+      if ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes'; then
+        if ! ${coreutils}/bin/sleep 5; then
+          echo "Warning: sleep failed, proceeding to reboot anyway" >&2
+        fi
+        ${systemd}/bin/systemctl reboot
+      fi
+    ''
+  );
+  rebootScript = "${rebootScriptDerivation}/bin/${script-name}";
+in
 {
   imports = [ inputs.comin.nixosModules.comin ];
 
@@ -48,30 +66,16 @@
     };
   };
 
-  config =
-    let
-      comin = config.services.comin.package;
-      ripgrep = pkgs.ripgrep;
-      coreutils = pkgs.coreutils;
-      systemd = pkgs.systemd;
-      script-name = "comin-reboot-if-needed";
-      rebootScriptDerivation =
-        with pkgs;
-        (writeShellScriptBin script-name ''
-          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && ${coreutils}/bin/sleep 5 && ${systemd}/bin/systemctl reboot
-        '');
-      rebootScript = "${rebootScriptDerivation}/bin/${script-name}";
-    in
-    {
-      services.comin = {
-        enable = true;
-        postDeploymentCommand = (lib.mkIf config.settings.comin.autoReboot rebootScript);
-        remotes = builtins.map (remote: {
-          url = remote.url;
-          name = remote.name;
-          branches.main.name = remote.branch;
-          poller.period = remote.pollInterval;
-        }) config.settings.comin.remotes;
-      };
+  config = {
+    services.comin = {
+      enable = true;
+      postDeploymentCommand = (lib.mkIf config.settings.comin.autoReboot rebootScript);
+      remotes = builtins.map (remote: {
+        url = remote.url;
+        name = remote.name;
+        branches.main.name = remote.branch;
+        poller.period = remote.pollInterval;
+      }) config.settings.comin.remotes;
     };
+  };
 }
