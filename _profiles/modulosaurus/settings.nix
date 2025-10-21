@@ -4,12 +4,14 @@
   settings = {
     sops.device-secrets = ../../secrets/modulosaurus.yaml;
 
-    comin = {
-      url = "https://github.com/Kitt3120/nixos-config.git";
-      remote = "origin";
-      branch = "main";
-      poll-interval = 60;
-    };
+    comin.remotes = [
+      {
+        url = "https://github.com/Kitt3120/nixos-config.git";
+        name = "origin";
+        branch = "main";
+        poll-interval = 60;
+      }
+    ];
 
     memoryAllocator = "libc";
 

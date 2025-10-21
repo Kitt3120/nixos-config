@@ -4,12 +4,14 @@
   settings = {
     sops.device-secrets = ../../secrets/hydra.yaml;
 
-    comin = {
-      url = "https://github.com/Kitt3120/nixos-config.git";
-      remote = "origin";
-      branch = "main";
-      poll-interval = 60;
-    };
+    comin.remotes = [
+      {
+        url = "https://github.com/Kitt3120/nixos-config.git";
+        name = "origin";
+        branch = "main";
+        poll-interval = 60;
+      }
+    ];
 
     networking.wireguard.publicKey = "M2fupWZjNrQUDAcQoB1Lq9Tof+USBJm0Stgw9T+yJjM=";
 
