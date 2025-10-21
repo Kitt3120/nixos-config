@@ -6,6 +6,24 @@
   ...
 }:
 
+let
+  comin = config.services.comin.package;
+  ripgrep = pkgs.ripgrep;
+  coreutils = pkgs.coreutils;
+  systemd = pkgs.systemd;
+  script-name = "comin-reboot-if-needed";
+  rebootScriptDerivation = (
+    pkgs.writeShellScriptBin script-name ''
+      if ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes'; then
+        if ! ${coreutils}/bin/sleep 5; then
+          echo "Warning: sleep failed, proceeding to reboot anyway" >&2
+        fi
+        ${systemd}/bin/systemctl reboot
+      fi
+    ''
+  );
+  rebootScript = "${rebootScriptDerivation}/bin/${script-name}";
+in
 {
   imports = [ inputs.comin.nixosModules.comin ];
 
@@ -48,26 +66,16 @@
     };
   };
 
-  config =
-    let
-      comin = config.services.comin.package;
-      ripgrep = pkgs.ripgrep;
-      rebootScript =
-        with pkgs;
-        (writeShellScriptBin "comin-reboot-if-needed" ''
-          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && /sbin/reboot
-        '');
-    in
-    {
-      services.comin = {
-        enable = true;
-        postDeploymentCommand = (lib.mkIf config.settings.comin.autoReboot rebootScript);
-        remotes = builtins.map (remote: {
-          url = remote.url;
-          name = remote.name;
-          branches.main.name = remote.branch;
-          poller.period = remote.pollInterval;
-        }) config.settings.comin.remotes;
-      };
+  config = {
+    services.comin = {
+      enable = true;
+      postDeploymentCommand = (lib.mkIf config.settings.comin.autoReboot rebootScript);
+      remotes = builtins.map (remote: {
+        url = remote.url;
+        name = remote.name;
+        branches.main.name = remote.branch;
+        poller.period = remote.pollInterval;
+      }) config.settings.comin.remotes;
     };
+  };
 }
