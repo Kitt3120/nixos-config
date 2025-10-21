@@ -52,11 +52,13 @@
     let
       comin = config.services.comin.package;
       ripgrep = pkgs.ripgrep;
+      coreutils = pkgs.coreutils;
+      systemd = pkgs.systemd;
       script-name = "comin-reboot-if-needed";
       rebootScriptDerivation =
         with pkgs;
         (writeShellScriptBin script-name ''
-          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && reboot
+          ${comin}/bin/comin status | ${ripgrep}/bin/rg -q 'Need to reboot: yes' && ${coreutils}/bin/sleep 5 && ${systemd}/bin/systemctl reboot
         '');
       rebootScript = "${rebootScriptDerivation}/bin/${script-name}";
     in
