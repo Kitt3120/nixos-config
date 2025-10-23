@@ -71,7 +71,6 @@
     kdePackages.taglib
     kdePackages.wallpaper-engine-plugin
     kdePackages.wayland
-    kdePackages.xwaylandvideobridge
     kdePackages.yakuake
     kwalletcli
     libheif
