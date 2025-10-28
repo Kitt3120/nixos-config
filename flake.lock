@@ -111,6 +111,22 @@
         "type": "github"
       }
     },
+    "mesa-good": {
+      "locked": {
+        "lastModified": 1754501210,
+        "narHash": "sha256-ahTHrGs72TLVcNUR2VHckEx+t6frke0e/Ptk6AaEINk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "599ddd2b79331c1e6153e1659bdaab65d62c4c82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "599ddd2b79331c1e6153e1659bdaab65d62c4c82",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nix-alien": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -191,6 +207,7 @@
         "aagl": "aagl",
         "comin": "comin",
         "home-manager": "home-manager",
+        "mesa-good": "mesa-good",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_2",
         "sops-nix": "sops-nix",
