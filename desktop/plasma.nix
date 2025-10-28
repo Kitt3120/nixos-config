@@ -69,7 +69,7 @@
     kdePackages.spectacle
     kdePackages.systemsettings
     kdePackages.taglib
-    kdePackages.wallpaper-engine-plugin
+    #kdePackages.wallpaper-engine-plugin # TODO: https://github.com/NixOS/nixpkgs/issues/455497
     kdePackages.wayland
     kdePackages.yakuake
     kwalletcli
