@@ -26,6 +26,7 @@ jobs:
       - name: Print PR number
         run: echo Pull request number is ${{ steps.update.outputs.pull-request-number }}.
       - name: Merge PR
+        if: steps.update.outputs.pull-request-number != ''
         run: gh pr merge ${{ steps.update.outputs.pull-request-number }} --squash --admin
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
