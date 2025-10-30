@@ -15,7 +15,7 @@
           Name=osu! (Wayland)
           Comment=A free-to-win rhythm game. Rhythm is just a *click* away!
           Icon=osu
-          Exec=env COMPlus_GCGen0MaxBudget=600000 SDL_VIDEODRIVER=wayland osu! %u
+          Exec=env COMPlus_GCGen0MaxBudget=600000 OSU_SDL3=true SDL_VIDEODRIVER=wayland osu! %u
           Terminal=false
           MimeType=application/x-osu-beatmap-archive;application/x-osu-skin-archive;application/x-osu-beatmap;application/x-osu-storyboard;application/x-osu-replay;x-scheme-handler/osu;
           Categories=Game;
