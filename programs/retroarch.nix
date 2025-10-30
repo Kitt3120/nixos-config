@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    retroarchFull
+    retroarch-full
     retroarch-assets
   ];
 }

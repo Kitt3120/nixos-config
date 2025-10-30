@@ -10,13 +10,12 @@
   environment.systemPackages = with pkgs; [
     dejavu_fonts
     liberation_ttf
-    ubuntu_font_family
+    ubuntu-classic
     freefont_ttf
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    noto-fonts-emoji
     noto-fonts-color-emoji
     fira-code
     nerd-fonts._0xproto

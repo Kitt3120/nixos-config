@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    protonup
+    protonup-ng
     protonup-qt
   ];
 }
