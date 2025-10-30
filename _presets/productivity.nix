@@ -10,7 +10,6 @@
     ../programs/cpupower-gui.nix
     ../programs/gparted.nix
     ../programs/gsmartcontrol.nix
-    ../programs/libreoffice.nix
     ../programs/nextcloud.nix
     ../programs/onlyoffice.nix
     ../programs/pdfarranger.nix
