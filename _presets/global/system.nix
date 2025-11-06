@@ -2,7 +2,6 @@
 
 {
   imports = [
-    #../../system/autoUpgrade.nix # TODO: Enable again when fixed
     ../../system/firmware.nix
     ../../system/i2c.nix
     ../../system/locale.nix

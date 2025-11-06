@@ -16,8 +16,6 @@
       ];
     };
 
-    #autoUpgrade.autoReboot.enable = true; # TODO
-
     memoryAllocator = "libc";
 
     zramSwap = {

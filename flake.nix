@@ -1,7 +1,6 @@
 {
   description = "Torben's machines";
 
-  # Don't forget to add new inputs to autoUpgrade.nix
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     #nixpkgs.url = "github:nixos/nixpkgs?ref=master";
