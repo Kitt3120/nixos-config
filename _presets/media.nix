@@ -10,7 +10,7 @@
     ../programs/handbrake.nix
     ../programs/imagemagick.nix
     ../programs/inkscape.nix
-    #../programs/jellyfin.nix TODO: Enable again when fixed
+    #../programs/jellyfin.nix # TODO: Enable again when fixed
     ../programs/kdenlive.nix
     ../programs/krita.nix
     ../programs/mkvtoolnix.nix
