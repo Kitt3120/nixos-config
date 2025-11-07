@@ -8,7 +8,7 @@
     ../../programs/libnotify.nix
     ../../programs/librewolf.nix
     ../../programs/linux-wifi-hotspot.nix
-    #../../programs/nvtop.nix # TODO: Enable again when fixed
+    ../../programs/nvtop.nix
     ../../programs/podman-desktop.nix
     ../../programs/qrtool.nix
     ../../programs/ryzen-monitor-ng.nix

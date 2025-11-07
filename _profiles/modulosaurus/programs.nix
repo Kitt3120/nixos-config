@@ -6,7 +6,7 @@
     ../../programs/kitty.nix
     ../../programs/libnotify.nix
     ../../programs/librewolf.nix
-    #../../programs/nvtop.nix # TODO: Enable again when fixed
+    ../../programs/nvtop.nix
     ../../programs/podman-desktop.nix
     ../../programs/qrtool.nix
     ../../programs/ryzen-monitor-ng.nix
