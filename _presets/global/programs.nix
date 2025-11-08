@@ -51,6 +51,8 @@
     ../../programs/pigz.nix
     ../../programs/pkg-config.nix
     ../../programs/pkgconf.nix
+    ../../programs/ripgrep.nix
+    ../../programs/ripgrep-all.nix
     ../../programs/rsync.nix
     ../../programs/rust-stakeholder.nix
     ../../programs/screen.nix
