@@ -7,7 +7,6 @@
     ../../services/fprintd.nix
     ../../services/media-pipelines-ffmpeg.nix
     ../../services/mullvad.nix
-    ../../services/nixos-upgrade-notification/libnotify.nix
     ../../services/openrgb.nix
     ../../services/opentabletdriver.nix
     ../../services/powermanagement.nix
