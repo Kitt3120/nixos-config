@@ -6,7 +6,7 @@
       plugins = with obs-studio-plugins; [
         waveform
         input-overlay
-        droidcam-obs
+        #droidcam-obs # TODO: Enable again when fixed
         obs-websocket
         obs-vkcapture
         obs-pipewire-audio-capture
