@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       - name: Install Determinate Nix
         uses: DeterminateSystems/determinate-nix-action@9596b92e70cbf68a494a2b0273cb5b680184f5fc
       - id: update
