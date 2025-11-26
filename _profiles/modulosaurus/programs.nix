@@ -5,7 +5,6 @@
     #../../programs/bambu-studio.nix # TODO: Enable again when fixed
     ../../programs/kitty.nix
     ../../programs/libnotify.nix
-    ../../programs/librewolf.nix
     ../../programs/nvtop.nix
     ../../programs/piper.nix
     ../../programs/podman-desktop.nix
