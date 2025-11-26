@@ -21,6 +21,7 @@
 
     ./modulosaurus/desktop.nix
     ./modulosaurus/hostname.nix
+    ./modulosaurus/networking.nix
     ./modulosaurus/programs.nix
     ./modulosaurus/services.nix
     ./modulosaurus/system.nix
