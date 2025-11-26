@@ -72,6 +72,11 @@
     fsType = "xfs";
   };
 
+  fileSystems."/media/EHddTosh1" = {
+    device = "/dev/disk/by-uuid/63759701-5f3c-43fe-afb9-9363f6998a0d";
+    fsType = "xfs";
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-uuid/2056ac77-9564-4552-a74a-d5985ab78def"; }
   ];
