@@ -2,9 +2,9 @@
   description = "Torben's machines";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     #nixpkgs.url = "github:nixos/nixpkgs?ref=master";
-    #nixpkgs.url = "github:nixos/nixpkgs?ref=599ddd2b79331c1e6153e1659bdaab65d62c4c82"; # nixos-unstable last good davinci resolve
+    #nixpkgs.url = "github:nixos/nixpkgs?ref=staging";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     #nixpkgs.url = "path:/home/torben/Nextcloud/Programmierung/NixOS/nixpkgs"; # local
 
     mesa-good.url = "github:nixos/nixpkgs?ref=599ddd2b79331c1e6153e1659bdaab65d62c4c82";

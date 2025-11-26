@@ -15,7 +15,7 @@ let
       owner = "CalcProgrammer1";
       repo = "OpenRGB";
       rev = "master";
-      sha256 = "sha256-RxIk5uaysNx9/M01YsRs8bAj6g5Nt4Zc06hTO3wq3Wg=";
+      sha256 = "sha256-pj+QUcdRAq+T+AXHaU79v46BNH6QKcHV4bhZj9b+gGc=";
     };
 
     patches = [ ]; # removes upstreams qlist-include.patch, which is not needed anymore

@@ -7,6 +7,7 @@
     ../../programs/libnotify.nix
     ../../programs/librewolf.nix
     ../../programs/nvtop.nix
+    ../../programs/piper.nix
     ../../programs/podman-desktop.nix
     ../../programs/qrtool.nix
     ../../programs/ryzen-monitor-ng.nix
