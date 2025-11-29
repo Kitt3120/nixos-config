@@ -17,6 +17,13 @@
         pager = "${pkgs.delta}/bin/delta";
       };
 
+      gpg.format = "ssh";
+      commit.gpgsign = true;
+      tag.gpgsign = true;
+      diff.algorithm = "histogram";
+      column.ui = "auto";
+      rerere.enabled = true;
+
       init.defaultBranch = "main";
       push.autoSetupRemote = "true";
 
@@ -24,10 +31,6 @@
         defaultRemote = "origin";
         workers = 0;
       };
-
-      gpg.format = "ssh";
-      commit.gpgsign = true;
-      tag.gpgsign = true;
 
       fetch = {
         writeCommitGraph = true;
@@ -37,9 +40,7 @@
       };
       submodule.fetchJobs = 0;
 
-      diff.algorithm = "histogram";
-      column.ui = "auto";
-      rerere.enabled = true;
+      pull.rebase = "true";
 
       alias = {
         st = "status";
