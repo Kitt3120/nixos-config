@@ -25,6 +25,7 @@
     ../../programs/htop.nix
     ../../programs/i2c-tools.nix
     ../../programs/inxi.nix
+    ../../programs/iotop.nix
     ../../programs/jq.nix
     ../../programs/killall.nix
     ../../programs/lm_sensors.nix
@@ -61,6 +62,7 @@
     ../../programs/sops.nix
     ../../programs/speedtest-cli.nix
     ../../programs/sudo-rs.nix
+    ../../programs/sysstat.nix
     ../../programs/tldr.nix
     ../../programs/unrar.nix
     ../../programs/unzip.nix
