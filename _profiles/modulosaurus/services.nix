@@ -4,6 +4,7 @@
   imports = [
     ../../services/ckb-next.nix
     ../../services/flatpak.nix
+    ../../services/logitech.nix
     ../../services/media-pipelines-ffmpeg.nix
     ../../services/mullvad.nix
     ../../services/opendeck.nix
