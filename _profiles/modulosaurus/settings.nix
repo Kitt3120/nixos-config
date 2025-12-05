@@ -31,6 +31,8 @@
       ppfeaturemask = "0xffffffff";
     };
 
+    podman.dockerMode = true;
+
     sunshine = {
       settings = {
         output_name = 1;

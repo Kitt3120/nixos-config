@@ -32,5 +32,7 @@
       enable = true;
       ppfeaturemask = "0xffffffff";
     };
+
+    podman.dockerMode = true;
   };
 }

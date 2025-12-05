@@ -44,6 +44,8 @@
       allowDocker = true;
     };
 
+    podman.dockerMode = false;
+
     minecraft.servers = [
       # {
       #   user = "minecraft";

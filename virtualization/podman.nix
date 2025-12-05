@@ -1,21 +1,35 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  virtualisation.podman = {
-    enable = true;
-    dockerSocket.enable = true;
-    dockerCompat = true;
-    autoPrune = {
-      enable = true;
-      dates = "weekly";
-      flags = [
-        "--all"
-        "--volumes"
-      ];
+  options.settings.podman = {
+    dockerMode = lib.mkOption {
+      type = lib.types.bool;
+      description = "Enable Docker compatibility mode (enables both dockerSocket and dockerCompat).";
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    podman-compose
-  ];
+  config = {
+    virtualisation.podman = {
+      enable = true;
+      dockerSocket.enable = config.settings.podman.dockerMode;
+      dockerCompat = config.settings.podman.dockerMode;
+      autoPrune = {
+        enable = true;
+        dates = "weekly";
+        flags = [
+          "--all"
+          "--volumes"
+        ];
+      };
+    };
+
+    environment.systemPackages = with pkgs; [
+      podman-compose
+    ];
+  };
 }

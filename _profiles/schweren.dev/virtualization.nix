@@ -1,5 +1,8 @@
 { ... }:
 
 {
-  imports = [ ../../virtualization/docker.nix ];
+  imports = [
+    ../../virtualization/docker.nix
+    ../../virtualization/podman.nix
+  ];
 }
