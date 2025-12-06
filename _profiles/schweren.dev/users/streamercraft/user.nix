@@ -12,6 +12,7 @@
     extraGroups = [
       "users"
       "networkmanager"
+      "podman"
     ];
     createHome = true;
     linger = true;

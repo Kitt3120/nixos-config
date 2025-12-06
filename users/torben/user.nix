@@ -15,6 +15,7 @@
       "libvirt-qemu"
       "libvirtd"
       "docker"
+      "podman"
       "gamemode"
       "audio"
       "video"
