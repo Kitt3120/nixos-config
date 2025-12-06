@@ -18,6 +18,7 @@
       enable = true;
       dockerSocket.enable = config.settings.podman.dockerMode;
       dockerCompat = config.settings.podman.dockerMode;
+      defaultNetwork.settings.dns_enabled = true; # Enable DNS in podman compose
       autoPrune = {
         enable = true;
         dates = "weekly";
@@ -31,5 +32,7 @@
     environment.systemPackages = with pkgs; [
       podman-compose
     ];
+
+    environment.variables.PODMAN_COMPOSE_WARNING_LOGS = "false"; # Disable external provider warnings
   };
 }
