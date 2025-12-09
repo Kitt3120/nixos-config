@@ -17,6 +17,7 @@
     ../../programs/ffmpeg.nix
     ../../programs/fish.nix
     ../../programs/fuse3.nix
+    ../../programs/gavin-bc.nix
     ../../programs/gdisk.nix
     ../../programs/git.nix
     ../../programs/gnu-coreutils-full.nix
