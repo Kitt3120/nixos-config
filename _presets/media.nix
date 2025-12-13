@@ -16,6 +16,7 @@
     ../programs/mkvtoolnix.nix
     ../programs/mpv.nix
     #../programs/nhentai.nix # TODO: Enable again when fixed
+    ../programs/obs-cli.nix
     ../programs/obs-studio.nix
     ../programs/plex-desktop.nix
     ../programs/vlc.nix
