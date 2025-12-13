@@ -19,7 +19,6 @@
       pkgs.obs-studio-plugins.obs-composite-blur
       pkgs.obs-studio-plugins.obs-command-source
       pkgs.obs-studio-plugins.obs-backgroundremoval
-
     ];
   };
 
