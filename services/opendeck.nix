@@ -2,7 +2,7 @@
 
 let
   pkgs-local = import /home/torben/Nextcloud/Programmierung/NixOS/nixpkgs {
-    system = pkgs.system;
+    stdenv.hostPlatform.system = pkgs.stdenv.hostPlatform.system;
     config = pkgs.config;
   };
 in

@@ -18,9 +18,9 @@
     #../programs/nhentai.nix # TODO: Enable again when fixed
     ../programs/obs-cli.nix
     ../programs/obs-studio.nix
+    ../programs/pear-desktop.nix
     ../programs/plex-desktop.nix
     ../programs/scrcpy.nix
     ../programs/vlc.nix
-    ../programs/youtube-music.nix
   ];
 }
