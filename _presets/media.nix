@@ -19,6 +19,7 @@
     ../programs/obs-cli.nix
     ../programs/obs-studio.nix
     ../programs/plex-desktop.nix
+    ../programs/scrcpy.nix
     ../programs/vlc.nix
     ../programs/youtube-music.nix
   ];
