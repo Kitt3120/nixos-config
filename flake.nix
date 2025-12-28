@@ -2,9 +2,9 @@
   description = "Torben's machines";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs?ref=master";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=master";
     #nixpkgs.url = "github:nixos/nixpkgs?ref=staging";
-    nixpkgs.url = "github:nixos/nixpkgs?ref=staging-nixos";
+    #nixpkgs.url = "github:nixos/nixpkgs?ref=staging-nixos";
     #nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     #nixpkgs.url = "path:/home/torben/Nextcloud/Programmierung/NixOS/nixpkgs"; # local
 
