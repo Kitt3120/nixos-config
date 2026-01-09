@@ -14,7 +14,6 @@
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/soco-cli.nix
     ../../programs/tor-browser.nix
-    ../../programs/ungoogled-chromium.nix
     ../../programs/wootility.nix
   ];
 }
