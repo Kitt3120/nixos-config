@@ -3,6 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     gh
-    gh-copilot
+    github-copilot-cli
   ];
 }
