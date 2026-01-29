@@ -30,6 +30,9 @@
       };
     };
 
+    # Declare AMD ROCm OpenCL as a system-wide OpenCL implementation
+    environment.variables.OCL_ICD_VENDORS = "/run/opengl-driver/etc/OpenCL/vendors/amdocl64.icd";
+
     # Useful userland tools for AMD GPUs
     environment.systemPackages = with pkgs; [
       radeontop
