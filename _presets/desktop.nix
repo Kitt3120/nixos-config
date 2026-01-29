@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../desktop/xserver.nix
     ../desktop/wayland.nix
 
     ../desktop/libinput.nix

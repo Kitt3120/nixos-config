@@ -2,13 +2,7 @@
 
 {
   services.displayManager = {
-    defaultSession =
-      if config.services.desktopManager.plasma6.enable then
-        "plasma"
-      else if config.services.xserver.desktopManager.plasma5.enable then
-        "plasmawayland"
-      else
-        null;
+    defaultSession = if config.services.desktopManager.plasma6.enable then "plasma" else null;
 
     sddm = {
       enable = true;
