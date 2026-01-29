@@ -8,7 +8,7 @@
       pkgs.obs-studio-plugins.pixel-art
       pkgs.obs-studio-plugins.waveform
       pkgs.obs-studio-plugins.input-overlay
-      #pkgs.obs-studio-plugins.droidcam-obs # TODO: Enable again when fixed
+      pkgs.obs-studio-plugins.droidcam-obs
       pkgs.obs-studio-plugins.obs-websocket
       pkgs.obs-studio-plugins.obs-vkcapture
       pkgs.obs-studio-plugins.obs-pipewire-audio-capture

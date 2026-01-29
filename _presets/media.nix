@@ -9,12 +9,10 @@
     ../programs/easyeffects.nix
     ../programs/imagemagick.nix
     ../programs/inkscape.nix
-    #../programs/jellyfin.nix # TODO: Enable again when fixed
-    #../programs/kdenlive.nix # TODO: Enable again when fixed
+    ../programs/jellyfin.nix
     ../programs/krita.nix
     ../programs/mkvtoolnix.nix
     ../programs/mpv.nix
-    #../programs/nhentai.nix # TODO: Enable again when fixed
     ../programs/obs-cli.nix
     ../programs/obs-studio.nix
     ../programs/pear-desktop.nix

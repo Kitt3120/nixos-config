@@ -16,7 +16,7 @@
     ../programs/pdfarranger.nix
     ../programs/qpdf.nix
     ../programs/remmina.nix
-    #../programs/rustdesk.nix # TODO: Enable again when fixed upstream
+    ../programs/rustdesk.nix
     ../programs/texlive.nix
     ../programs/thunderbird.nix
     #../programs/ventoy.nix # TODO: Enable again when upstream removed blobs
