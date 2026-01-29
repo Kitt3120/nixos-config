@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # GPU Killer Script
 # This script allows the user to disable a selected GPU by removing its PCI device.
 # It also provides an option to re-enable all GPUs by rescanning the PCI bus.

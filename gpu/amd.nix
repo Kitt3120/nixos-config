@@ -5,6 +5,13 @@
   ...
 }:
 
+let
+  source = builtins.readFile ../assets/scripts/rusticl-amd-run.sh;
+  rusticl-amd-run = pkgs.writeShellScriptBin "rusticl-amd-run" ''
+    ${source}
+  '';
+in
+
 {
   options.settings.amd.overdrive = {
     enable = lib.mkOption {
@@ -37,6 +44,7 @@
     environment.systemPackages = with pkgs; [
       radeontop
       rocmPackages.rocm-smi
+      rusticl-amd-run # Script to run programs with Rusticl, as default is ROCm
     ];
 
     # Fix some ROCm related issues specific to NixOS
