@@ -13,7 +13,7 @@
       cups-pk-helper
       cups-filters
       ghostscript
-      cups-kyodialog
+      #cups-kyodialog # TODO: Enable again when fixed upstream
       cups-kyocera
       foomatic-db
       foomatic-db-engine
