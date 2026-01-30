@@ -11,7 +11,6 @@ let
     ${source}
   '';
 in
-
 {
   options.settings.amd.overdrive = {
     enable = lib.mkOption {
