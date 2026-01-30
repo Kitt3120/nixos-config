@@ -9,6 +9,10 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
+  sops.secrets."smb/credentials" = {
+    sopsFile = config.settings.sops.device-secrets;
+  };
+
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "nvme"
@@ -75,6 +79,21 @@
   fileSystems."/media/EHddTosh1" = {
     device = "/dev/disk/by-uuid/63759701-5f3c-43fe-afb9-9363f6998a0d";
     fsType = "xfs";
+  };
+
+  fileSystems."/media/Archiv" = {
+    device = "//192.168.178.10/Archiv";
+    fsType = "cifs";
+    options = [
+      "vers=3.11"
+      "iocharset=utf8"
+      "_netdev"
+      "x-systemd.automount"
+      "credentials=${config.sops.secrets."smb/credentials".path}"
+      "uid=1000"
+      "gid=1000"
+      "nofail"
+    ];
   };
 
   swapDevices = [

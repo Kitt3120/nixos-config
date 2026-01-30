@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../system/cifs.nix
     ../../system/firmware.nix
     ../../system/i2c.nix
     ../../system/locale.nix
