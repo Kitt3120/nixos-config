@@ -43,6 +43,7 @@ in
     environment.systemPackages = with pkgs; [
       radeontop
       rocmPackages.rocm-smi
+      rocmPackages.rocminfo
       rusticl-amd-run # Script to run programs with Rusticl, as default is ROCm
     ];
 
