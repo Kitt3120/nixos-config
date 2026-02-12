@@ -1,5 +1,8 @@
 { ... }:
 
 {
-  imports = [ ../../desktop/plasma.nix ];
+  imports = [
+    ../../desktop/plasma.nix
+    ../../desktop/linux-wallpaperengine.nix
+  ];
 }

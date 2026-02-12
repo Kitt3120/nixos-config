@@ -69,7 +69,6 @@
     kdePackages.spectacle
     kdePackages.systemsettings
     kdePackages.taglib
-    kdePackages.wallpaper-engine-plugin
     kdePackages.wayland
     kdePackages.yakuake
     kwalletcli
