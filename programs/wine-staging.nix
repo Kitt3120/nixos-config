@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wineWowPackages.stagingFull
+    wineWow64Packages.stagingFull
     winetricks
     protontricks
   ];
