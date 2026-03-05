@@ -18,7 +18,6 @@
     ../programs/rustdesk.nix
     ../programs/texlive.nix
     ../programs/thunderbird.nix
-    #../programs/ventoy.nix # TODO: Enable again when upstream removed blobs
     ../programs/winboat.nix
     ../programs/xournalpp.nix
   ];
