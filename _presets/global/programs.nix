@@ -13,6 +13,7 @@
     ../../programs/dfc.nix
     ../../programs/dig.nix
     ../../programs/exfatprogs.nix
+    ../../programs/fastfetch.nix
     ../../programs/fdisk.nix
     ../../programs/ffmpeg.nix
     ../../programs/fish.nix
@@ -34,7 +35,6 @@
     ../../programs/lvm2.nix
     ../../programs/mail.nix
     ../../programs/ncdu.nix
-    ../../programs/neofetch.nix
     ../../programs/nettools.nix
     ../../programs/nh.nix
     ../../programs/nix-alien.nix
