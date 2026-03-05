@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    python312
-    python312Packages.pip
+    python3
+    python3Packages.pip
   ];
 }
