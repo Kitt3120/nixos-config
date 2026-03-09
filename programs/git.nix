@@ -74,6 +74,7 @@
 
         rba = "rebase --abort";
         rbc = "rebase --continue";
+        rbr = "restore --merge --worktree -- .";
 
         ma = "merge --abort";
         mc = "merge --continue";
