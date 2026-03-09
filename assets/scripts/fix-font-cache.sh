@@ -1,4 +1,5 @@
-rm -rf ~/.cache/fontconfig && \
+sudo rm -rf /home/*/.cache/fontconfig && \
+sudo rm -rf /home/*/.var/app/*/cache/fontconfig && \
 sudo rm -rf /var/cache/fontconfig && \
 fc-cache -r -v && \
 sudo fc-cache -r -v && \
