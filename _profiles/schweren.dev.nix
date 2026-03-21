@@ -9,6 +9,7 @@
     ./schweren.dev/firewall/mailcow.nix
     ./schweren.dev/firewall/palworld.nix
     ./schweren.dev/firewall/playforia-minigolf.nix
+    ./schweren.dev/firewall/ryubing-ldn.nix
     ./schweren.dev/firewall/satisfactory.nix
     ./schweren.dev/firewall/valheim.nix
 
