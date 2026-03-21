@@ -13,6 +13,7 @@
     ../programs/prism-launcher.nix
     ../programs/protonup.nix
     #../programs/retroarch.nix # TODO: Enable when fixed upstream
+    ../programs/ryubing.nix
     ../programs/steam.nix
   ];
 }
