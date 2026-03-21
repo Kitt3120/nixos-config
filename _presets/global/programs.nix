@@ -12,6 +12,7 @@
     ../../programs/cryptsetup.nix
     ../../programs/dfc.nix
     ../../programs/dig.nix
+    ../../programs/eza.nix
     ../../programs/exfatprogs.nix
     ../../programs/fastfetch.nix
     ../../programs/fdisk.nix
