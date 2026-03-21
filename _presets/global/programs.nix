@@ -21,6 +21,7 @@
     ../../programs/ffmpeg.nix
     ../../programs/fish.nix
     ../../programs/fuse3.nix
+    ../../programs/fzf.nix
     ../../programs/gavin-bc.nix
     ../../programs/gdisk.nix
     ../../programs/git.nix
