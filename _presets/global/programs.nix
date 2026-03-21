@@ -67,6 +67,7 @@
     ../../programs/smartmontools.nix
     ../../programs/sops.nix
     ../../programs/speedtest-cli.nix
+    ../../programs/starship.nix
     ../../programs/sudo-rs.nix
     ../../programs/sysstat.nix
     ../../programs/tldr.nix
