@@ -5,6 +5,7 @@
     ../../programs/age.nix
     ../../programs/appimage-run.nix
     ../../programs/aria2.nix
+    ../../programs/atuin.nix
     ../../programs/bcachefs-tools.nix
     ../../programs/btop.nix
     ../../programs/btrfs-progs.nix
