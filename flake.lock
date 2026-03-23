@@ -188,6 +188,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-winboat": {
+      "locked": {
+        "lastModified": 1772786520,
+        "narHash": "sha256-QMrq9eK7A7l+lsR8woqgQ3RmrItRsZ/CRfg29hVGJmw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "f03ffed7daa609c30ab003a056d040beb6cca33c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "f03ffed7daa609c30ab003a056d040beb6cca33c",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1770107345,
@@ -227,6 +243,7 @@
         "home-manager": "home-manager",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_3",
+        "nixpkgs-winboat": "nixpkgs-winboat",
         "sops-nix": "sops-nix",
         "vscode-server": "vscode-server"
       }
