@@ -10,6 +10,9 @@
 
     #mesa-good.url = "github:nixos/nixpkgs?ref=599ddd2b79331c1e6153e1659bdaab65d62c4c82";
 
+    # winboat broken since Go 1.26.1 - last good commit
+    nixpkgs-winboat.url = "github:nixos/nixpkgs?rev=f03ffed7daa609c30ab003a056d040beb6cca33c";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 

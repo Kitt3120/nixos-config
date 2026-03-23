@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ winboat ];
+  environment.systemPackages = [
+    inputs.nixpkgs-winboat.legacyPackages.${pkgs.system}.winboat
+  ];
 }
