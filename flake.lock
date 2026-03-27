@@ -138,11 +138,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774613658,
-        "narHash": "sha256-WO9KA47RYIZj/hRNZWBR6bkT8ICl8fe4VNwKBwCNFZw=",
+        "lastModified": 1774613805,
+        "narHash": "sha256-SP8U4AhZbNaoQtZGAzVIkw56pOObacxcArqPNjc3FQc=",
         "owner": "thiagokokada",
         "repo": "nix-alien",
-        "rev": "5a46200ba2fca87801a731e61514565fe99e68d7",
+        "rev": "406827a0064e940578c18be868198aa06f443792",
         "type": "github"
       },
       "original": {
