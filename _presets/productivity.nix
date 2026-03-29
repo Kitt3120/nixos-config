@@ -16,6 +16,7 @@
     ../programs/qpdf.nix
     ../programs/remmina.nix
     ../programs/rustdesk.nix
+    ../programs/tesseract.nix
     ../programs/texlive.nix
     ../programs/thunderbird.nix
     ../programs/winboat.nix
