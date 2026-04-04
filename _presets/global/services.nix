@@ -9,9 +9,11 @@
     ../../services/fstrim.nix
     ../../services/fwupd.nix
     ../../services/logrotate.nix
+    ../../services/minecraft-servers.nix
     ../../services/oomd.nix
     ../../services/openssh.nix
     ../../services/packagekit.nix
+    ../../services/podman-deployments.nix
     ../../services/timesyncd.nix
   ];
 }

@@ -1,7 +1,11 @@
 { config, lib, ... }:
 
 {
-  options.settings.minecraft.servers = lib.mkOption { type = lib.types.listOf (lib.types.attrs); };
+  options.settings.minecraft.servers = lib.mkOption {
+    type = lib.types.listOf (lib.types.attrs);
+    default = [ ];
+    description = "List of Minecraft servers to manage as systemd user services.";
+  };
 
   config.home-manager.users = lib.foldl' (
     acc: server:
