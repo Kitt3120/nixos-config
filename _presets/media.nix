@@ -9,6 +9,7 @@
     ../programs/easyeffects.nix
     ../programs/imagemagick.nix
     ../programs/inkscape.nix
+    ../programs/darktable.nix
     ../programs/jellyfin.nix
     ../programs/krita.nix
     ../programs/mkvtoolnix.nix
