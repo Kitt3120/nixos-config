@@ -6,7 +6,7 @@
     ../programs/dolphin-emulator.nix
     ../programs/gamemode.nix
     ../programs/gamescope.nix
-    #../programs/lutris.nix # TODO: Enable again when fixed upstream
+    ../programs/lutris.nix
     ../programs/mangohud.nix
     ../programs/moonlight-qt.nix
     ../programs/osu-lazer.nix
