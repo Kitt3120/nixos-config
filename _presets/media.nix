@@ -18,6 +18,7 @@
     ../programs/obs-studio.nix
     ../programs/pear-desktop.nix
     ../programs/plex-desktop.nix
+    ../programs/qpwgraph.nix
     ../programs/scrcpy.nix
     ../programs/upscayl.nix
     ../programs/vlc.nix
