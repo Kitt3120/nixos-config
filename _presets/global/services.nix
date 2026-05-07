@@ -4,7 +4,7 @@
   imports = [
     ../../services/avahi.nix
     ../../services/comin.nix
-    #../../services/cups.nix # TODO: Enable again when fixed upstream
+    ../../services/cups.nix
     ../../services/dbus.nix
     ../../services/fstrim.nix
     ../../services/fwupd.nix

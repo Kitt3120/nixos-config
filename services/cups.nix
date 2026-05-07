@@ -50,4 +50,9 @@
     hplipWithPlugin
     splix
   ];
+
+  # TODO: remove
+  nixpkgs.config.permittedInsecurePackages = [
+    "python3.13-pypdf3-1.0.6"
+  ];
 }
