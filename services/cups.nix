@@ -30,9 +30,4 @@
 
   services.system-config-printer.enable = true;
   programs.system-config-printer.enable = true;
-
-  # TODO: remove
-  nixpkgs.config.permittedInsecurePackages = [
-    "python3.13-pypdf3-1.0.6"
-  ];
 }
