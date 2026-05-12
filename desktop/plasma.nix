@@ -71,7 +71,6 @@
     kdePackages.taglib
     kdePackages.wayland
     kdePackages.yakuake
-    kwalletcli
     libheif
   ];
 }
