@@ -17,5 +17,7 @@
     ../desktop/pipewire.nix
     ../desktop/fonts.nix
     ../desktop/hunspell.nix
+
+    ../system/kernel/modules/logitech-driver-blacklist.nix
   ];
 }
