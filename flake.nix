@@ -28,6 +28,9 @@
 
     comin.url = "github:nlewo/comin";
     comin.inputs.nixpkgs.follows = "nixpkgs";
+
+    opendeck-nix.url = "github:Kitt3120/opendeck-nix";
+    opendeck-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

@@ -31,11 +31,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1778219972,
-        "narHash": "sha256-ZMzrCZDXozNiUNkAI9oJmp+D64WVhoGPbkulEpocixc=",
+        "lastModified": 1779222559,
+        "narHash": "sha256-DP/lAeisYBjpB6cjWdNIy32V94s2y90qvkuYB96QFEQ=",
         "owner": "nlewo",
         "repo": "comin",
-        "rev": "b838a7dbea7db31cf5ced2021881b61a806c60b4",
+        "rev": "e2b3da42bb84a25f075994d98199b5fdac34b36a",
         "type": "github"
       },
       "original": {
@@ -204,6 +204,26 @@
         "type": "github"
       }
     },
+    "opendeck-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779228972,
+        "narHash": "sha256-zSkBBjJAmA1JNXeNnBAxfrqJ3oTnkoSlsKcydEjON8Y=",
+        "owner": "Kitt3120",
+        "repo": "opendeck-nix",
+        "rev": "63293348a22d10ab6b19890e7f7e927c780f0542",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kitt3120",
+        "repo": "opendeck-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aagl": "aagl",
@@ -211,6 +231,7 @@
         "home-manager": "home-manager",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_2",
+        "opendeck-nix": "opendeck-nix",
         "sops-nix": "sops-nix",
         "vscode-server": "vscode-server"
       }

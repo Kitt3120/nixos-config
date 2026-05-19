@@ -6,6 +6,7 @@
     ../../programs/kitty.nix
     ../../programs/libnotify.nix
     ../../programs/nvtop.nix
+    ../../programs/opendeck.nix
     ../../programs/piper.nix
     ../../programs/podman-desktop.nix
     ../../programs/qrtool.nix
