@@ -211,11 +211,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779228972,
-        "narHash": "sha256-zSkBBjJAmA1JNXeNnBAxfrqJ3oTnkoSlsKcydEjON8Y=",
+        "lastModified": 1779231486,
+        "narHash": "sha256-eD8kyJl/eLkgTd1dn/EqmdVRP6h2UuvO91r5MqYiW7g=",
         "owner": "Kitt3120",
         "repo": "opendeck-nix",
-        "rev": "63293348a22d10ab6b19890e7f7e927c780f0542",
+        "rev": "8f1f7dbc470df7e7bdbc0a2da944f54d47773fbe",
         "type": "github"
       },
       "original": {
