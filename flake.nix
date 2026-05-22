@@ -30,7 +30,7 @@
     comin.inputs.nixpkgs.follows = "nixpkgs";
 
     opendeck-nix.url = "github:Kitt3120/opendeck-nix";
-    opendeck-nix.inputs.nixpkgs.follows = "nixpkgs";
+    # not setting the nixpkgs input for opendeck-nix to prevent hash mismatches
   };
 
   outputs =
