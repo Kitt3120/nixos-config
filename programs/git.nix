@@ -62,6 +62,7 @@
 
         fap = "!git fetch --all -p && git pull";
         fep = "!git fetch --all -p && git pull";
+        pr = "pull --rebase";
         puf = "push --force-with-lease";
 
         as = "!git add . && git status";
