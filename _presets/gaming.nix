@@ -6,6 +6,7 @@
     ../programs/dolphin-emulator.nix
     ../programs/gamemode.nix
     ../programs/gamescope.nix
+    ../programs/heroic.nix
     ../programs/lutris.nix
     ../programs/mangohud.nix
     ../programs/moonlight-qt.nix
