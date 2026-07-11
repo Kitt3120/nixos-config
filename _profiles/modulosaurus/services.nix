@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../services/bluetooth.nix
     ../../services/flatpak.nix
     ../../services/logitech.nix
     ../../services/media-pipelines-ffmpeg.nix
