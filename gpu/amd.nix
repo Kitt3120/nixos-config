@@ -36,8 +36,14 @@ in
       };
     };
 
+    # Enable nixpkgs-wide ROCm support
+    nixpkgs.config.rocmSupport = true;
+
     # Declare AMD ROCm OpenCL as a system-wide OpenCL implementation
     environment.variables.OCL_ICD_VENDORS = "/run/opengl-driver/etc/OpenCL/vendors/amdocl64.icd";
+
+    # Force RADV as vulkan loader so games do not accidentally use AMDVLK
+    environment.variables.AMD_VULKAN_ICD = "RADV";
 
     # Useful userland tools for AMD GPUs
     environment.systemPackages = with pkgs; [
