@@ -26,8 +26,6 @@
       memoryPercent = 50;
     };
 
-    zswap.enable = true;
-
     amd.overdrive = {
       enable = true;
       ppfeaturemask = "0xffffffff";
