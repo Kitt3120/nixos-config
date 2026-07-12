@@ -26,6 +26,8 @@
       memoryPercent = 50;
     };
 
+    zswap.enable = true;
+
     tor-relay = {
       ContactInfo = "tor@schweren.dev";
       Address = "schweren.dev";
