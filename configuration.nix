@@ -9,6 +9,12 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = "nix-command flakes";
 
+  # TODO: Keep as minimal as possible
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10" # Bitwarden desktop
+    "electron-40.10.5" # Vesktop
+  ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
