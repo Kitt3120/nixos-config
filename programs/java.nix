@@ -3,19 +3,19 @@
 {
   programs.java = {
     enable = true;
-    package = pkgs.jdk; # Set to same as first Java below
+    package = pkgs.jdk25; # Set to same as first Java below
   };
 
   environment.systemPackages = with pkgs; [
     # First option is default Java
-    jdk
     jdk25
+    jdk
     jdk21
     jdk17
   ];
 
   environment.variables = {
-    JAVA_HOME = "${pkgs.jdk}";
+    JAVA_HOME = "${pkgs.jdk25}";
     JAVA_LATEST_HOME = "${pkgs.jdk25}";
     JAVA_25_HOME = "${pkgs.jdk25}";
     JAVA_21_HOME = "${pkgs.jdk21}";
