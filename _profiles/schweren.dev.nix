@@ -16,6 +16,7 @@
     ./schweren.dev/hardware-configuration.nix
     ./schweren.dev/settings.nix
 
+    ./schweren.dev/deployments.nix
     ./schweren.dev/hostname.nix
     ./schweren.dev/networking.nix
     ./schweren.dev/programs.nix
