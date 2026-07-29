@@ -5,12 +5,11 @@
     default =
       {
         name,
-        workingDirectory,
+        deploymentDirectory,
         compose,
         preStart ? "",
       }:
       let
-        deploymentDir = "${workingDirectory}/${name}";
         composeFile = pkgs.writeText "${name}-compose.yml" compose;
 
         script-cli =
@@ -37,7 +36,7 @@
 
             function logs {
               export PATH="${podman}/bin:$PATH"
-              cd "${deploymentDir}"
+              cd "${deploymentDirectory}"
               ${podman-compose}/bin/podman-compose logs -f
             }
 
@@ -68,9 +67,9 @@
           with pkgs;
           (writeShellScriptBin "podman-deployment-${name}-start" ''
             export PATH="${podman}/bin:$PATH"
-            ${coreutils}/bin/mkdir -p "${deploymentDir}"
-            ${coreutils}/bin/cp -f "${composeFile}" "${deploymentDir}/compose.yml"
-            cd "${deploymentDir}"
+            ${coreutils}/bin/mkdir -p "${deploymentDirectory}"
+            ${coreutils}/bin/cp -f "${composeFile}" "${deploymentDirectory}/compose.yml"
+            cd "${deploymentDirectory}"
             ${podman-compose}/bin/podman-compose down || true
             ${podman-compose}/bin/podman-compose pull
             ${lib.optionalString (preStart != "") preStart}
@@ -81,7 +80,7 @@
           with pkgs;
           (writeShellScriptBin "podman-deployment-${name}-stop" ''
             export PATH="${podman}/bin:$PATH"
-            cd "${deploymentDir}"
+            cd "${deploymentDirectory}"
             ${podman-compose}/bin/podman-compose down
           '');
       in

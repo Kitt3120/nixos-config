@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -19,9 +20,10 @@
             description = "Username to run the deployment as. Will be created as a system user if it doesn't exist.";
           };
 
-          workingDirectory = lib.mkOption {
-            type = lib.types.str;
-            description = "Parent directory for the deployment. The deployment will be placed in a subdirectory named after the deployment.";
+          deploymentDirectory = lib.mkOption {
+            type = lib.types.nullOr lib.types.str;
+            default = null;
+            description = "Exact directory for the deployment. Defaults to /var/lib/<user>/<name>.";
           };
 
           compose = lib.mkOption {
@@ -33,6 +35,12 @@
             type = lib.types.lines;
             default = "";
             description = "Shell commands executed after pulling images and before starting the deployment.";
+          };
+
+          shell = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+            description = "Whether to assign a login shell to the auto-created system user. Uses fish if enabled, then zsh, then bash.";
           };
 
           ports = {
@@ -76,6 +84,15 @@
             createHome = true;
             linger = true;
             autoSubUidGidRange = true;
+          }
+          // lib.optionalAttrs deployment.shell {
+            shell =
+              if config.programs.fish.enable then
+                pkgs.fish
+              else if config.programs.zsh.enable then
+                pkgs.zsh
+              else
+                pkgs.bash;
           };
         }
     ) { } config.settings.podman.deployments;
@@ -96,43 +113,45 @@
     systemd.tmpfiles.rules = lib.concatMap (
       deployment:
       let
-        deploymentDir = "${deployment.workingDirectory}/${deployment.name}";
+        effectiveDeploymentDir =
+          if deployment.deploymentDirectory != null then
+            deployment.deploymentDirectory
+          else
+            "/var/lib/${deployment.user}/${deployment.name}";
       in
       [
-        "d ${deployment.workingDirectory} 0755 ${deployment.user} - -"
-        "d ${deploymentDir} 0755 ${deployment.user} - -"
+        "d ${effectiveDeploymentDir} 0755 ${deployment.user} - -"
       ]
     ) config.settings.podman.deployments;
 
     # Set up systemd user services via home-manager
     home-manager.users = lib.foldl' (
       acc: deployment:
+      let
+        podmanDeployment = config.mkPodmanDeployment {
+          inherit (deployment)
+            name
+            compose
+            preStart
+            ;
+          deploymentDirectory =
+            if deployment.deploymentDirectory != null then
+              deployment.deploymentDirectory
+            else
+              "/var/lib/${deployment.user}/${deployment.name}";
+        };
+      in
       acc
       // {
         ${deployment.user} = acc.${deployment.user} or { } // {
           home.stateVersion = config.system.stateVersion;
 
           home.packages = (acc.${deployment.user}.home.packages or [ ]) ++ [
-            (config.mkPodmanDeployment {
-              inherit (deployment)
-                name
-                workingDirectory
-                compose
-                preStart
-                ;
-            }).scripts.cli
+            podmanDeployment.scripts.cli
           ];
 
           systemd.user.services = (acc.${deployment.user}.systemd.user.services or { }) // {
-            "podman-deployment-${deployment.name}" =
-              (config.mkPodmanDeployment {
-                inherit (deployment)
-                  name
-                  workingDirectory
-                  compose
-                  preStart
-                  ;
-              }).systemd.unit;
+            "podman-deployment-${deployment.name}" = podmanDeployment.systemd.unit;
           };
         };
       }

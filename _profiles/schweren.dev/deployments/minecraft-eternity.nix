@@ -47,9 +47,11 @@
     {
       name = "eternity";
       user = "minecraft-eternity";
-      workingDirectory = "/var/lib/minecraft-eternity";
+      shell = true;
       preStart = ''
-        cp -f ${config.sops.templates."minecraft-eternity.env".path} /var/lib/minecraft-eternity/eternity/.env
+        cp -f ${
+          config.sops.templates."minecraft-eternity.env".path
+        } /var/lib/minecraft-eternity/eternity/.env
         chmod 600 /var/lib/minecraft-eternity/eternity/.env
       '';
       compose = ''
