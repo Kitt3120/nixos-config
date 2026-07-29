@@ -61,7 +61,7 @@
 
         services:
           redis:
-            image: redis:8
+            image: docker.io/library/redis:8
             restart: always
             command: redis-server --requirepass ''${REDIS_PASSWORD}
             networks:
@@ -70,7 +70,7 @@
               - ./redis:/data
 
           postgres:
-            image: postgres:18
+            image: docker.io/library/postgres:18
             restart: always
             shm_size: 128mb
             networks:
@@ -83,7 +83,7 @@
               - ./postgres:/var/lib/postgresql
 
           mariadb:
-            image: mariadb:12
+            image: docker.io/library/mariadb:12
             restart: always
             networks:
               - eternity
@@ -97,7 +97,7 @@
               - ./mariadb:/var/lib/mysql
 
           eternity:
-            image: itzg/minecraft-server:latest
+            image: docker.io/itzg/minecraft-server:latest
             restart: always
             tty: true
             stdin_open: true
