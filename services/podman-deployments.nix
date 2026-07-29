@@ -29,6 +29,12 @@
             description = "Contents of the compose.yml file.";
           };
 
+          preStart = lib.mkOption {
+            type = lib.types.lines;
+            default = "";
+            description = "Shell commands executed after pulling images and before starting the deployment.";
+          };
+
           ports = {
             tcp = lib.mkOption {
               type = lib.types.listOf lib.types.port;
@@ -69,7 +75,7 @@
             home = "/var/lib/${deployment.user}";
             createHome = true;
             linger = true;
-            extraGroups = [ "podman" ];
+            autoSubUidGidRange = true;
           };
         }
     ) { } config.settings.podman.deployments;
@@ -108,14 +114,24 @@
 
           home.packages = (acc.${deployment.user}.home.packages or [ ]) ++ [
             (config.mkPodmanDeployment {
-              inherit (deployment) name workingDirectory compose;
+              inherit (deployment)
+                name
+                workingDirectory
+                compose
+                preStart
+                ;
             }).scripts.cli
           ];
 
           systemd.user.services = (acc.${deployment.user}.systemd.user.services or { }) // {
             "podman-deployment-${deployment.name}" =
               (config.mkPodmanDeployment {
-                inherit (deployment) name workingDirectory compose;
+                inherit (deployment)
+                  name
+                  workingDirectory
+                  compose
+                  preStart
+                  ;
               }).systemd.unit;
           };
         };

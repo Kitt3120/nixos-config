@@ -7,6 +7,7 @@
         name,
         workingDirectory,
         compose,
+        preStart ? "",
       }:
       let
         deploymentDir = "${workingDirectory}/${name}";
@@ -72,6 +73,7 @@
             cd "${deploymentDir}"
             ${podman-compose}/bin/podman-compose down || true
             ${podman-compose}/bin/podman-compose pull
+            ${lib.optionalString (preStart != "") preStart}
             ${podman-compose}/bin/podman-compose up -d --build
           '');
 
