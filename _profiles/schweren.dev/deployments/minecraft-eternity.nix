@@ -128,6 +128,7 @@
               EULA: "TRUE"
               TYPE: "LEAF"
               SERVER_NAME: "Eternity"
+              MOTD: "§6The server running for §5eternity§6. Started §529.07.2026§6."
               VERSION: "latest"
               MEMORY: "8G"
               USE_AIKAR_FLAGS: "false"
