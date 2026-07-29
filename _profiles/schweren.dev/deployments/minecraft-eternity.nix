@@ -127,11 +127,19 @@
               GID: "0"
               EULA: "TRUE"
               TYPE: "LEAF"
-              SERVER_NAME: "eternity"
+              SERVER_NAME: "Eternity"
+              VERSION: "latest"
+              MEMORY: "8G"
+              USE_AIKAR_FLAGS: "false"
+              USE_MEOWICE_FLAGS: "true"
               ONLINE_MODE: "true"
+              ENABLE_COMMAND_BLOCK: "true"
+              ALLOW_FLIGHT: "true"
+              MAX_PLAYERS: "10"
               ENABLE_RCON: "false"
               SPAWN_PROTECTION: "0"
               SYNC_CHUNK_WRITES: "false"
+              VIEW_DISTANCE: "16"
             volumes:
               - ./eternity:/data
             logging:
