@@ -68,6 +68,10 @@
               - eternity
             volumes:
               - ./redis:/data
+            logging:
+              driver: json-file
+              options:
+                max-size: "20m"
 
           postgres:
             image: docker.io/library/postgres:18
@@ -81,6 +85,10 @@
               POSTGRES_PASSWORD: "''${POSTGRES_PASSWORD}"
             volumes:
               - ./postgres:/var/lib/postgresql
+            logging:
+              driver: json-file
+              options:
+                max-size: "20m"
 
           mariadb:
             image: docker.io/library/mariadb:12
@@ -95,6 +103,10 @@
               MARIADB_PASSWORD: "''${MARIADB_PASSWORD}"
             volumes:
               - ./mariadb:/var/lib/mysql
+            logging:
+              driver: json-file
+              options:
+                max-size: "20m"
 
           eternity:
             image: docker.io/itzg/minecraft-server:latest
@@ -122,6 +134,10 @@
               SYNC_CHUNK_WRITES: "false"
             volumes:
               - ./eternity:/data
+            logging:
+              driver: json-file
+              options:
+                max-size: "20m"
       '';
     }
   ];
