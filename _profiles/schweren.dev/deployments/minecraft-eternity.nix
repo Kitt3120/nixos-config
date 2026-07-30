@@ -48,6 +48,16 @@
       name = "eternity";
       user = "minecraft-eternity";
       shell = true;
+      ports = {
+        tcp = [
+          25565
+          8100
+        ];
+
+        udp = [
+          19132
+        ];
+      };
       preStart = ''
         cp -f ${
           config.sops.templates."minecraft-eternity.env".path
