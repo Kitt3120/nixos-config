@@ -15,7 +15,6 @@ in
     "ssh/blocks/mrmeeseeks".neededForUsers = true;
     "ssh/blocks/schweren.dev".neededForUsers = true;
     "ssh/blocks/minecraft".neededForUsers = true;
-    "ssh/blocks/streamercraft".neededForUsers = true;
   };
 
   /*
@@ -63,8 +62,6 @@ in
       cat ${config.sops.secrets."ssh/blocks/schweren.dev".path} >> /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
       cat ${config.sops.secrets."ssh/blocks/minecraft".path} >> /home/${username}/.ssh/config
-      echo "" >> /home/${username}/.ssh/config
-      cat ${config.sops.secrets."ssh/blocks/streamercraft".path} >> /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
       chown ${username}:users /home/${username}/.ssh/config
       chmod 600 /home/${username}/.ssh/config
