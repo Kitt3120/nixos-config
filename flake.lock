@@ -240,11 +240,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1785763732,
-        "narHash": "sha256-CelD/ZsIo6feGiK84PtFggKSY3xgMFT5Lcj5ikd9e1w=",
+        "lastModified": 1785764453,
+        "narHash": "sha256-q2Sjdts8zY+WvpjtnUbnakrgDHzi0DmlDjQMfyu3hWg=",
         "owner": "Kitt3120",
         "repo": "opendeck-nix",
-        "rev": "bdca93bc3787ee7fe01e95441722b63d8b84ebae",
+        "rev": "32160fa0ae01bf227a691c54a162809b14b8641b",
         "type": "github"
       },
       "original": {
