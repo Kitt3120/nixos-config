@@ -11,6 +11,7 @@
     ../programs/jetbrains-toolbox.nix
     ../programs/llvm.nix
     ../programs/maven.nix
+    ../programs/opencode.nix
     ../programs/python3.nix
     ../programs/rustup.nix
     ../programs/sqlite.nix
