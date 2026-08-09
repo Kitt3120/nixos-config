@@ -1,5 +1,8 @@
 { ... }:
 
 {
-  imports = [ ../gpu/mesa.nix ];
+  imports = [
+    ../services/lact.nix
+    ../gpu/mesa.nix
+  ];
 }
