@@ -6,7 +6,6 @@
     ../programs/ausweisapp.nix
     ../programs/bitwarden.nix
     ../programs/brave.nix
-    ../programs/corectrl.nix
     ../programs/gparted.nix
     ../programs/gsmartcontrol.nix
     ../programs/nextcloud.nix

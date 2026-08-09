@@ -1,7 +1,0 @@
-{ ... }:
-
-{
-  programs.corectrl = {
-    enable = true;
-  };
-}
