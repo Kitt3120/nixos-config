@@ -14,6 +14,7 @@
     ../../services/openssh.nix
     ../../services/packagekit.nix
     ../../services/podman-deployments.nix
+    ../../services/power-profiles-daemon.nix
     ../../services/timesyncd.nix
   ];
 }
