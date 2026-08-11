@@ -74,12 +74,14 @@
             image: docker.io/library/redis:8
             restart: always
             command: redis-server --requirepass ''${REDIS_PASSWORD}
+            environment:
+              REDIS_PASSWORD: "''${REDIS_PASSWORD}"
             networks:
               - eternity
             volumes:
               - ./redis:/data
             healthcheck:
-              test: ["CMD-SHELL", "redis-cli --pass $$REDIS_PASSWORD ping | grep PONG"]
+              test: ["CMD-SHELL", "redis-cli -a $$REDIS_PASSWORD --no-auth-warning ping | grep PONG"]
               interval: 10s
               timeout: 5s
               retries: 5
