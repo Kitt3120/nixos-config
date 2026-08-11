@@ -142,7 +142,7 @@
               MEMORY: "12G"
               EULA: "TRUE"
               VIEW_DISTANCE: "16"
-              SIMULATION_DISTANCE: "16"
+              SIMULATION_DISTANCE: "10"
               SYNC_CHUNK_WRITES: "false"
               DIFFICULTY: "normal"
               MODE: "survival"
