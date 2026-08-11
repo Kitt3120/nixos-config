@@ -78,6 +78,11 @@
               - eternity
             volumes:
               - ./redis:/data
+            healthcheck:
+              test: ["CMD-SHELL", "redis-cli --pass $$REDIS_PASSWORD ping | grep PONG"]
+              interval: 10s
+              timeout: 5s
+              retries: 5
             logging:
               driver: json-file
               options:
@@ -95,6 +100,11 @@
               POSTGRES_PASSWORD: "''${POSTGRES_PASSWORD}"
             volumes:
               - ./postgres:/var/lib/postgresql
+            healthcheck:
+              test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+              interval: 10s
+              timeout: 5s
+              retries: 5
             logging:
               driver: json-file
               options:
@@ -113,6 +123,11 @@
               MARIADB_PASSWORD: "''${MARIADB_PASSWORD}"
             volumes:
               - ./mariadb:/var/lib/mysql
+            healthcheck:
+              test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+              interval: 10s
+              timeout: 5s
+              retries: 5
             logging:
               driver: json-file
               options:
@@ -126,9 +141,12 @@
             networks:
               - eternity
             depends_on:
-              - redis
-              - postgres
-              - mariadb
+              redis:
+                condition: service_healthy
+              postgres:
+                condition: service_healthy
+              mariadb:
+                condition: service_healthy
             ports:
               - "25565:25565"
               - "172.17.0.1:8100:8100"
