@@ -84,7 +84,7 @@
                 max-size: "20m"
 
           postgres:
-            image: docker.io/library/postgres:18
+            image: docker.io/library/postgres:18.4
             restart: always
             shm_size: 128mb
             networks:
@@ -101,7 +101,7 @@
                 max-size: "20m"
 
           mariadb:
-            image: docker.io/library/mariadb:12
+            image: docker.io/library/mariadb:12.3
             restart: always
             networks:
               - eternity
