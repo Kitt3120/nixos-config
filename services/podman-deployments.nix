@@ -256,6 +256,7 @@ in
             createHome = true;
             linger = true;
             autoSubUidGidRange = true;
+            extraGroups = [ "systemd-journal" ];
           }
           // lib.optionalAttrs deployment.shell {
             shell =
