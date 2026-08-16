@@ -212,7 +212,7 @@
                 "USE_AIKAR_FLAGS=false"
                 "USE_MEOWICE_FLAGS=true"
                 "SERVER_NAME=Eternity"
-                "MOTD=§6The server running for §5eternity§6. Started §529.07.2026§6."
+                ''MOTD="§6The server running for §5eternity§6. Started §529.07.2026§6."''
                 "ICON=https://cloud.schweren.dev/apps/files_sharing/publicpreview/kMHzyqTswdN9GER?file=/&fileId=8367804&x=3840&y=2160&a=true&etag=fa316cd23f8713936c4783760afadbcb"
                 "OVERRIDE_ICON=true"
               ];
