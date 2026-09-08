@@ -3,7 +3,7 @@
 {
   imports = [
     ../programs/adb.nix
-    ../programs/android-studio.nix
+    #../programs/android-studio.nix # TODO: Enable again when fixed upstream
     ../programs/delta.nix
     ../programs/gh.nix
     ../programs/gradle.nix
