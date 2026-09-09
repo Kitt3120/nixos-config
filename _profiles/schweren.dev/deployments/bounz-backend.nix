@@ -22,6 +22,7 @@
     {
       name = "bounz-backend";
       user = "bounz-backend";
+      shell = true;
 
       ports.tcp = [ 28080 ];
 
