@@ -11,6 +11,7 @@
     ../programs/mangohud.nix
     ../programs/moonlight-qt.nix
     ../programs/osu-lazer.nix
+    ../programs/parsec.nix
     ../programs/prism-launcher.nix
     ../programs/protonup.nix
     ../programs/retroarch.nix
