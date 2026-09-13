@@ -38,7 +38,7 @@
 
           Container = {
             Image = "docker.io/renegademaster/zomboid-dedicated-server:latest";
-            
+
             EnvironmentFile = config.sops.templates."zomboid.env".path;
 
             Environment = [

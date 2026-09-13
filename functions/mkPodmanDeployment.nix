@@ -13,11 +13,29 @@
       let
         quadletFormat = pkgs.formats.ini { listsAsDuplicateKeys = true; };
 
+        volumeSources = lib.concatMap (
+          containerName:
+          let
+            volumes = containers.${containerName}.quadlet.Container.Volume or [ ];
+          in
+          map (volume: builtins.head (lib.splitString ":" volume)) (lib.toList volumes)
+        ) (builtins.attrNames containers);
+
+        isPathLike =
+          source:
+          source == "."
+          || source == ".."
+          || lib.hasPrefix "/" source
+          || lib.hasPrefix "./" source
+          || lib.hasPrefix "../" source;
+
+        volumeDirectories = builtins.filter isPathLike volumeSources;
+
         deploymentPrefix = "podman-deployment-${name}";
         targetUnit = "${deploymentPrefix}.target";
         controllerUnit = "${deploymentPrefix}.service";
         prepareUnit = "${deploymentPrefix}-prepare.service";
-        hasPrepareStep = preStart != "";
+        hasPrepareStep = volumeDirectories != [ ] || preStart != "";
 
         containerFileName = containerName: "${deploymentPrefix}-${containerName}.container";
         containerServiceName = containerName: "${deploymentPrefix}-${containerName}.service";
@@ -111,8 +129,13 @@
         containerServiceNames = map containerServiceName (builtins.attrNames containers);
         networkServiceNames = map networkServiceName (builtins.attrNames networks);
 
+        prepareDirectories = lib.optionalString (volumeDirectories != [ ]) (
+          "mkdir -p -- ${lib.concatMapStringsSep " " lib.escapeShellArg volumeDirectories}"
+        );
+
         prepareScript = pkgs.writeShellScript "${deploymentPrefix}-prepare" ''
           cd "${deploymentDirectory}"
+          ${prepareDirectories}
           ${preStart}
         '';
 
