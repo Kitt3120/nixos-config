@@ -195,7 +195,7 @@
                 "GID=0"
                 "TZ=Europe/Berlin"
                 "TYPE=LEAF"
-                "VERSION=latest"
+                "VERSION=26.2"
                 "MEMORY=12G"
                 "EULA=TRUE"
                 "VIEW_DISTANCE=16"
