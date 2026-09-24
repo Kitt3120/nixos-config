@@ -5,6 +5,8 @@ keys:
   - &hydra-torben age1tgeqcsyrjv9fngtcjg4ef6p4mdcnlsgvr45cwmxfnq4vpltnpygqgykcph
   - &schweren-dev-root age1zqsw2zmrggl0svmjqeylhvngdj84a0nk3l0zp3av59384jgm6qaqsdjqd8
   - &schweren-dev-torben age1nr93n9wpfnq8caczyulnyym73j4fkzg66xzh57s2n7lklw3g4sjsqlv5ss
+  - &gensokyo-root age1fqn6e60h0et6lz5y5uhjxmplftmecf0w94md0djw50g28arzsezsr2gsw2
+  - &gensokyo-torben age1ng4nz6uy72ll25smrraeen2qa5r9zretyh7y0pvrhmvt3y6c0y5q4zdgz6
 creation_rules:
   - path_regex: secrets/shared\.yaml$
     key_groups:
@@ -15,6 +17,8 @@ creation_rules:
           - *hydra-torben
           - *schweren-dev-root
           - *schweren-dev-torben
+          - *gensokyo-root
+          - *gensokyo-torben
   - path_regex: secrets/modulosaurus\.yaml$
     key_groups:
       - age:
@@ -30,3 +34,8 @@ creation_rules:
       - age:
           - *schweren-dev-root
           - *schweren-dev-torben
+  - path_regex: secrets/gensokyo.yaml$
+    key_groups:
+      - age:
+          - *gensokyo-root
+          - *gensokyo-torben
