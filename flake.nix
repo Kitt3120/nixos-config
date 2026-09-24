@@ -56,6 +56,15 @@
           ];
         };
 
+        gensokyo = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = { inherit self system inputs; };
+          modules = [
+            ./configuration.nix
+            ./_profiles/gensokyo.nix
+          ];
+        };
+
         schweren = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = { inherit self system inputs; };
