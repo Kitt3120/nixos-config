@@ -2,6 +2,8 @@
 
 {
   settings = {
+    sops.device-secrets = ../../secrets/gensokyo.yaml;
+
     comin = {
       autoReboot = false;
       remotes = [
