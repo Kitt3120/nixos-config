@@ -4,6 +4,8 @@
   settings = {
     sops.device-secrets = ../../secrets/gensokyo.yaml;
 
+    networking.wireguard.interfaces.MrMeeseeks.peers.MrMeeseeks = { };
+
     comin = {
       autoReboot = false;
       remotes = [
@@ -15,7 +17,7 @@
         }
       ];
     };
-    
+
     memoryAllocator = "libc";
 
     zramSwap = {

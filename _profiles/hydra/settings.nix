@@ -4,6 +4,8 @@
   settings = {
     sops.device-secrets = ../../secrets/hydra.yaml;
 
+    networking.wireguard.interfaces.MrMeeseeks.peers.MrMeeseeks = { };
+
     comin = {
       autoReboot = false;
       remotes = [
