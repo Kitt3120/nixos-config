@@ -16,8 +16,6 @@
       ];
     };
     
-    networking.wireguard.publicKey = "M2fupWZjNrQUDAcQoB1Lq9Tof+USBJm0Stgw9T+yJjM=";
-
     memoryAllocator = "libc";
 
     zramSwap = {

@@ -1,14 +1,13 @@
-{ config, lib, ... }:
+{ config, ... }:
 
 {
-  options.settings.networking.wireguard.publicKey = lib.mkOption {
-    type = lib.types.str;
-    description = "Public key for the WireGuard interface.";
-  };
-
   config = {
     sops.secrets = {
       "wireguard/ip" = {
+        sopsFile = config.settings.sops.device-secrets;
+        neededForUsers = true;
+      };
+      "wireguard/publicKey" = {
         sopsFile = config.settings.sops.device-secrets;
         neededForUsers = true;
       };
@@ -34,8 +33,9 @@
         ips = [ "$(cat ${config.sops.secrets."wireguard/ip".path})" ];
         peers = [
           {
+            name = "MrMeeseeks-peer";
             endpoint = "$(cat ${config.sops.secrets."wireguard/endpoint".path})";
-            publicKey = config.settings.networking.wireguard.publicKey;
+            publicKey = "$(cat ${config.sops.secrets."wireguard/publicKey".path})";
             allowedIPs = [
               "$(cat ${config.sops.secrets."wireguard/allowedIPs/localIP".path})"
               "$(cat ${config.sops.secrets."wireguard/allowedIPs/vpnIP".path})"
