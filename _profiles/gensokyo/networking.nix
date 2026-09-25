@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  #imports = [ ../../networking/wireguard.nix ];
+  imports = [ ../../networking/wireguard.nix ];
 }
