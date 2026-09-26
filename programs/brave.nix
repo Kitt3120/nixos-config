@@ -166,7 +166,7 @@ let
 
       containers.enabled = true;
       enable_window_closing_confirm = false;
-      history.retention_days = 90;
+      history.retention_days = -1;
       tabs.hover_mode = 2;
       web_view_rounded_corners = false;
     };
