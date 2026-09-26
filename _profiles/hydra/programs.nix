@@ -10,6 +10,7 @@
     ../../programs/linux-wifi-hotspot.nix
     ../../programs/nvtop.nix
     ../../programs/podman-desktop.nix
+    ../../programs/powertop.nix
     ../../programs/qrtool.nix
     ../../programs/ryzen-monitor-ng.nix
     ../../programs/soco-cli.nix

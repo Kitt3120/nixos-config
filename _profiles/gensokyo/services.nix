@@ -9,8 +9,6 @@
     ../../services/mullvad.nix
     ../../services/opentabletdriver.nix
     ../../services/powermanagement.nix
-    ../../services/powertop.nix
-    ../../services/thermald.nix
     ../../services/smartd.nix
   ];
 }
