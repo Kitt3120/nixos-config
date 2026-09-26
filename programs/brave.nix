@@ -165,16 +165,34 @@ let
       };
 
       containers.enabled = true;
+      enable_media_router_on_restart = true;
       enable_window_closing_confirm = false;
       history.retention_days = -1;
+      show_side_panel_button = true;
       tabs.hover_mode = 2;
       web_view_rounded_corners = false;
     };
 
+    media_router.enable_media_router = true;
     omnibox.prevent_url_elisions = true;
     browser.show_home_button = true;
     extensions.pinned_extensions = pinnedExtensions;
     account_values.extensions.pinned_extensions = pinnedExtensions;
+
+    toolbar = {
+      pinned_actions = [
+        "kActionNewIncognitoWindow"
+        "kActionShowDownloads"
+        "kActionCopyUrl"
+        "kActionSendTabToSelf"
+        "kActionDevTools"
+        "kActionRouteMedia"
+      ];
+      pinned_chrome_labs_migration_complete = true;
+      pinned_cast_migration_complete = true;
+      tabs_from_other_devices_auto_pinned_migration = true;
+      ttc_auto_pinned_migration = true;
+    };
   };
 
   localState = {
