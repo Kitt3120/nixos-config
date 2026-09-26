@@ -30,6 +30,8 @@ let
 
   pinnedExtensions = [
     "nngceckbapebfimnlniiiahkandclblb"
+    "bgkmgpgeempochogfoddiobpbhdfgkdi"
+    "jcokkipkhhgiakinbnnplhkdbjbgcgpe"
     "ldpochfccmkkmhdbclfhpagapcfdljkj"
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
     "eimadpbcbfnmbkopoojfekhnkhdbieeh"
