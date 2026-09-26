@@ -6,22 +6,9 @@
   ...
 }:
 let
-  braveMv2Extensions = {
-    "bgkmgpgeempochogfoddiobpbhdfgkdi" = {
-      installation_mode = "force_installed";
-      update_url = "https://clients2.google.com/service/update2/crx";
-    };
-
-    "jcokkipkhhgiakinbnnplhkdbjbgcgpe" = {
-      installation_mode = "force_installed";
-      update_url = "https://clients2.google.com/service/update2/crx";
-    };
-  };
-
-  allExtensions = [
+  extensions = [
     "aghdiknflpelpkepifoplhodcnfildao"
     "ajopnjidmegmdimjlfnijceegpefgped"
-    "bgkmgpgeempochogfoddiobpbhdfgkdi"
     "blfpdedbdighagggfhgihcocfheicfjk"
     "cfidkbgamfhdgmedldkagjopnbobdmdn"
     "dmodoodhamgjfnfnokgflekfjgjagpna"
@@ -33,7 +20,6 @@ let
     "hkligngkgcpcolhcnkgccglchdafcnao"
     "iaiomicjabeggjcfkbimgmglanimpnae"
     "iidnbdjijdkbmajdffnidomddglmieko"
-    "jcokkipkhhgiakinbnnplhkdbjbgcgpe"
     "ldpochfccmkkmhdbclfhpagapcfdljkj"
     "lmjnegcaeklhafolokijcfjliaokphfk"
     "mnjggcdmjocbbbhaepdhchncahnbgone"
@@ -42,12 +28,8 @@ let
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
   ];
 
-  extensions = allExtensions;
-
   pinnedExtensions = [
     "nngceckbapebfimnlniiiahkandclblb"
-    "bgkmgpgeempochogfoddiobpbhdfgkdi"
-    "jcokkipkhhgiakinbnnplhkdbjbgcgpe"
     "ldpochfccmkkmhdbclfhpagapcfdljkj"
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
     "eimadpbcbfnmbkopoojfekhnkhdbieeh"
@@ -61,7 +43,7 @@ let
       name = id;
       value = {
         toolbar_pin = "default_pinned";
-      } // (braveMv2Extensions.${id} or { });
+      };
     }) pinnedExtensions
   );
 
@@ -194,6 +176,7 @@ let
   };
 
   localState = {
+    brave.widevine_opted_in = true;
     brave.allow_element_blocker_in_private_mode = true;
     brave.shields.adblock_only_mode_enabled = false;
     brave.shields.fb_embed_default = false;
