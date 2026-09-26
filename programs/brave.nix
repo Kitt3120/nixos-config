@@ -9,12 +9,12 @@ let
   braveMv2Extensions = {
     "bgkmgpgeempochogfoddiobpbhdfgkdi" = {
       installation_mode = "force_installed";
-      update_url = "https://go-updater.brave.com/extensions";
+      update_url = "https://clients2.google.com/service/update2/crx";
     };
 
     "jcokkipkhhgiakinbnnplhkdbjbgcgpe" = {
       installation_mode = "force_installed";
-      update_url = "https://go-updater.brave.com/extensions";
+      update_url = "https://clients2.google.com/service/update2/crx";
     };
   };
 
@@ -42,9 +42,7 @@ let
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
   ];
 
-  extensions = builtins.filter (
-    id: !(builtins.hasAttr id braveMv2Extensions)
-  ) allExtensions;
+  extensions = allExtensions;
 
   pinnedExtensions = [
     "nngceckbapebfimnlniiiahkandclblb"
