@@ -6,7 +6,19 @@
   ...
 }:
 let
-  extensions = [
+  braveMv2Extensions = {
+    "bgkmgpgeempochogfoddiobpbhdfgkdi" = {
+      installation_mode = "force_installed";
+      update_url = "https://go-updater.brave.com/extensions";
+    };
+
+    "jcokkipkhhgiakinbnnplhkdbjbgcgpe" = {
+      installation_mode = "force_installed";
+      update_url = "https://go-updater.brave.com/extensions";
+    };
+  };
+
+  allExtensions = [
     "aghdiknflpelpkepifoplhodcnfildao"
     "ajopnjidmegmdimjlfnijceegpefgped"
     "bgkmgpgeempochogfoddiobpbhdfgkdi"
@@ -30,6 +42,10 @@ let
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
   ];
 
+  extensions = builtins.filter (
+    id: !(builtins.hasAttr id braveMv2Extensions)
+  ) allExtensions;
+
   pinnedExtensions = [
     "nngceckbapebfimnlniiiahkandclblb"
     "bgkmgpgeempochogfoddiobpbhdfgkdi"
@@ -45,7 +61,9 @@ let
   extensionSettings = builtins.listToAttrs (
     map (id: {
       name = id;
-      value.toolbar_pin = "default_pinned";
+      value = {
+        toolbar_pin = "default_pinned";
+      } // (braveMv2Extensions.${id} or { });
     }) pinnedExtensions
   );
 
