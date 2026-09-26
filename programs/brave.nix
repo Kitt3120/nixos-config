@@ -26,6 +26,7 @@ let
     "neebplgakaahbhdphmkckjjcegoiijjo"
     "nngceckbapebfimnlniiiahkandclblb"
     "nomnklagbgmgghhjidfhnoelnjfndfpd"
+    "cimiefiiaegbelhefglklhhakcgmhkai"
   ];
 
   pinnedExtensions = [
