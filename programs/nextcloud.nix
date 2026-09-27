@@ -62,6 +62,7 @@
 
       # Compile output
       target
+      node_modules
     '';
   });
 }
