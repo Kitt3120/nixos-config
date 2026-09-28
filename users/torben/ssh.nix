@@ -42,6 +42,8 @@ in
       echo "" >> /home/${username}/.ssh/authorized_keys
       cat ${config.sops.secrets."ssh/keys/grapheneos".path} >> /home/${username}/.ssh/authorized_keys
       echo "" >> /home/${username}/.ssh/authorized_keys
+      cat ${config.sops.secrets."ssh/keys/gensokyo".path} >> /home/${username}/.ssh/authorized_keys
+      echo "" >> /home/${username}/.ssh/authorized_keys
       chown ${username}:users /home/${username}/.ssh/authorized_keys
       chmod 600 /home/${username}/.ssh/authorized_keys
     '';
@@ -62,6 +64,8 @@ in
       cat ${config.sops.secrets."ssh/blocks/schweren.dev".path} >> /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
       cat ${config.sops.secrets."ssh/blocks/minecraft".path} >> /home/${username}/.ssh/config
+      echo "" >> /home/${username}/.ssh/config
+      cat ${config.sops.secrets."ssh/blocks/hytale".path} >> /home/${username}/.ssh/config
       echo "" >> /home/${username}/.ssh/config
       chown ${username}:users /home/${username}/.ssh/config
       chmod 600 /home/${username}/.ssh/config
