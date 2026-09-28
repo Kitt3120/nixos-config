@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Watchtower talks to the Podman REST API to see and update containers, which rootless Podman
