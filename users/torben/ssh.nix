@@ -10,11 +10,13 @@ in
     "ssh/keys/mrmeeseeks".neededForUsers = true;
     "ssh/keys/schweren.dev".neededForUsers = true;
     "ssh/keys/grapheneos".neededForUsers = true;
+    "ssh/keys/gensokyo".neededForUsers = true;
 
     "ssh/blocks/modulosaurus".neededForUsers = true;
     "ssh/blocks/mrmeeseeks".neededForUsers = true;
     "ssh/blocks/schweren.dev".neededForUsers = true;
     "ssh/blocks/minecraft".neededForUsers = true;
+    "ssh/blocks/hytale".neededForUsers = true;
   };
 
   /*
