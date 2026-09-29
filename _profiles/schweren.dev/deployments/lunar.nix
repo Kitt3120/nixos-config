@@ -1,6 +1,20 @@
 { config, pkgs, ... }:
 
 {
+  sops.secrets = {
+    "lunar/discord-token" = {
+      sopsFile = config.settings.sops.device-secrets;
+    };
+  };
+
+  sops.templates."lunar.env" = {
+    content = ''
+      DISCORD_TOKEN=${config.sops.placeholder."lunar/discord-token"}
+    '';
+    owner = "lunar";
+    mode = "0600";
+  };
+
   # Watchtower talks to the Podman REST API to see and update containers, which rootless Podman
   # doesn't expose by default. Enable it just for this deployment's user, socket-activated so it
   # only actually runs while something is connected to it.
@@ -35,6 +49,7 @@
               Image = "ghcr.io/clawface420/lunar:latest";
               # Picked up by this deployment's own Watchtower instance below.
               Label = "com.centurylinklabs.watchtower.enable=true";
+              EnvironmentFile = config.sops.templates."lunar.env".path;
             };
           };
         };
