@@ -8,7 +8,7 @@
     ../programs/gamescope.nix
     ../programs/heroic.nix
     ../programs/lutris.nix
-    ../programs/mangohud.nix
+    #../programs/mangohud.nix # TODO: enable again when fixed upstream
     ../programs/moonlight-qt.nix
     ../programs/osu-lazer.nix
     ../programs/parsec.nix
