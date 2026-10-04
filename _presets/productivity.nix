@@ -13,7 +13,7 @@
     ../programs/pdfarranger.nix
     ../programs/qpdf.nix
     ../programs/remmina.nix
-    ../programs/rustdesk.nix
+    #../programs/rustdesk.nix # TOOD: enable when fixed upstream
     ../programs/tesseract.nix
     ../programs/texlive.nix
     ../programs/thunderbird.nix
