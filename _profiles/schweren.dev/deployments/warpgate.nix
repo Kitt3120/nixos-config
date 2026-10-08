@@ -60,6 +60,7 @@ in
       user = "warpgate";
       shell = true;
       deploymentDirectory = deploymentDir;
+      ports.tcp = [ proxyListenPort ];
 
       networks.warpgate = {
         quadlet.Network.NetworkName = "warpgate";
