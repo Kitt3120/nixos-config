@@ -126,6 +126,7 @@ in
               Image = image.nextcloud;
               ContainerName = "warpgate-nextcloud";
               EnvironmentFile = config.sops.templates."warpgate-nextcloud.env".path;
+              AddHost = "smtp.schweren.dev:host-gateway"; # fix podman -> docker routing for emails
               Volume = "${deploymentDir}/nextcloud:/var/www/html";
               PublishPort = "${proxyListenAddress}:${toString proxyListenPort}:80";
 
