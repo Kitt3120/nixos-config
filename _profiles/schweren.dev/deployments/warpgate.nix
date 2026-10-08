@@ -140,7 +140,7 @@ in
                 # TODO after verifying the actual peer IP visible inside
                 # Nextcloud from the rootless Podman port forward:
                 # "TRUSTED_PROXIES=<VERIFIED_PROXY_PEER_IP_OR_CIDR>"
-                # "APACHE_DISABLE_REWRITE_IP=1"
+                "APACHE_DISABLE_REWRITE_IP=1"
               ];
 
               # The image contains PHP; no additional healthcheck binaries.
