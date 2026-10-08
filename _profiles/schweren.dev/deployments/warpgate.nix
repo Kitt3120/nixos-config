@@ -30,6 +30,9 @@ in
     "warpgate/nextcloud-admin-password" = {
       sopsFile = config.settings.sops.device-secrets;
     };
+    "warpgate/trusted-proxy" = {
+      sopsFile = config.settings.sops.device-secrets;
+    };
   };
 
   sops.templates."warpgate-postgres.env" = {
@@ -51,6 +54,7 @@ in
       POSTGRES_PASSWORD=${config.sops.placeholder."warpgate/postgres-password"}
       NEXTCLOUD_ADMIN_USER=${config.sops.placeholder."warpgate/nextcloud-admin-user"}
       NEXTCLOUD_ADMIN_PASSWORD=${config.sops.placeholder."warpgate/nextcloud-admin-password"}
+      TRUSTED_PROXIES=${config.sops.placeholder."warpgate/trusted-proxy"}
     '';
   };
 
@@ -137,9 +141,6 @@ in
                 "PHP_UPLOAD_LIMIT=16G"
                 "APACHE_BODY_LIMIT=0"
                 "PHP_OPCACHE_MEMORY_CONSUMPTION=256"
-                # TODO after verifying the actual peer IP visible inside
-                # Nextcloud from the rootless Podman port forward:
-                # "TRUSTED_PROXIES=<VERIFIED_PROXY_PEER_IP_OR_CIDR>"
                 "APACHE_DISABLE_REWRITE_IP=1"
               ];
 
