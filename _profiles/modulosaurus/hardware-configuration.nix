@@ -69,16 +69,28 @@
   fileSystems."/media/EHddSG1" = {
     device = "/dev/disk/by-uuid/1ebba608-94d4-4c49-ae88-55fc8d55e778";
     fsType = "xfs";
+    options = [
+      "nofail"
+      "x-systemd.device-timeout=5s"
+    ];
   };
 
   fileSystems."/media/EHddSG2" = {
     device = "/dev/disk/by-uuid/ac66b009-d6ea-44e9-934e-a4dbea596a18";
     fsType = "xfs";
+    options = [
+      "nofail"
+      "x-systemd.device-timeout=5s"
+    ];
   };
 
   fileSystems."/media/EHddTosh1" = {
     device = "/dev/disk/by-uuid/63759701-5f3c-43fe-afb9-9363f6998a0d";
     fsType = "xfs";
+    options = [
+      "nofail"
+      "x-systemd.device-timeout=5s"
+    ];
   };
 
   fileSystems."/media/Archiv" = {
@@ -88,11 +100,12 @@
       "vers=3.11"
       "iocharset=utf8"
       "_netdev"
-      "x-systemd.automount"
       "credentials=${config.sops.secrets."smb/credentials".path}"
       "uid=1000"
       "gid=1000"
       "nofail"
+      "x-systemd.device-timeout=120s"
+      "x-systemd.automount"
     ];
   };
 
