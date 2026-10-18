@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  hardware.cpu.intel.npu.enable = true;
+  imports = [ ../system/npu/intel.nix ];
 }
