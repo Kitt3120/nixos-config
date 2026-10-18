@@ -5,6 +5,7 @@
     ../_presets/global.nix
 
     ../_presets/intel-cpu.nix
+    ../_presets/intel-gpu.nix
     ../_presets/intel-npu.nix
     ../_presets/gpu.nix
 
