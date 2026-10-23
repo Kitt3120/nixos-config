@@ -3,7 +3,7 @@
 {
   programs.obs-studio = {
     enable = true;
-    enableVirtualCamera = true;
+    enableVirtualCamera = false; # TODO: Enable again when kernel bug has been resolved upstream
     plugins = [
       pkgs.obs-studio-plugins.pixel-art
       pkgs.obs-studio-plugins.waveform
