@@ -41,7 +41,7 @@
     ../../programs/ncdu.nix
     ../../programs/nettools.nix
     ../../programs/nh.nix
-    ../../programs/nix-alien.nix
+    #../../programs/nix-alien.nix # TODO: Enable again when fixed upstream
     ../../programs/nix-index.nix
     ../../programs/nix-ld.nix
     ../../programs/nix-output-monitor.nix
