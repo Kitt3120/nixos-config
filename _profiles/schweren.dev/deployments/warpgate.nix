@@ -8,7 +8,7 @@ let
   proxyListenPort = 18080;
 
   image = {
-    nextcloud = "docker.io/library/nextcloud:35.0.1-apache";
+    nextcloud = "docker.io/library/nextcloud:35.0.2-apache";
     postgres = "docker.io/library/postgres:18.4";
     redis = "docker.io/library/redis:8.4";
   };
