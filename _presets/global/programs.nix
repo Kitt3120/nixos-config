@@ -7,6 +7,7 @@
     ../../programs/aria2.nix
     ../../programs/atuin.nix
     ../../programs/bcachefs-tools.nix
+    ../../programs/bubblewrap.nix
     ../../programs/btop.nix
     ../../programs/btrfs-progs.nix
     ../../programs/cpupower.nix
@@ -65,6 +66,7 @@
     ../../programs/screen.nix
     ../../programs/scrub.nix
     ../../programs/smartmontools.nix
+    ../../programs/socat.nix
     ../../programs/sops.nix
     ../../programs/speedtest-cli.nix
     ../../programs/starship.nix
