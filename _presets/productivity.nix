@@ -9,7 +9,7 @@
     ../programs/gparted.nix
     ../programs/gsmartcontrol.nix
     ../programs/nextcloud.nix
-    ../programs/onlyoffice.nix
+    #../programs/onlyoffice.nix # TODO: enable when fixed upstream
     ../programs/pdfarranger.nix
     ../programs/qpdf.nix
     ../programs/remmina.nix
