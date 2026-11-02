@@ -23,8 +23,8 @@
 
   environment.systemPackages = with pkgs; [
     virtiofsd
-    libguestfs
-    guestfs-tools
+    #libguestfs # TODO: Enable again when fixed upstream
+    #guestfs-tools # TODO: Enable again when fixed upstream - depends on libguestfs
   ];
 
   home-manager.users = config.mapAllUsersToSet (user: {
