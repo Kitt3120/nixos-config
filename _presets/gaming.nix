@@ -7,7 +7,7 @@
     ../programs/gamemode.nix
     ../programs/gamescope.nix
     ../programs/heroic.nix
-    #../programs/lutris.nix # TODO: Enable again when it doesn't use gtk2 upstream
+    ../programs/lutris.nix
     ../programs/mangohud.nix
     ../programs/moonlight-qt.nix
     ../programs/osu-lazer.nix
