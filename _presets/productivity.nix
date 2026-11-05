@@ -5,7 +5,7 @@
     ../programs/anki.nix
     ../programs/ausweisapp.nix
     ../programs/bitwarden.nix
-    ../programs/brave.nix
+    #../programs/brave.nix # TODO: enable again when upstream got their shit together
     ../programs/gparted.nix
     ../programs/gsmartcontrol.nix
     ../programs/nextcloud.nix
