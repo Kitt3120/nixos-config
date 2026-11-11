@@ -17,7 +17,6 @@
     ../programs/obs-cli.nix
     ../programs/obs-studio.nix
     ../programs/pear-desktop.nix
-    ../programs/plex-desktop.nix
     ../programs/qpwgraph.nix
     ../programs/scrcpy.nix
     ../programs/upscayl.nix
