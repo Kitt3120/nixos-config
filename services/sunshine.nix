@@ -14,6 +14,11 @@
   };
 
   config = {
+    # Disable MangoHud for the Sunshine service to fix crashes
+    systemd.user.services.sunshine.environment = {
+      DISABLE_MANGOHUD = "1";
+    };
+
     services.sunshine = {
       enable = true;
       autoStart = true;
