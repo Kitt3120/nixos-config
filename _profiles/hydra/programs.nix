@@ -3,7 +3,6 @@
 {
   imports = [
     #../../programs/bambu-studio.nix # TODO: Enable again when fixed
-    ../../programs/framework-tool.nix
     ../../programs/gpukiller.nix
     ../../programs/kitty.nix
     ../../programs/libnotify.nix

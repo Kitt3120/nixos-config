@@ -21,6 +21,7 @@
     ./gensokyo/settings.nix
 
     ./gensokyo/desktop.nix
+    ./gensokyo/gpu.nix
     ./gensokyo/hostname.nix
     ./gensokyo/networking.nix
     ./gensokyo/programs.nix

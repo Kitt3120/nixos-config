@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [ libfprint ];
   services.fprintd.enable = true;
 
+  # Fixes SDDM REQUIRING fingerprint authentication in addition to password
   security.pam.services.login.fprintAuth = false;
 }

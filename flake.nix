@@ -9,7 +9,8 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
     #nixpkgs.url = "path:/home/torben/Nextcloud/Programmierung/NixOS/nixpkgs"; # local
 
-    #mesa-good.url = "github:nixos/nixpkgs?ref=599ddd2b79331c1e6153e1659bdaab65d62c4c82";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -53,6 +54,7 @@
           modules = [
             ./configuration.nix
             ./_profiles/hydra.nix
+            inputs.nixos-hardware.nixosModules.framework-16-7040-amd
           ];
         };
 
@@ -62,6 +64,7 @@
           modules = [
             ./configuration.nix
             ./_profiles/gensokyo.nix
+            inputs.nixos-hardware.nixosModules.framework-intel-core-ultra-series3
           ];
         };
 
