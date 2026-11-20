@@ -76,6 +76,16 @@
             ./_profiles/schweren.dev.nix
           ];
         };
+
+        flipflop = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = { inherit self system inputs; };
+          modules = [
+            ./configuration.nix
+            ./_profiles/flipflop.nix
+            inputs.nixos-hardware.nixosModules.microsoft-surface-pro-intel
+          ];
+        };
       };
     };
 }

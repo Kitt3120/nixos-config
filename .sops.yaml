@@ -7,6 +7,8 @@ keys:
   - &schweren-dev-torben age1nr93n9wpfnq8caczyulnyym73j4fkzg66xzh57s2n7lklw3g4sjsqlv5ss
   - &gensokyo-root age1fqn6e60h0et6lz5y5uhjxmplftmecf0w94md0djw50g28arzsezsr2gsw2
   - &gensokyo-torben age1ng4nz6uy72ll25smrraeen2qa5r9zretyh7y0pvrhmvt3y6c0y5q4zdgz6
+  - &flipfop-root age1h8rfenw6wcutu7sfkk6smgqaf44czx40y28jc39mayd0wyj2g5nqehv7ky
+  - &flipfop-torben age19tpe3rf5hhspn2sr7azd8c3yx6g2efnwp8gjvwe0t3htgtpc2umswfzscc
 creation_rules:
   - path_regex: secrets/shared\.yaml$
     key_groups:
@@ -19,6 +21,8 @@ creation_rules:
           - *schweren-dev-torben
           - *gensokyo-root
           - *gensokyo-torben
+          - *flipfop-root
+          - *flipfop-torben
   - path_regex: secrets/modulosaurus\.yaml$
     key_groups:
       - age:
@@ -39,3 +43,8 @@ creation_rules:
       - age:
           - *gensokyo-root
           - *gensokyo-torben
+  - path_regex: secrets/flipflop.yaml$
+    key_groups:
+      - age:
+          - *flipfop-root
+          - *flipfop-torben
