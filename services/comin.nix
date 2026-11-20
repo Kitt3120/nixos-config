@@ -78,8 +78,10 @@ in
       }) config.settings.comin.remotes;
     };
 
-    programs.bash.interactiveShellInit = "eval $(${comin}/bin/comin completion bash)";
-    programs.zsh.interactiveShellInit = lib.mkIf config.programs.zsh.enable "eval $(${comin}/bin/comin completion zsh)";
-    programs.fish.interactiveShellInit = lib.mkIf config.programs.fish.enable "${comin}/bin/comin completion fish | source";
+    programs.bash.interactiveShellInit = lib.mkIf config.services.comin.enable "eval $(${comin}/bin/comin completion bash)";
+    programs.zsh.interactiveShellInit = lib.mkIf (
+      config.services.comin.enable && config.programs.zsh.enable
+    ) "eval $(${comin}/bin/comin completion zsh)";
+    programs.fish.interactiveShellInit = lib.mkIf config.services.comin.enable "${comin}/bin/comin completion fish | source";
   };
 }
